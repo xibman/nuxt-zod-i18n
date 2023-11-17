@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "Campo no válido",
+      "invalid_arguments": "Argumentos de función no válidos",
+      "invalid_date": "Fecha no válida",
+      "invalid_enum_value": "Valor enum no válido. Esperaba {options} para revisar, recibió '{received}'",
+      "invalid_intersection_types": "No se han podido fusionar los resultados de las intersecciones",
+      "invalid_literal": "Valor literal no válido, esperado {expected}",
+      "invalid_return_type": "Tipo de retorno de función no válido",
+      "invalid_string": {
+        "cuid": "No válido {validation}",
+        "datetime": "No válido {validation}",
+        "email": "No válido {validation}",
+        "endsWith": "Campo no válido: debe terminar con \"{endsWith}\"",
+        "regex": "INVALID",
+        "startsWith": "Campo no válido: debe empezar por \"{startsWith}\"",
+        "url": "No válido {validation}",
+        "uuid": "No válido {validation}"
+      },
+      "invalid_type": "Previsto {expected}, recibido {received}",
+      "invalid_type_received_undefined": "obligatorio",
+      "invalid_union": "Campo no válido",
+      "invalid_union_discriminator": "Valor discriminador no válido. Esperado {options} para revisar",
+      "not_finite": "El número debe ser finito",
+      "not_multiple_of": "El número debe ser múltiplo de {multipleOf}",
+      "required": "obligatorio",
+      "too_big": {
+        "array": {
+          "exact": "La matriz debe contener exactamente {maximum} elemento(s)",
+          "inclusive": "La matriz debe contener como máximo {maximum} elemento(s)",
+          "not_inclusive": "La matriz debe contener menos de {maximum} elemento(s)"
+        },
+        "date": {
+          "exact": "La fecha debe ser exactamente {maximum}",
+          "inclusive": "La fecha debe ser inferior o igual a {maximum}",
+          "not_inclusive": "La fecha debe ser inferior a {maximum}"
+        },
+        "number": {
+          "exact": "El número debe ser exactamente {maximum}",
+          "inclusive": "El número debe ser inferior o igual a {maximum}",
+          "not_inclusive": "El número debe ser inferior a {maximum}"
+        },
+        "set": {
+          "exact": "Campo no válido",
+          "inclusive": "Campo no válido",
+          "not_inclusive": "Campo no válido"
+        },
+        "string": {
+          "exact": "La cadena debe contener exactamente {maximum} carácter(es)",
+          "inclusive": "La cadena debe contener como máximo {maximum} carácter(es)",
+          "not_inclusive": "La cadena debe contener menos de {maximum} carácter(es)"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "La matriz debe contener exactamente {minimum} elemento(s)",
+          "inclusive": "La matriz debe contener al menos {minimum} elemento(s)",
+          "not_inclusive": "La matriz debe contener más de {minimum} elemento(s)"
+        },
+        "date": {
+          "exact": "La fecha debe ser exactamente {minimum}",
+          "inclusive": "La fecha debe ser mayor o igual a {minimum}",
+          "not_inclusive": "La fecha debe ser superior a {minimum}"
+        },
+        "number": {
+          "exact": "El número debe ser exactamente {minimum}",
+          "inclusive": "El número debe ser mayor o igual que {minimum}",
+          "not_inclusive": "El número debe ser mayor que {minimum}"
+        },
+        "set": {
+          "exact": "Campo no válido",
+          "inclusive": "Campo no válido",
+          "not_inclusive": "Campo no válido"
+        },
+        "string": {
+          "exact": "La cadena debe contener exactamente {minimum} carácter(es)",
+          "inclusive": "La cadena debe contener al menos {minimum} carácter(es)",
+          "not_inclusive": "La cadena debe contener más de {minimum} carácter(es)"
+        }
+      },
+      "unrecognized_keys": "Clave(s) no reconocida(s) en el objeto: {keys} revisar"
+    },
+    "types": {
+      "array": "array",
+      "bigint": "bigint",
+      "boolean": "boolean",
+      "date": "date",
+      "float": "float",
+      "function": "function",
+      "integer": "integer",
+      "map": "map",
+      "nan": "nan",
+      "never": "never",
+      "null": "null",
+      "number": "number",
+      "object": "object",
+      "promise": "promise",
+      "set": "set",
+      "string": "string",
+      "symbol": "symbol",
+      "undefined": "undefined",
+      "unknown": "unknown",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "datetime",
+      "email": "Correo electrónico",
+      "regex": "regex",
+      "url": "Url",
+      "uuid": "Uuid"
+    }
+  }
+}

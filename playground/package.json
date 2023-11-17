@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "nuxt-zod-i18n-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate"
+  },
+  "dependencies": {
+    "@iconify-json/flag": "^1.1.42",
+    "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "nuxt": "latest"
+  }
+}

@@ -2,7 +2,7 @@ import { defineNuxtPlugin } from "#app";
 
 import type { Composer } from "@nuxtjs/i18n/dist/runtime/composables";
 import { defaultErrorMap, z, ZodIssueCode, ZodParsedType } from "zod";
-import { joinValues, jsonStringifyReplacer, getKeyAndValues } from "../utils";
+import { joinValues, jsonStringifyReplacer, getKeyAndValues } from "./utils";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { dateFormat } = useRuntimeConfig().public.zodI18n;

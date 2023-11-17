@@ -57,7 +57,7 @@ export default defineNuxtModule<ModuleOptions>({
       logger.error("Nuxt 3 required");
     }
 
-    const languageFiles = await readdir(resolve("./locales"));
+    const languageFiles = await readdir(resolve("./runtime/locales"));
 
     nuxt.options.runtimeConfig.public.zodI18n = defu(
       nuxt.options.runtimeConfig.public.zodI18n,
@@ -69,7 +69,7 @@ export default defineNuxtModule<ModuleOptions>({
     // @ts-expect-error - type not good
     nuxt.hook("i18n:registerModule", (register) => {
       register({
-        langDir: resolve("./locales"),
+        langDir: resolve("./runtime/locales"),
         locales: languageFiles.map((file) => ({
           file,
           code: file.replace(".json", ""),

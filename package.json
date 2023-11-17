@@ -1,6 +1,6 @@
 {
   "name": "nuxt-zod-i18n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Nuxt Module for localizing zod error messages.",
   "repository": "xibman/nuxt-zod-i18n",
   "license": "MIT",

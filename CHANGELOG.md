@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.0.2...v1.0.3)
+
+### 🩹 Fixes
+
+- **global:** Move utils folder to runtime for full export ([af2ebe0](https://github.com/xibman/nuxt-zod-i18n/commit/af2ebe0))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.0.2
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.0.1...v1.0.2)

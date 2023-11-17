@@ -10,7 +10,7 @@ A Nuxt Module for localizing zod error messages.
 Check the playground for usage doc and test will come later
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/xibman/nuxt-zod-i18n?file=playground%2Fapp.vue) -->
+- [🏀 Online playground](https://stackblitz.com/github/xibman/nuxt-zod-i18n?file=playground%2Fapp.vue)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features

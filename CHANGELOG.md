@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.0.3...v1.0.4)
+
+### 🩹 Fixes
+
+- **runtime config:** Add missing import from #app for useRuntimeConfig ([49c924e](https://github.com/xibman/nuxt-zod-i18n/commit/49c924e))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.0.3
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.0.2...v1.0.3)

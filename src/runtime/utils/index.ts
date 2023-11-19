@@ -1,32 +1,32 @@
-import type { Composer } from "@nuxtjs/i18n/dist/runtime/composables";
-export function joinValues<T extends any[]>(
+import type { Composer } from '@nuxtjs/i18n/dist/runtime/composables'
+export function joinValues<T extends any[]> (
   array: T,
-  separator = " | "
+  separator = ' | '
 ): string {
   return array
-    .map((val) => (typeof val === "string" ? `'${val}'` : val))
-    .join(separator);
+    .map(val => (typeof val === 'string' ? `'${val}'` : val))
+    .join(separator)
 }
 
-export function jsonStringifyReplacer(_: string, value: any): any {
-  if (typeof value === "bigint") {
-    return value.toString();
+export function jsonStringifyReplacer (_: string, value: any): any {
+  if (typeof value === 'bigint') {
+    return value.toString()
   }
 
-  return value;
+  return value
 }
 
-export function isRecord(value: unknown): value is Record<string, unknown> {
-  if (typeof value !== "object" || value === null) return false;
+export function isRecord (value: unknown): value is Record<string, unknown> {
+  if (typeof value !== 'object' || value === null) { return false }
 
   for (const key in value) {
-    if (!Object.prototype.hasOwnProperty.call(value, key)) return false;
+    if (!Object.prototype.hasOwnProperty.call(value, key)) { return false }
   }
 
-  return true;
+  return true
 }
 
-export function getKeyAndValues(
+export function getKeyAndValues (
   param: unknown,
   defaultKey: string,
   i18n: Composer
@@ -34,22 +34,22 @@ export function getKeyAndValues(
   values: Record<string, string>;
   key: string;
 } {
-  const { t } = i18n;
-  if (typeof param === "string") return { key: param, values: {} };
+  const { t } = i18n
+  if (typeof param === 'string') { return { key: param, values: {} } }
 
   if (isRecord(param)) {
     const key =
-      "key" in param && typeof param.key === "string" ? param.key : defaultKey;
+      'key' in param && typeof param.key === 'string' ? param.key : defaultKey
     const values =
-      "values" in param && isRecord(param.values)
+      'values' in param && isRecord(param.values)
         ? Object.entries(param.values).reduce((acc, [key, value]) => {
-            acc = { ...acc, [key]: t(value as string) };
-            return acc;
-          }, {})
-        : {};
+          acc = { ...acc, [key]: t(value as string) }
+          return acc
+        }, {})
+        : {}
 
-    return { key, values };
+    return { key, values }
   }
 
-  return { key: defaultKey, values: {} };
+  return { key: defaultKey, values: {} }
 }

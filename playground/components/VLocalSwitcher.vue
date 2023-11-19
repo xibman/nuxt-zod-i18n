@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
-import type { LocaleObject } from '#i18n';
+import type { LocaleObject } from '#i18n'
 import type { DropdownItem } from '#ui/types'
 
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const items = computed<DropdownItem[][]>(() => {
-  const availableLocales = (locales.value as LocaleObject[]).filter(i => i.code !== locale.value);
+  const availableLocales = (locales.value as LocaleObject[]).filter(i => i.code !== locale.value)
 
   const data = availableLocales.map(({ code }) => {
     return {
@@ -19,8 +19,7 @@ const items = computed<DropdownItem[][]>(() => {
   })
 
   return [data]
-});
-
+})
 
 </script>
 
@@ -52,7 +51,6 @@ const items = computed<DropdownItem[][]>(() => {
       <NuxtLink :to="switchLocalePath(availableLocale.code)">
 
         {{ availableLocale.code }}
-
 
         <Icon :name="`flag:${availableLocale.code.split('-')[1].toLowerCase()}-4x3`" color="black" />
       </NuxtLink>

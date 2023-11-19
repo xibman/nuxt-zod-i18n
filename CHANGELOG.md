@@ -1,6 +1,5 @@
 # Changelog
 
-
 ## v1.0.4
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.0.3...v1.0.4)
@@ -43,7 +42,6 @@
 
 ## v1.0.1
 
-
 ### 🏡 Chore
 
 - Initial commit ([9cf92be](https://github.com/xibman/nuxt-zod-i18n/commit/9cf92be))
@@ -51,4 +49,3 @@
 ### ❤️ Contributors
 
 - Julien Georget <julien.georget@hikoala.com>
-

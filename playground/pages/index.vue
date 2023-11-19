@@ -6,10 +6,11 @@ import { loginSchema } from '~/schema'
 
 const state = reactive({
   name: undefined,
-  email: undefined,
+  email: undefined
 })
 
-async function onSubmit(event: FormSubmitEvent<LoginDto>) {
+function onSubmit (event: FormSubmitEvent<LoginDto>) {
+  // eslint-disable-next-line no-console
   console.log(event.data)
 }
 
@@ -24,38 +25,18 @@ async function onSubmit(event: FormSubmitEvent<LoginDto>) {
       description="This example show translated zod error with a simple schema"
     />
 
-    <UForm
-      :schema="loginSchema"
-      :state="state"
-      class="flex flex-col gap-6 pt-6"
-      @submit="onSubmit"
-    >
+    <UForm :schema="loginSchema" :state="state" class="flex flex-col gap-6 pt-6" @submit="onSubmit">
       <h1 class="text-2xl font-bold">
         Account
       </h1>
       <UDivider />
-      <UFormGroup
-        label="Name"
-        name="name"
-      >
-        <UInput
-          v-model="state.name"
-          placeholder="Your name"
-        />
+      <UFormGroup label="Name" name="name">
+        <UInput v-model="state.name" placeholder="Your name" />
       </UFormGroup>
-      <UFormGroup
-        label="Email"
-        name="email"
-      >
-        <UInput
-          v-model="state.email"
-          placeholder="Your email"
-        />
+      <UFormGroup label="Email" name="email">
+        <UInput v-model="state.email" placeholder="Your email" />
       </UFormGroup>
-      <UButton
-        type="submit"
-        class="w-fit"
-      >
+      <UButton type="submit" class="w-fit">
         Save
       </UButton>
     </UForm>

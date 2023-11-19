@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@nuxt/eslint-config"]
+  "extends": ["@nuxtjs/eslint-config-typescript", "plugin:jsonc/recommended-with-json", "prettier"]
 }

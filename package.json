@@ -22,8 +22,16 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "docs:dev": "nuxi dev docs",
+    "docs:build": "nuxi build docs",
+    "docs:generate": "nuxi generate docs",
+    "docs:preview": "nuxi preview docs",
+    "fix": "npm run lint:fix && npm run format:fix",
+    "format": "prettier --config .prettierrc.mjs --ignore-path .prettierignore --list-different '**/*.{js,json,html,md}'",
+    "format:fix": "pnpm format --write",
+    "lint": "eslint --cache --ext .js,.ts,.vue,.json .",
+    "lint:fix": "pnpm lint --fix",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-    "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
@@ -34,15 +42,32 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.2.0",
-    "@nuxt/module-builder": "^0.5.3",
+    "@nuxt/module-builder": "^0.5.4",
     "@nuxt/schema": "^3.8.1",
     "@nuxt/test-utils": "^3.8.1",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
-    "@types/node": "^20.8.10",
+    "@types/node": "^20.9.2",
     "changelogen": "^0.5.5",
-    "eslint": "^8.53.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jsonc": "^2.10.0",
+    "lint-staged": "^15.1.0",
     "nuxt": "^3.8.1",
-    "vitest": "^0.33.0"
+    "prettier": "^3.1.0",
+    "vitest": "^0.34.6"
+  },
+  "lint-staged": {
+    "*.{json,md,yml}": [
+      "prettier --write"
+    ],
+    "*.{js,vue}": [
+      "prettier --write",
+      "eslint --fix --ext .js,.vue"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint --fix --ext .ts"
+    ]
   }
 }

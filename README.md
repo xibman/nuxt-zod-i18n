@@ -16,6 +16,7 @@ Check the playground for usage doc and test will come later
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
+
 - This library depends on [@nuxtjs/i18n](https://i18n.nuxtjs.org/) .
 - Provide a Global error map for zod see [Zod ERROR_HANDLING](https://zod.dev/ERROR_HANDLING?id=global-error-map)
 - Translation for zod errors based on [ZodIssueCode](https://zod.dev/ERROR_HANDLING?id=zodissuecode)
@@ -36,13 +37,11 @@ yarn add --dev nuxt-zod-i18n
 npm install --save-dev nuxt-zod-i18n
 ```
 
-2. Add `nuxt-zod-i18n` to the `modules` section of `nuxt.config.ts`
+2. Add `nuxt-zod-i18n` to the `modules` section of `nuxt.config.ts` before `@nuxtjs/i18n` module
 
 ```js
 export default defineNuxtConfig({
-  modules: [
-    'nuxt-zod-i18n'
-  ]
+  modules: ['nuxt-zod-i18n', '@nuxtjs/i18n']
 })
 ```
 
@@ -75,14 +74,12 @@ npm run release
 ```
 
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-zod-i18n/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/nuxt-zod-i18n
-
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-zod-i18n.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-downloads-href]: https://npmjs.com/package/nuxt-zod-i18n
-
 [license-src]: https://img.shields.io/npm/l/nuxt-zod-i18n.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/nuxt-zod-i18n
-
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com

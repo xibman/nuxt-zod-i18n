@@ -4,5 +4,12 @@
     "green": "green"
   },
   "myCustomError": "Custom error",
-  "myCustomErrorWithInterpolation": "My preferred colors are {first} and {second}"
+  "myCustomErrorWithInterpolation": "My preferred colors are {first} and {second}",
+  "zodI18n": {
+    "errors": {
+      "invalid_string": {
+        "url": "overload by your global translation, original translation: Invalid url"
+      }
+    }
+  }
 }

@@ -17,7 +17,7 @@ defineOgImage({
 
 <template>
   <div>
-    <ULandingHero v-if="page.hero" v-bind="page.hero">
+    <ULandingHero v-if="page.hero" v-bind="page.hero" class="md:py-24">
       <template #title>
         <MDC :value="page.hero.title" />
       </template>
@@ -25,7 +25,7 @@ defineOgImage({
       <MDC :value="page.hero.code" tag="pre" class="prose prose-primary dark:prose-invert max-w-none" />
     </ULandingHero>
 
-    <ULandingSection :title="page.features.title">
+    <ULandingSection :title="page.features.title" class="sm:py-12 md:py-12">
       <UPageGrid>
         <ULandingCard v-for="(item, index) of page.features.items" :key="index" v-bind="item" />
       </UPageGrid>

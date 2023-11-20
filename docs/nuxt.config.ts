@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxtlabs/github-module'
   ],
   ui: {
     icons: ['heroicons', 'simple-icons']
@@ -22,8 +23,11 @@ export default defineNuxtConfig({
       'DM+Sans': [400, 500, 600, 700]
     }
   },
+  github: {
+    repo: 'xibman/nuxt-zod-i18n' // Or use GITHUB_REPO in .env
+  },
   routeRules: {
-    '/api/search.json': { prerender: true },
+    '/api/search.json': { prerender: true }
   },
   // Devtools / Typescript
   devtools: { enabled: true },

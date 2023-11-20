@@ -1,67 +1,59 @@
-title: 'Nuxt UI Pro - Docs template'
-description: 'Welcome to Nuxt UI Pro documentation template.'
+title: 'Nuxt zodI18n'
+description: 'Welcome to Nuxt zodI18n documentation.'
 navigation: false
 hero:
-  title: 'Nuxt UI Pro :br [Docs template]{.text-primary}'
-  description: 'Create your documentation in seconds with this template!'
+  title: 'Nuxt [zodI18n]{.text-primary}'
+  description: 'Easily Translate Zod''s default error messages.:'
   orientation: horizontal
   links:
     - label: 'Get started'
       icon: 'i-heroicons-rocket-launch'
-      to: '/getting-started'
+      to: '/getting-started/installation'
       size: lg
-    - label: 'Documentation'
-      icon: 'i-simple-icons-nuxtdotjs'
+    - label: 'Open on Github'
+      icon: 'i-simple-icons-github'
       color: 'white'
-      to: 'https://ui.nuxt.com/pro'
+      to: 'https://github.com/xibman/nuxt-zod-i18n'
+      target: '_blank'
+      size: lg
+    - label: 'Playground'
+      icon: 'i-simple-icons-stackblitz'
+      color: 'white'
+      to: 'https://stackblitz.com/github/xibman/nuxt-zod-i18n?file=playground%2Fapp.vue'
       target: '_blank'
       size: lg
   code: |
-    ```vue [pages/\[...slug\\].vue]
-    <template>
-      <UPage>
-        <UPageHeader :title="page.title" :description="page.description" :links="page.links" />
-
-        <UPageBody prose>
-          <ContentRenderer v-if="page.body" :value="page" />
-        </UPageBody>
-
-        <template #right>
-          <UDocsToc :links="page.body.toc.links" />
-        </template>
-      </UPage>
-    </template>
+    # Quick Setup
+    ::code-group
+      ```bash [pnpm]
+      pnpm add -D nuxt-zod-i18n
+      ```
+      ```bash [yarn]
+      yarn add --dev nuxt-zod-i18n
+      ```
+      ```bash [npm]
+      npm install --save-dev nuxt-zod-i18n
+      ```
+    ::
+    ```ts [nuxt.config.ts]
+    export default defineNuxtConfig({
+      modules: ['nuxt-zod-i18n', '@nuxtjs/i18n']
+    })
     ```
 features:
-  title: 'All-in-one docs template'
+  title: 'Translate zod error message easily'
   items:
-    - title: 'Nuxt 3'
-      description: 'Powered by Nuxt 3 for optimal performances and SEO.'
-      icon: 'i-simple-icons-nuxtdotjs'
-      to: 'https://nuxt.com'
+    - title: 'i18n'
+      description: 'Multiple locale available'
+      icon: 'i-simple-icons-googletranslate'
+      to: 'https://github.com/xibman/nuxt-zod-i18n/tree/main/src/runtime/locales'
       target: '_blank'
     - title: 'Markdown'
-      description: 'Write your pages with MDC thanks to Nuxt Content.'
-      icon: 'i-simple-icons-markdown'
-      to: 'https://content.nuxt.com'
+      description: 'Integration with nuxt/i18n'
+      icon: 'i-simple-icons-nuxtdotjs'
+      to: 'https://i18n.nuxtjs.org/'
       target: '_blank'
     - title: 'Nuxt UI'
-      description: 'Offers a very large set of full customizable components.'
-      icon: 'i-heroicons-sparkles-20-solid'
-      to: 'https://ui.nuxt.com'
-      target: '_blank'
-    - title: 'TypeScript'
-      description: 'A fully typed development experience.'
-      icon: 'i-simple-icons-typescript'
-      to: 'https://www.typescriptlang.org'
-      target: '_blank'
-    - title: 'Nuxt Studio'
-      description: 'Supported by Nuxt Studio for fast updates and previews.'
-      icon: 'i-simple-icons-nuxtdotjs'
-      to: 'https://nuxt.studio'
-      target: '_blank'
-    - title: 'Search'
-      description: 'A full-text search modal empowered by Fuse.js.'
-      icon: 'i-heroicons-magnifying-glass-20-solid'
-      to: 'https://ui.nuxt.com/pro/components/docs/docs-search'
-      target: '_blank'
+      description: 'Lazy-loading of translation messages'
+      icon: 'i-heroicons-arrow-path-solid'
+

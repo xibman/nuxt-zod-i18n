@@ -7,6 +7,26 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   server: false
 })
 
+const links = computed(() => {
+  return [
+    {
+      label: 'Documentation',
+      icon: 'i-heroicons-book-open-solid',
+      to: '/getting-started',
+    },
+    {
+      label: 'Playground',
+      icon: 'i-simple-icons-stackblitz',
+      to: '/playground',
+    },
+    {
+      label: 'Releases',
+      icon: 'i-heroicons-rocket-launch-solid',
+      to: '/changelog',
+    },
+  ]
+})
+
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -25,11 +45,12 @@ useSeoMeta({
 })
 
 provide('navigation', navigation)
+provide('links', links)
 </script>
 
 <template>
   <div>
-    <Header />
+    <Header :links="links" />
 
     <UMain>
       <NuxtLayout>
@@ -40,7 +61,7 @@ provide('navigation', navigation)
     <Footer />
 
     <ClientOnly>
-      <LazyUDocsSearch :files="files" :navigation="navigation" />
+      <LazyUDocsSearch :files="files" :navigation="navigation" :links="links" />
     </ClientOnly>
 
     <UNotifications />

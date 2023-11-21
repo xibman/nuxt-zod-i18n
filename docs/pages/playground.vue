@@ -4,7 +4,7 @@ const description = 'Play online with our interactive Nuxt zodI18n playground.'
 
 useSeoMeta({
   title,
-  ogTitle: 'Nuxt UI Playground',
+  ogTitle: 'Nuxt zodI18n playground',
   description
 })
 

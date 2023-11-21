@@ -6,7 +6,7 @@ const navigation = inject<NavItem[]>('navigation', [])
 const { header } = useAppConfig()
 const { metaSymbol } = useShortcuts()
 const links = inject<Ref<any[]>>('links')
-const route = useRoute()
+
 </script>
 
 <template>
@@ -17,7 +17,6 @@ const route = useRoute()
         Nuxt <span class="text-primary">zodI18n</span>
       </template>
       <template v-else>
-        Nuxt UI Pro
         <UBadge label="Docs" variant="subtle" class="mb-0.5" />
       </template>
     </template>

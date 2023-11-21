@@ -47,6 +47,7 @@ useSeoMeta({
 })
 
 provide('navigation', navigation)
+provide('files', files)
 provide('links', links)
 </script>
 

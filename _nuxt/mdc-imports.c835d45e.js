@@ -1,0 +1,1 @@
+const e={},t={},l={theme:{light:"material-theme-lighter",default:"material-theme",dark:"material-theme-palenight"},preload:["json","js","ts","html","css","vue","diff","shell","markdown","yaml","bash","ini"]};export{l as highlight,t as rehypePlugins,e as remarkPlugins};

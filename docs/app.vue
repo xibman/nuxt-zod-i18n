@@ -42,7 +42,8 @@ useHead({
 useSeoMeta({
   ogSiteName: 'Nuxt zodi18n Documentation',
   twitterCard: 'summary_large_image',
-  ogImage: './img/og-nuxt-zod-i18n.jpeg',
+  ogImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
+  twitterImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
 })
 
 provide('navigation', navigation)

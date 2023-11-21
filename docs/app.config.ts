@@ -60,7 +60,7 @@ export default defineAppConfig({
     title: 'Table of Contents',
     bottom: {
       title: 'Community',
-      edit: 'https://github.com/xibman/nuxt-zod-i18n/docs/edit/main/content',
+      edit: 'https://github.com/xibman/nuxt-zod-i18n/tree/main/docs/content',
       links: [
         {
           icon: 'i-heroicons-star',

@@ -23,7 +23,28 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   server: false,
 })
 
+const links = computed(() => {
+  return [
+    {
+      label: 'Documentation',
+      icon: 'i-heroicons-book-open-solid',
+      to: '/getting-started',
+    },
+    {
+      label: 'Playground',
+      icon: 'i-simple-icons-stackblitz',
+      to: '/playground',
+    },
+    {
+      label: 'Releases',
+      icon: 'i-heroicons-rocket-launch-solid',
+      to: '/changelog',
+    },
+  ]
+})
+
 provide('navigation', navigation)
+provide('links', links)
 </script>
 
 <template>

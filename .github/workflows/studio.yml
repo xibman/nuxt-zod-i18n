@@ -23,9 +23,6 @@ jobs:
   # Build job
   build-and-deploy:
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: docs
 
     strategy:
       matrix:
@@ -59,30 +56,27 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.pkgman.outputs.package_manager }} install
 
-      - name: Stub Module
-        run: ${{ steps.pkgman.outputs.package_manager }} nuxt-module-build build --stub
-
-      - name: prepare Module
-        run: ${{ steps.pkgman.outputs.package_manager }} nuxt-module-build prepare
+      - name: Prepare Module
+        run: ${{ steps.pkgman.outputs.package_manager }} dev:prepare
 
       - name: Install @nuxthq/studio
         run: ${{ steps.pkgman.outputs.package_manager }} add -D @nuxthq/studio
 
       - name: Create .nuxtrc
-        run: echo $'\nautoImport=true\nmodules[]=@nuxthq/studio' >> .nuxtrc
+        run: echo $'\nautoImport=true\nmodules[]=@nuxthq/studio' >> ./docs/.nuxtrc
 
       - name: Generate
-        run: npx nuxi generate
+        run: ${{ steps.pkgman.outputs.package_manager }} docs:generate
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
           NUXT_PUBLIC_STUDIO_TOKENS: 021898e2298d7d23c1c6f39ef9c1e5c66b4fd4f9415f2a69dbb18f23b3c3016d
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
       - name: Add .nojekyll file
-        run: touch .output/public/.nojekyll
+        run: touch ./docs/.output/public/.nojekyll
 
         # Deployment job
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: docs/.output/public
+          folder: ./docs/.output/public

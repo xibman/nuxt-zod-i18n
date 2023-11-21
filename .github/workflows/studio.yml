@@ -1,4 +1,3 @@
-
 name: studio-nuxt-build
 run-name: studio nuxt build
 
@@ -17,7 +16,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -59,6 +58,9 @@ jobs:
 
       - name: Install dependencies
         run: ${{ steps.pkgman.outputs.package_manager }} install
+
+      - name: Prepare Module
+        run: ${{ steps.pkgman.outputs.package_manager }} dev:prepare
 
       - name: Install @nuxthq/studio
         run: ${{ steps.pkgman.outputs.package_manager }} add -D @nuxthq/studio

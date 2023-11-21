@@ -59,8 +59,11 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.pkgman.outputs.package_manager }} install
 
-      - name: Prepare Module
-        run: ${{ steps.pkgman.outputs.package_manager }} dev:prepare
+      - name: Stub Module
+        run: ${{ steps.pkgman.outputs.package_manager }} nuxt-module-build build --stub
+
+      - name: prepare Module
+        run: ${{ steps.pkgman.outputs.package_manager }} nuxt-module-build prepare
 
       - name: Install @nuxthq/studio
         run: ${{ steps.pkgman.outputs.package_manager }} add -D @nuxthq/studio

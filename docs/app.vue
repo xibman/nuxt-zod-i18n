@@ -40,8 +40,9 @@ useHead({
 })
 
 useSeoMeta({
-  ogSiteName: 'Nuxt UI Pro - Docs template',
-  twitterCard: 'summary_large_image'
+  ogSiteName: 'Nuxt zodi18n Documentation',
+  twitterCard: 'summary_large_image',
+  ogImage: './img/og-nuxt-zod-i18n.jpeg',
 })
 
 provide('navigation', navigation)

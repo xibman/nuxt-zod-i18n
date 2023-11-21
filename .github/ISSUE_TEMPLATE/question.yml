@@ -1,0 +1,14 @@
+name: '💬 Question'
+description: Ask a question about the module.
+labels: ['question']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before asking a question, please make sure that you have read through our [documentation](https://xibman-nuxt-zod-i18n.nuxt.space) and existing [issues](https://github.com/xibman/nuxt-zod-i18n/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true

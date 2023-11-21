@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     }
   },
   github: {
-    repo: 'xibman/nuxt-zod-i18n' // Or use GITHUB_REPO in .env
+    repo: 'xibman/nuxt-zod-i18n'
   },
   routeRules: {
     '/api/search.json': { prerender: true }

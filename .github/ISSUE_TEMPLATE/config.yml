@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Documentation
+    url: https://xibman-nuxt-zod-i18n.nuxt.space
+    about: Check the documentation for guides and examples.

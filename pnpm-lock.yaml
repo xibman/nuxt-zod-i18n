@@ -76,8 +76,8 @@ importers:
         specifier: ^2.9.0
         version: 2.9.0(nuxt@3.8.2)(rollup@3.29.4)(vue@3.3.8)
       '@nuxt/ui-pro':
-        specifier: npm:@nuxt/ui-pro-edge@0.4.2-28343172.54e30a6
-        version: /@nuxt/ui-pro-edge@0.4.2-28343172.54e30a6(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)(vue@3.3.8)(webpack@5.89.0)
+        specifier: npm:@nuxt/ui-pro-edge@0.4.2-28343422.cbbfed1
+        version: /@nuxt/ui-pro-edge@0.4.2-28343422.cbbfed1(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)(vue@3.3.8)(webpack@5.89.0)
       '@nuxtjs/fontaine':
         specifier: ^0.4.1
         version: 0.4.1(rollup@3.29.4)
@@ -2247,8 +2247,8 @@ packages:
       - webpack
     dev: false
 
-  /@nuxt/ui-pro-edge@0.4.2-28343172.54e30a6(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)(vue@3.3.8)(webpack@5.89.0):
-    resolution: {integrity: sha512-YCTCc09+MnJH0gAjb3lOsau4gGkwJnvRYMe45RmzZxSDs079a7MTBDO4N7bhJhOYT+rXD5EZyPbXfNaznHC5vA==}
+  /@nuxt/ui-pro-edge@0.4.2-28343422.cbbfed1(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)(vue@3.3.8)(webpack@5.89.0):
+    resolution: {integrity: sha512-Y34MsAx2AjLjcauoi2fSgnQzqPQrJN5KG6xBLCcPlpnNkTXx4mhlazV8K5ywBh4d+LOvt+bSxeU2LLIzsNS5fw==}
     dependencies:
       '@nuxt/ui': /@nuxt/ui-edge@2.10.0-28343161.11ccbbb(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)(vue@3.3.8)(webpack@5.89.0)
       '@vueuse/core': 10.6.1(vue@3.3.8)
@@ -9449,7 +9449,7 @@ packages:
     dependencies:
       '@iconify/collections': 1.0.357
       '@iconify/vue': 4.1.1(vue@3.3.8)
-      '@nuxt/devtools-kit': 1.0.2(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)
+      '@nuxt/devtools-kit': 1.0.3(nuxt@3.8.2)(rollup@3.29.4)(vite@4.5.0)
       '@nuxt/kit': 3.8.2(rollup@3.29.4)
     transitivePeerDependencies:
       - nuxt

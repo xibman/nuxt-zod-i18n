@@ -12,7 +12,7 @@ import {
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   dateFormat: Intl.DateTimeFormatOptions;
-  codesMap?: Record<string, string>;
+  localeCodesMapping?: Record<string, string>;
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -64,7 +64,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.runtimeConfig.public.zodI18n,
       {
         dateFormat: options.dateFormat,
-        codesMap: options.codesMap
+        localeCodesMapping: options.localeCodesMapping
       }
     )
 
@@ -74,7 +74,7 @@ export default defineNuxtModule<ModuleOptions>({
         langDir: resolve('./runtime/locales'),
         locales: languageFiles.map(file => ({
           file,
-          code: options.codesMap?.[file.replace('.json', '')] || file.replace('.json', '')
+          code: options.localeCodesMapping?.[file.replace('.json', '')] || file.replace('.json', '')
         }))
       })
     })

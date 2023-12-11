@@ -4,33 +4,29 @@ import type { FormSubmitEvent } from '#ui/types'
 
 import { websiteSchema } from '~/schema'
 
+const { t } = useI18n()
 const state = reactive({
   name: 'My website',
-  url: 'lol'
+  url: 'Not an url'
 })
 
-function onSubmit (event: FormSubmitEvent<WebsiteDto>) {
+function onSubmit(event: FormSubmitEvent<WebsiteDto>) {
   // eslint-disable-next-line no-console
   console.log(event.data)
 }
-
 </script>
 <template>
   <div class="mx-auto w-full max-w-4xl">
     <UAlert
-      icon="i-heroicons-command-line"
-      color="primary"
-      variant="solid"
-      title="Heads up!"
-      description="This example show translated zod error with translation overloaded by your global translations"
-    />
+icon="i-heroicons-command-line" color="primary" variant="solid" :title="t('pages.overload.alert.title')"
+      :description="t('pages.overload.alert.description')" />
 
     <UForm :schema="websiteSchema" :state="state" class="flex flex-col gap-6 pt-6" @submit="onSubmit">
       <h1 class="text-2xl font-bold">
-        Website info
+        {{ t('pages.overload.title') }}
       </h1>
       <UDivider />
-      <UFormGroup label="Name" name="name">
+      <UFormGroup :label="t('dictionary.name')" name="name">
         <UInput v-model="state.name" placeholder="Website name" />
       </UFormGroup>
       <UFormGroup label="Url" name="url">

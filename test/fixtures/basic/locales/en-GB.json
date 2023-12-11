@@ -1,7 +1,7 @@
 {
   "colors": {
-    "red": "red",
-    "green": "green"
+    "green": "green",
+    "red": "red"
   },
   "myCustomError": "Custom error",
   "myCustomErrorWithInterpolation": "My preferred colors are {first} and {second}"

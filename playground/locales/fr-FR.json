@@ -1,8 +1,48 @@
 {
   "colors": {
-    "red": "rouge",
-    "green": "vert"
+    "green": "vert",
+    "red": "rouge"
+  },
+  "dictionary": {
+    "email": "Email",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "name": "Nom",
+    "save": "Sauvegarder",
+    "url": "Url",
+    "yourPlaceholder": " Votre {input}"
   },
   "myCustomError": "Erreur custom",
-  "myCustomErrorWithInterpolation": "Mes couleurs préférées sont {first} et {second}"
+  "myCustomErrorWithInterpolation": "Mes couleurs préférées sont {first} et {second}",
+  "pages": {
+    "complex": {
+      "alert": {
+        "description": "Cet exemple montre une erreur zod traduite avec un schéma complexe et une valeur interpolée dans l'erreur.",
+        "title": "@:pages.index.alert.title"
+      },
+      "preferredColor": "Couleur préférée",
+      "title": "@:pages.index.title"
+    },
+    "index": {
+      "alert": {
+        "description": "Cet exemple montre une erreur de zod traduite avec un schéma simple",
+        "title": "Information !"
+      },
+      "title": "Compte"
+    },
+    "overload": {
+      "alert": {
+        "description": "Cet exemple montre l'erreur zod traduite avec la traduction surchargée par vos traductions globales.",
+        "title": "@:pages.index.alert.title"
+      },
+      "title": "Informations Site web"
+    }
+  },
+  "zodI18n": {
+    "errors": {
+      "invalid_string": {
+        "url": "Surcharge par la traduction globale, traduction originale : Invalid url"
+      }
+    }
+  }
 }

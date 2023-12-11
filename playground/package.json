@@ -8,7 +8,7 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "@iconify-json/flag": "^1.1.43",
+    "@iconify-json/flag": "^1.1.46",
     "@nuxt/ui": "npm:@nuxt/ui-edge@latest",
     "zod": "^3.22.4"
   },

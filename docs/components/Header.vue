@@ -29,7 +29,8 @@ const links = inject<Ref<any[]>>('links')
       <UColorModeButton v-if="header?.colorMode" />
 
       <template v-if="header?.links">
-        <UButton v-for="(link, index) of header.links" :key="index"
+        <UButton
+v-for="(link, index) of header.links" :key="index"
           v-bind="{ color: 'gray', variant: 'ghost', ...link }" />
       </template>
     </template>

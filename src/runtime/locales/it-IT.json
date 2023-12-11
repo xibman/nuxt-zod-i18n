@@ -1,7 +1,7 @@
 {
   "zodI18n": {
     "errors": {
-      "custom": "Inserimento non valido",
+      "custom": "Dato non valido",
       "invalid_arguments": "Argomenti della funzione non validi",
       "invalid_date": "Data non valida",
       "invalid_enum_value": "Valore enum non valido. Atteso {options} per la revisione, ricevuto '{received}'.",
@@ -9,27 +9,27 @@
       "invalid_literal": "Valore letterale non valido, atteso {expected}",
       "invalid_return_type": "Tipo di ritorno della funzione non valido",
       "invalid_string": {
-        "cuid": "Non valido {validation}",
-        "datetime": "Non valido {validation}",
-        "email": "Non valido {validation}",
-        "endsWith": "Input non valido: deve terminare con \"{endsWith}\".",
+        "cuid": "{validation} non valido",
+        "datetime": "{validation} non valide",
+        "email": "{validation} non valida",
+        "endsWith": "Dato non valido: deve terminare con \"{endsWith}\".",
         "regex": "Invalido",
-        "startsWith": "Input non valido: deve iniziare con \"{startsWith}\".",
-        "url": "Non valido {validation}",
-        "uuid": "Non valido {validation}"
+        "startsWith": "Dato non valido: deve iniziare con \"{startsWith}\".",
+        "url": "{validation} non valido",
+        "uuid": "{validation} non valido"
       },
       "invalid_type": "Previsto {expected}, ricevuto {received}",
       "invalid_type_received_undefined": "Richiesto",
-      "invalid_union": "Inserimento non valido",
+      "invalid_union": "Dato non valido",
       "invalid_union_discriminator": "Valore discriminante non valido. Previsto {options} da rivedere",
       "not_finite": "Il numero deve essere finito",
       "not_multiple_of": "Il numero deve essere un multiplo di {multipleOf}",
       "required": "Richiesto",
       "too_big": {
         "array": {
-          "exact": "La matrice deve contenere esattamente {maximum} elementi",
-          "inclusive": "La matrice deve contenere al massimo {maximum} elementi.",
-          "not_inclusive": "La matrice deve contenere meno di {maximum} elementi"
+          "exact": "Il vettore deve contenere esattamente {maximum} elementi",
+          "inclusive": "Il vettore deve contenere al massimo {maximum} elementi.",
+          "not_inclusive": "Il vettore deve contenere meno di {maximum} elementi"
         },
         "date": {
           "exact": "La data deve essere esattamente {maximum}",
@@ -42,9 +42,9 @@
           "not_inclusive": "Il numero deve essere inferiore a {maximum}"
         },
         "set": {
-          "exact": "Inserimento non valido",
-          "inclusive": "Inserimento non valido",
-          "not_inclusive": "Inserimento non valido"
+          "exact": "Dato non valido",
+          "inclusive": "Dato non valido",
+          "not_inclusive": "Dato non valido"
         },
         "string": {
           "exact": "La stringa deve contenere esattamente {maximum} caratteri",
@@ -54,9 +54,9 @@
       },
       "too_small": {
         "array": {
-          "exact": "La matrice deve contenere esattamente {minimum} elementi",
-          "inclusive": "La matrice deve contenere almeno {minimum} elementi.",
-          "not_inclusive": "La matrice deve contenere più di {minimum} elementi"
+          "exact": "Il vettore deve contenere esattamente {minimum} elementi",
+          "inclusive": "Il vettore deve contenere almeno {minimum} elementi.",
+          "not_inclusive": "Il vettore deve contenere più di {minimum} elementi"
         },
         "date": {
           "exact": "La data deve essere esattamente {minimum}",
@@ -69,9 +69,9 @@
           "not_inclusive": "Il numero deve essere maggiore di {minimum}"
         },
         "set": {
-          "exact": "Inserimento non valido",
-          "inclusive": "Inserimento non valido",
-          "not_inclusive": "Inserimento non valido"
+          "exact": "Dato non valido",
+          "inclusive": "Dato non valido",
+          "not_inclusive": "Dato non valido"
         },
         "string": {
           "exact": "La stringa deve contenere esattamente {minimum} caratteri",
@@ -79,37 +79,37 @@
           "not_inclusive": "La stringa deve contenere più di {minimum} caratteri"
         }
       },
-      "unrecognized_keys": "Chiave(e) non riconosciuta(e) nell'oggetto: {keys} da rivedere"
+      "unrecognized_keys": "Chiave(i) non riconosciuta(e) nell'oggetto: {keys} da rivedere"
     },
     "types": {
-      "array": "array",
-      "bigint": "bigint",
-      "boolean": "boolean",
-      "date": "date",
+      "array": "vettore",
+      "bigint": "intero grande",
+      "boolean": "booleano",
+      "date": "data",
       "float": "float",
-      "function": "function",
-      "integer": "integer",
-      "map": "map",
+      "function": "funzione",
+      "integer": "intero",
+      "map": "mappa",
       "nan": "nan",
       "never": "never",
       "null": "null",
-      "number": "number",
-      "object": "object",
-      "promise": "promise",
+      "number": "numero",
+      "object": "oggetto",
+      "promise": "promessa",
       "set": "set",
-      "string": "string",
-      "symbol": "symbol",
+      "string": "stringa",
+      "symbol": "simbolo",
       "undefined": "undefined",
       "unknown": "unknown",
       "void": "void"
     },
     "validations": {
-      "cuid": "cuid",
+      "cuid": "CUID",
       "datetime": "Data e ora",
       "email": "Email",
-      "regex": "regex",
+      "regex": "Regex",
       "url": "URL",
-      "uuid": "uuid"
+      "uuid": "UUID"
     }
   }
 }

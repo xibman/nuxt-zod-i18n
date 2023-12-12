@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.3.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- **module:** Add locales mapping to ModuleOptions ([#14](https://github.com/xibman/nuxt-zod-i18n/pull/14))
+
+### 🏡 Chore
+
+- **global:** Update dependencies ([920ea44](https://github.com/xibman/nuxt-zod-i18n/commit/920ea44))
+
+### ❤️ Contributors
+
+- Daniele Nicosia <zdanymc@gmail.com>
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.1.0...v1.2.0)

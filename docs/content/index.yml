@@ -48,7 +48,7 @@ features:
       icon: 'i-simple-icons-googletranslate'
       to: 'https://github.com/xibman/nuxt-zod-i18n/tree/main/src/runtime/locales'
       target: '_blank'
-    - title: 'Markdown'
+    - title: 'Nuxt i18n'
       description: 'Integration with nuxt/i18n'
       icon: 'i-simple-icons-nuxtdotjs'
       to: 'https://i18n.nuxtjs.org/'

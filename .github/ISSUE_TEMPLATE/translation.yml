@@ -3,9 +3,9 @@ description: Add or improve translation
 labels: ['translation']
 body:
   - type: markdown
-      attributes:
-        value: |
-        Please use https://localazy.com/p/zod-i18n to add or modify translation then create a pull request
+    attributes:
+      value: |
+      Please use https://localazy.com/p/zod-i18n to add or modify translation then create a pull request
   - type: textarea
     id: description
     attributes:

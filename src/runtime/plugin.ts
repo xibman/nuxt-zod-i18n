@@ -1,10 +1,9 @@
 import type { Composer } from '@nuxtjs/i18n/dist/runtime/composables'
-
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { defaultErrorMap, z, ZodIssueCode, ZodParsedType } from 'zod'
 import { joinValues, jsonStringifyReplacer, getKeyAndValues } from './utils'
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(nuxtApp => {
   const { dateFormat } = useRuntimeConfig().public.zodI18n
   const i18n = nuxtApp.$i18n as Composer
   const { t, d } = i18n
@@ -78,44 +77,26 @@ export default defineNuxtPlugin((nuxtApp) => {
       case ZodIssueCode.too_small:
         message = t(
           `zodI18n.errors.too_small.${error.type}.${
-            error.exact
-              ? 'exact'
-              : error.inclusive
-              ? 'inclusive'
-              : 'not_inclusive'
+            error.exact ? 'exact' : error.inclusive ? 'inclusive' : 'not_inclusive'
           }`,
           {
-            minimum:
-              error.type === 'date'
-                ? d(new Date(error.minimum as number), dateFormat)
-                : error.minimum
+            minimum: error.type === 'date' ? d(new Date(error.minimum as number), dateFormat) : error.minimum
           }
         )
         break
       case ZodIssueCode.too_big:
         message = t(
           `zodI18n.errors.too_big.${error.type}.${
-            error.exact
-              ? 'exact'
-              : error.inclusive
-              ? 'inclusive'
-              : 'not_inclusive'
+            error.exact ? 'exact' : error.inclusive ? 'inclusive' : 'not_inclusive'
           }`,
           {
-            maximum:
-              error.type === 'date'
-                ? d(new Date(error.maximum as number), dateFormat)
-                : error.maximum
+            maximum: error.type === 'date' ? d(new Date(error.maximum as number), dateFormat) : error.maximum
           }
         )
         break
       case ZodIssueCode.custom:
         // eslint-disable-next-line no-case-declarations
-        const { key, values } = getKeyAndValues(
-          error.params?.i18n,
-          'zodI18n.errors.custom',
-          i18n
-        )
+        const { key, values } = getKeyAndValues(error.params?.i18n, 'zodI18n.errors.custom', i18n)
 
         message = t(key, values)
         break

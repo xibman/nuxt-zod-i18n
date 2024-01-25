@@ -3,7 +3,6 @@ import { defu } from 'defu'
 import { addPlugin, createResolver, defineNuxtModule, isNuxt3, useLogger } from '@nuxt/kit'
 import type { NuxtI18nOptions } from '@nuxtjs/i18n/dist/module'
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables'
-import type { Context } from 'vitest'
 import { getNormalizedLocales } from './utils'
 
 // Module options TypeScript interface definition

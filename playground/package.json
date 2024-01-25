@@ -13,7 +13,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@8.0.0-rc.9-28370094.38d234a",
+    "@nuxtjs/i18n": "^8.0.0",
     "nuxt": "latest"
   }
 }

@@ -1,5 +1,36 @@
 # Changelog
 
+## v1.4.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.3.0...v1.4.0)
+
+### 🚀 Enhancements
+
+- **locales loading:** Use nuxt/i18n config to restrict module locale to load ([5a62629](https://github.com/xibman/nuxt-zod-i18n/commit/5a62629))
+
+### 🩹 Fixes
+
+- **issue template:** Fix ident problem ([afce42b](https://github.com/xibman/nuxt-zod-i18n/commit/afce42b))
+- **issue template:** Fix wrong formated lines ([ae80e7b](https://github.com/xibman/nuxt-zod-i18n/commit/ae80e7b))
+- **issue template:** Fix name for translation template ([3464cdd](https://github.com/xibman/nuxt-zod-i18n/commit/3464cdd))
+
+### 📖 Documentation
+
+- **github:** Add issue template for translations ([b119792](https://github.com/xibman/nuxt-zod-i18n/commit/b119792))
+- **translation:** Add link to localazy translation interface ([e7005f9](https://github.com/xibman/nuxt-zod-i18n/commit/e7005f9))
+
+### 🏡 Chore
+
+- Update deps ([9f17aaf](https://github.com/xibman/nuxt-zod-i18n/commit/9f17aaf))
+
+### 🎨 Styles
+
+- Linting ([41b99cb](https://github.com/xibman/nuxt-zod-i18n/commit/41b99cb))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.2.0...v1.3.0)

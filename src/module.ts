@@ -63,7 +63,6 @@ export default defineNuxtModule<ModuleOptions>({
       logger.error('Nuxt 3 required')
     }
 
-    // @ts-expect-error - type not recognized
     const appLocalesCode = getNormalizedLocales(i18nOptions && i18nOptions?.locales ? i18nOptions.locales : []).map(
       ({ code }) => code
     )

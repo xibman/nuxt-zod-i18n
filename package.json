@@ -37,27 +37,27 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@intlify/shared": "^9.9.0",
-    "@nuxt/kit": "^3.8.2",
-    "defu": "^6.1.3",
+    "@intlify/shared": "^9.10.2",
+    "@nuxt/kit": "^3.11.1",
+    "defu": "^6.1.4",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/module-builder": "^0.5.4",
-    "@nuxt/schema": "^3.8.2",
-    "@nuxt/test-utils": "^3.8.1",
+    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/schema": "^3.11.1",
+    "@nuxt/test-utils": "^3.12.0",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/i18n": "^8.0.0",
-    "@types/node": "^20.10.4",
+    "@nuxtjs/i18n": "^8.2.0",
+    "@types/node": "^20.11.30",
     "changelogen": "^0.5.5",
-    "eslint": "^8.55.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsonc": "^2.10.0",
-    "lint-staged": "^15.2.0",
-    "nuxt": "^3.8.2",
-    "prettier": "^3.1.1",
-    "vitest": "^1.0.4"
+    "eslint-plugin-jsonc": "^2.14.1",
+    "lint-staged": "^15.2.2",
+    "nuxt": "^3.11.1",
+    "prettier": "^3.2.5",
+    "vitest": "^1.4.0"
   },
   "lint-staged": {
     "*.{json,md,yml}": [

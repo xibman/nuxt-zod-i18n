@@ -23,7 +23,7 @@ const links = inject<Ref<any[]>>('links')
 
     <template #right>
       <UTooltip text="Search" :shortcuts="[metaSymbol, 'K']">
-        <UDocsSearchButton label="Search..." />
+        <UContentSearchButton label="Search..." />
       </UTooltip>
 
       <UColorModeButton v-if="header?.colorMode" />

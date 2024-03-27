@@ -1,13 +1,6 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
-  modules: [
-    '@nuxt/content',
-    '@nuxt/ui',
-    '@nuxtjs/fontaine',
-    '@nuxtjs/google-fonts',
-    'nuxt-og-image',
-    '@nuxtlabs/github-module'
-  ],
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/fontaine', '@nuxtjs/google-fonts', 'nuxt-og-image'],
   ui: {
     icons: ['heroicons', 'simple-icons']
   },
@@ -21,9 +14,6 @@ export default defineNuxtConfig({
     families: {
       'DM+Sans': [400, 500, 600, 700]
     }
-  },
-  github: {
-    repo: 'xibman/nuxt-zod-i18n'
   },
   routeRules: {
     '/api/search.json': { prerender: true }

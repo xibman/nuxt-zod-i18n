@@ -22,7 +22,8 @@ const links = computed(() => {
     {
       label: 'Releases',
       icon: 'i-heroicons-rocket-launch-solid',
-      to: '/changelog',
+      to: 'https://github.com/xibman/nuxt-zod-i18n/releases',
+      target: '_blank'
     },
   ]
 })
@@ -42,8 +43,11 @@ useHead({
 useSeoMeta({
   ogSiteName: 'Nuxt zodi18n Documentation',
   twitterCard: 'summary_large_image',
+  twitterTitle: 'Nuxt zodi18n Documentation',
+  twitterDescription: 'Nuxt zodi18n Documentation',
   ogImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
   twitterImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
+  ogUrl: '[og:url]'
 })
 
 provide('navigation', navigation)
@@ -64,7 +68,7 @@ provide('links', links)
     <Footer />
 
     <ClientOnly>
-      <LazyUDocsSearch :files="files" :navigation="navigation" :links="links" />
+      <LazyUContentSearch :files="files" :navigation="navigation" :links="links" />
     </ClientOnly>
 
     <UNotifications />

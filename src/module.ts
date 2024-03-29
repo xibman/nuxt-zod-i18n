@@ -1,8 +1,7 @@
 import { readdir } from 'node:fs/promises'
 import { defu } from 'defu'
 import { addPlugin, createResolver, defineNuxtModule, isNuxt3, useLogger } from '@nuxt/kit'
-import type { NuxtI18nOptions } from '@nuxtjs/i18n/dist/module'
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables'
+import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
 import { getNormalizedLocales } from './utils'
 
 // Module options TypeScript interface definition
@@ -56,16 +55,16 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     if (checkI18nAvailable) {
-      logger.error('Nuxt I18n required')
+      logger.fatal('Nuxt I18n required')
     }
 
     if (!isNuxt3()) {
       logger.error('Nuxt 3 required')
     }
 
-    const appLocalesCode = getNormalizedLocales(i18nOptions && i18nOptions?.locales ? i18nOptions.locales : []).map(
-      ({ code }) => code
-    )
+    const appLocalesCode = getNormalizedLocales(
+      i18nOptions && (i18nOptions as NuxtI18nOptions)?.locales ? (i18nOptions as NuxtI18nOptions).locales : []
+    ).map(({ code }) => code)
 
     const languageFiles = await readdir(resolve('./runtime/locales'))
 

@@ -1,5 +1,30 @@
 # Changelog
 
+## v1.5.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.4.0...v1.5.0)
+
+### 🚀 Enhancements
+
+- **i18n:** Add translation for both simplified and traditional Chinese ([#21](https://github.com/xibman/nuxt-zod-i18n/pull/21))
+
+### 🩹 Fixes
+
+- **typing:** Correct @nuxtjs/i18n typing imports ([9b0855f](https://github.com/xibman/nuxt-zod-i18n/commit/9b0855f))
+
+### 💅 Refactors
+
+- **ts:** Remove comment to ignore type for getNormalizedLocales ([1d3c6d0](https://github.com/xibman/nuxt-zod-i18n/commit/1d3c6d0))
+
+### 🎨 Styles
+
+- **linting:** Apply linting to new zh translations ([d296b4a](https://github.com/xibman/nuxt-zod-i18n/commit/d296b4a))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+- Kyle Xie ([@KyleXie](http://github.com/KyleXie))
+
 ## v1.4.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.3.0...v1.4.0)

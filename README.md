@@ -27,14 +27,7 @@ Check the playground for usage doc and test will come later
 1. Add `nuxt-zod-i18n` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D nuxt-zod-i18n
-
-# Using yarn
-yarn add --dev nuxt-zod-i18n
-
-# Using npm
-npm install --save-dev nuxt-zod-i18n
+npx nuxi@latest module add nuxt-zod-i18n
 ```
 
 2. Add `nuxt-zod-i18n` to the `modules` section of `nuxt.config.ts` before `@nuxtjs/i18n` module

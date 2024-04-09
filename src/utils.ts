@@ -1,6 +1,5 @@
-import type { NuxtI18nOptions } from '@nuxtjs/i18n'
+import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
 import { isString } from '@intlify/shared'
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables'
 
 export function getNormalizedLocales(locales: NuxtI18nOptions['locales']): LocaleObject[] {
   locales = locales || []

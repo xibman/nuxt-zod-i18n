@@ -6,6 +6,7 @@ import { getNormalizedLocales } from './utils'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
+  useModuleLocale: boolean
   dateFormat: Intl.DateTimeFormatOptions
   localeCodesMapping?: Record<string, string>
 }
@@ -20,6 +21,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
+    useModuleLocale: true,
     dateFormat: {
       day: 'numeric',
       month: 'long',
@@ -62,31 +64,34 @@ export default defineNuxtModule<ModuleOptions>({
       logger.error('Nuxt 3 required')
     }
 
-    const appLocalesCode = getNormalizedLocales(
-      i18nOptions && (i18nOptions as NuxtI18nOptions)?.locales ? (i18nOptions as NuxtI18nOptions).locales : []
-    ).map(({ code }) => code)
+    if (options.useModuleLocale) {
+      const appLocalesCode = getNormalizedLocales(
+        i18nOptions && (i18nOptions as NuxtI18nOptions)?.locales ? (i18nOptions as NuxtI18nOptions).locales : []
+      ).map(({ code }) => code)
 
-    const languageFiles = await readdir(resolve('./runtime/locales'))
+      const languageFiles = await readdir(resolve('./runtime/locales'))
 
-    const locales = languageFiles.reduce<LocaleObject[]>((acc, file) => {
-      const code = options.localeCodesMapping?.[file.replace('.json', '')] || file.replace('.json', '')
-      if (appLocalesCode.includes(code)) {
-        acc.push({ file, code })
-      }
+      const locales = languageFiles.reduce<LocaleObject[]>((acc, file) => {
+        const code = options.localeCodesMapping?.[file.replace('.json', '')] || file.replace('.json', '')
+        if (appLocalesCode.includes(code)) {
+          acc.push({ file, code })
+        }
 
-      return acc
-    }, [])
+        return acc
+      }, [])
 
+      nuxt.hook('i18n:registerModule', register => {
+        register({
+          langDir: resolve('./runtime/locales'),
+          locales
+        })
+      })
+    }
+
+    // @ts-expect-error generated type
     nuxt.options.runtimeConfig.public.zodI18n = defu(nuxt.options.runtimeConfig.public.zodI18n, {
       dateFormat: options.dateFormat,
       localeCodesMapping: options.localeCodesMapping
-    })
-
-    nuxt.hook('i18n:registerModule', register => {
-      register({
-        langDir: resolve('./runtime/locales'),
-        locales
-      })
     })
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`

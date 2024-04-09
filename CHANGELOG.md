@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.6.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.5.0...v1.6.0)
+
+### 🚀 Enhancements
+
+- **module option:** Add new option useModuleLocale to toggle module locale loading ([3fefe9c](https://github.com/xibman/nuxt-zod-i18n/commit/3fefe9c))
+
+### 🩹 Fixes
+
+- **plugin loading strategy:** Load plugin in parallel mode with explicit dependency to i18n:plugin ([e85d879](https://github.com/xibman/nuxt-zod-i18n/commit/e85d879))
+
+### 💅 Refactors
+
+- **typing:** Rework type import from @nuxt/i18n ([57806a2](https://github.com/xibman/nuxt-zod-i18n/commit/57806a2))
+
+### 📖 Documentation
+
+- Use new `nuxi module add` command in installation ([#24](https://github.com/xibman/nuxt-zod-i18n/pull/24))
+- **modules options:** Add doc for new module option useModuleLocale ([5f181ad](https://github.com/xibman/nuxt-zod-i18n/commit/5f181ad))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+
 ## v1.5.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.4.0...v1.5.0)

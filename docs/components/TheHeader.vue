@@ -5,8 +5,7 @@ const navigation = inject<NavItem[]>('navigation', [])
 
 const { header } = useAppConfig()
 const { metaSymbol } = useShortcuts()
-const links = inject<Ref<any[]>>('links')
-
+const links = inject<Ref<{ label: string, icon: string, to: string, target?: string }[]>>('links')
 </script>
 
 <template>
@@ -17,12 +16,19 @@ const links = inject<Ref<any[]>>('links')
         Nuxt <span class="text-primary">zodI18n</span>
       </template>
       <template v-else>
-        <UBadge label="Docs" variant="subtle" class="mb-0.5" />
+        <UBadge
+          label="Docs"
+          variant="subtle"
+          class="mb-0.5"
+        />
       </template>
     </template>
 
     <template #right>
-      <UTooltip text="Search" :shortcuts="[metaSymbol, 'K']">
+      <UTooltip
+        text="Search"
+        :shortcuts="[metaSymbol, 'K']"
+      >
         <UContentSearchButton label="Search..." />
       </UTooltip>
 
@@ -30,17 +36,26 @@ const links = inject<Ref<any[]>>('links')
 
       <template v-if="header?.links">
         <UButton
-v-for="(link, index) of header.links" :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }" />
+          v-for="(link, index) of header.links"
+          :key="index"
+          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
+        />
       </template>
     </template>
 
     <template #panel>
       <UAsideLinks :links="links" />
 
-      <UDivider type="dashed" class="mt-4 mb-3" />
+      <UDivider
+        type="dashed"
+        class="mt-4 mb-3"
+      />
 
-      <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="false" default-open />
+      <UNavigationTree
+        :links="mapContentNavigation(navigation)"
+        :multiple="false"
+        default-open
+      />
     </template>
   </UHeader>
 </template>

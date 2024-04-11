@@ -1,14 +1,14 @@
 import type { Composer } from 'vue-i18n'
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 import { defaultErrorMap, z, ZodIssueCode, ZodParsedType } from 'zod'
 import { joinValues, jsonStringifyReplacer, getKeyAndValues } from './utils'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin({
   name: 'zodI18n:plugin',
   // @ts-expect-error plugin from @nuxt/i18n
   dependsOn: ['i18n:plugin'],
   parallel: true,
-  setup: nuxtApp => {
+  setup: (nuxtApp) => {
     const { dateFormat } = useRuntimeConfig().public.zodI18n
     const i18n = nuxtApp.$i18n as Composer
     const { t, d } = i18n
@@ -22,21 +22,22 @@ export default defineNuxtPlugin({
         case ZodIssueCode.invalid_type:
           if (error.received === ZodParsedType.undefined) {
             message = t('zodI18n.errors.invalid_type_received_undefined')
-          } else {
+          }
+          else {
             message = t('zodI18n.errors.invalid_type', {
               expected: error.expected,
-              received: error.received
+              received: error.received,
             })
           }
           break
         case ZodIssueCode.invalid_literal:
           message = t('zodI18n.errors.invalid_literal', {
-            expected: JSON.stringify(error.expected, jsonStringifyReplacer)
+            expected: JSON.stringify(error.expected, jsonStringifyReplacer),
           })
           break
         case ZodIssueCode.unrecognized_keys:
           message = t('zodI18n.errors.unrecognized_keys', {
-            keys: joinValues(error.keys, ', ')
+            keys: joinValues(error.keys, ', '),
           })
           break
         case ZodIssueCode.invalid_union:
@@ -44,13 +45,13 @@ export default defineNuxtPlugin({
           break
         case ZodIssueCode.invalid_union_discriminator:
           message = t('zodI18n.errors.invalid_union_discriminator', {
-            options: joinValues(error.options)
+            options: joinValues(error.options),
           })
           break
         case ZodIssueCode.invalid_enum_value:
           message = t('zodI18n.errors.invalid_enum_value', {
             options: joinValues(error.options),
-            received: error.received
+            received: error.received,
           })
           break
         case ZodIssueCode.invalid_arguments:
@@ -66,16 +67,18 @@ export default defineNuxtPlugin({
           if (typeof error.validation === 'object') {
             if ('startsWith' in error.validation) {
               message = t('zodI18n.errors.invalid_string.startsWith', {
-                startsWith: error.validation.startsWith
-              })
-            } else if ('endsWith' in error.validation) {
-              message = t('zodI18n.errors.invalid_string.endsWith', {
-                endsWith: error.validation.endsWith
+                startsWith: error.validation.startsWith,
               })
             }
-          } else {
+            else if ('endsWith' in error.validation) {
+              message = t('zodI18n.errors.invalid_string.endsWith', {
+                endsWith: error.validation.endsWith,
+              })
+            }
+          }
+          else {
             message = t(`zodI18n.errors.invalid_string.${error.validation}`, {
-              validation: t(`zodI18n.validations.${error.validation}`)
+              validation: t(`zodI18n.validations.${error.validation}`),
             })
           }
           break
@@ -85,8 +88,8 @@ export default defineNuxtPlugin({
               error.exact ? 'exact' : error.inclusive ? 'inclusive' : 'not_inclusive'
             }`,
             {
-              minimum: error.type === 'date' ? d(new Date(error.minimum as number), dateFormat) : error.minimum
-            }
+              minimum: error.type === 'date' ? d(new Date(error.minimum as number), dateFormat) : error.minimum,
+            },
           )
           break
         case ZodIssueCode.too_big:
@@ -95,8 +98,8 @@ export default defineNuxtPlugin({
               error.exact ? 'exact' : error.inclusive ? 'inclusive' : 'not_inclusive'
             }`,
             {
-              maximum: error.type === 'date' ? d(new Date(error.maximum as number), dateFormat) : error.maximum
-            }
+              maximum: error.type === 'date' ? d(new Date(error.maximum as number), dateFormat) : error.maximum,
+            },
           )
           break
         case ZodIssueCode.custom:
@@ -110,7 +113,7 @@ export default defineNuxtPlugin({
           break
         case ZodIssueCode.not_multiple_of:
           message = t('zodI18n.errors.not_multiple_of', {
-            multipleOf: error.multipleOf
+            multipleOf: error.multipleOf,
           })
           break
         case ZodIssueCode.not_finite:
@@ -124,5 +127,5 @@ export default defineNuxtPlugin({
     }
 
     z.setErrorMap(errorMap)
-  }
+  },
 })

@@ -1,6 +1,12 @@
 import { readdir } from 'node:fs/promises'
 import { defu } from 'defu'
-import { addPlugin, createResolver, defineNuxtModule, isNuxt3, useLogger } from '@nuxt/kit'
+import {
+  addPlugin,
+  createResolver,
+  defineNuxtModule,
+  isNuxt3,
+  useLogger,
+} from '@nuxt/kit'
 import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
 import { getNormalizedLocales } from './utils'
 
@@ -14,10 +20,10 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     compatibility: {
-      nuxt: '^3.0.0'
+      nuxt: '^3.0.0',
     },
     name: 'nuxt-zod-i18n',
-    configKey: 'zodI18n'
+    configKey: 'zodI18n',
   },
   // Default configuration options of the Nuxt module
   defaults: {
@@ -25,8 +31,8 @@ export default defineNuxtModule<ModuleOptions>({
     dateFormat: {
       day: 'numeric',
       month: 'long',
-      year: 'numeric'
-    }
+      year: 'numeric',
+    },
   },
   async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
@@ -35,11 +41,12 @@ export default defineNuxtModule<ModuleOptions>({
     let i18nOptions: NuxtI18nOptions | null = null
 
     // Check NuxtI18n module availability
-    const checkI18nAvailable = !nuxt.options.modules.some(module => {
+    const checkI18nAvailable = !nuxt.options.modules.some((module) => {
       const i18nModuleNames = ['@nuxtjs/i18n', '@nuxtjs/i18n-edge']
       if (typeof module === 'string') {
         const isRegistered = i18nModuleNames.includes(module)
         if (isRegistered) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           i18nOptions = (nuxt.options as any).i18n
         }
         return isRegistered
@@ -66,13 +73,17 @@ export default defineNuxtModule<ModuleOptions>({
 
     if (options.useModuleLocale) {
       const appLocalesCode = getNormalizedLocales(
-        i18nOptions && (i18nOptions as NuxtI18nOptions)?.locales ? (i18nOptions as NuxtI18nOptions).locales : []
+        i18nOptions && (i18nOptions as NuxtI18nOptions)?.locales
+          ? (i18nOptions as NuxtI18nOptions).locales
+          : [],
       ).map(({ code }) => code)
 
       const languageFiles = await readdir(resolve('./runtime/locales'))
 
       const locales = languageFiles.reduce<LocaleObject[]>((acc, file) => {
-        const code = options.localeCodesMapping?.[file.replace('.json', '')] || file.replace('.json', '')
+        const code
+          = options.localeCodesMapping?.[file.replace('.json', '')]
+          || file.replace('.json', '')
         if (appLocalesCode.includes(code)) {
           acc.push({ file, code })
         }
@@ -80,23 +91,26 @@ export default defineNuxtModule<ModuleOptions>({
         return acc
       }, [])
 
-      nuxt.hook('i18n:registerModule', register => {
+      nuxt.hook('i18n:registerModule', (register) => {
         register({
           langDir: resolve('./runtime/locales'),
-          locales
+          locales,
         })
       })
     }
 
     // @ts-expect-error generated type
-    nuxt.options.runtimeConfig.public.zodI18n = defu(nuxt.options.runtimeConfig.public.zodI18n, {
-      dateFormat: options.dateFormat,
-      localeCodesMapping: options.localeCodesMapping
-    })
+    nuxt.options.runtimeConfig.public.zodI18n = defu(
+      nuxt.options.runtimeConfig.public.zodI18n,
+      {
+        dateFormat: options.dateFormat,
+        localeCodesMapping: options.localeCodesMapping,
+      },
+    )
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolve('./runtime/plugin'))
-  }
+  },
 })
 
 export interface ModulePublicRuntimeConfig {
@@ -104,5 +118,5 @@ export interface ModulePublicRuntimeConfig {
 }
 
 declare module '@nuxt/schema' {
-  interface PublicRuntimeConfig extends ModulePublicRuntimeConfig {}
+  interface PublicRuntimeConfig extends ModulePublicRuntimeConfig { }
 }

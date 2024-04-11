@@ -4,7 +4,7 @@ import type { NuxtError } from '#app'
 
 useSeoMeta({
   title: 'Page not found',
-  description: 'We are sorry but this page could not be found.'
+  description: 'We are sorry but this page could not be found.',
 })
 
 defineProps<{
@@ -13,8 +13,8 @@ defineProps<{
 
 useHead({
   htmlAttrs: {
-    lang: 'en'
-  }
+    lang: 'en',
+  },
 })
 
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
@@ -49,7 +49,7 @@ provide('links', links)
 
 <template>
   <div>
-    <Header />
+    <TheHeader />
 
     <UMain>
       <UContainer>
@@ -59,10 +59,13 @@ provide('links', links)
       </UContainer>
     </UMain>
 
-    <Footer />
+    <TheFooter />
 
     <ClientOnly>
-      <LazyUContentSearch :files="files" :navigation="navigation" />
+      <LazyUContentSearch
+        :files="files"
+        :navigation="navigation"
+      />
     </ClientOnly>
 
     <UNotifications />

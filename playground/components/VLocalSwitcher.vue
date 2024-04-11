@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-import type { LocaleObject } from '#i18n'
+import type { LocaleObject } from '@nuxtjs/i18n'
 import type { DropdownItem } from '#ui/types'
 
 const { locale, locales } = useI18n()
@@ -13,14 +12,13 @@ const items = computed<DropdownItem[][]>(() => {
     return {
       label: code,
       to: switchLocalePath(code),
-      icon: `i-flag-${code.split('-')[1].toLowerCase()}-4x3`
+      icon: `i-flag-${code.split('-')[1].toLowerCase()}-4x3`,
 
     }
   })
 
   return [data]
 })
-
 </script>
 
 <template>

@@ -15,7 +15,7 @@ export default defineNuxtConfig({
         flag: 'gb',
         isCatchallLocale: true,
         iso: 'en-GB',
-        name: 'English'
+        name: 'English',
       },
       {
         code: 'fr-FR',
@@ -23,10 +23,10 @@ export default defineNuxtConfig({
         file: 'fr-FR.json',
         flag: 'fr',
         iso: 'fr-FR',
-        name: 'French'
-      }
+        name: 'French',
+      },
     ],
     strategy: 'prefix_except_default',
-    types: 'composition'
-  }
+    types: 'composition',
+  },
 })

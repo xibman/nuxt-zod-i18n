@@ -1,19 +1,19 @@
 {
-  "private": true,
-  "name": "nuxt-zod-i18n-playground",
-  "type": "module",
-  "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "generate": "nuxi generate"
-  },
   "dependencies": {
-    "@iconify-json/flag": "^1.1.49",
-    "@nuxt/ui": "2.14.2",
+    "@iconify-json/flag": "^1.1.50",
+    "@nuxt/ui": "2.15.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.2.0",
-    "nuxt": "latest"
-  }
+    "@nuxtjs/i18n": "^8.3.0",
+    "nuxt": "^3.11.2"
+  },
+  "name": "nuxt-zod-i18n-playground",
+  "private": true,
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate"
+  },
+  "type": "module"
 }

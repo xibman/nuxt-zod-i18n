@@ -12,11 +12,11 @@ export const userSchema = z.object({
     params: {
       i18n: {
         key: 'myCustomErrorWithInterpolation',
-        values: { first: 'colors.red', second: 'colors.green' }
-      }
-    }
-  })
+        values: { first: 'colors.red', second: 'colors.green' },
+      },
+    },
+  }),
 })
 
-export type userDto = z.input<typeof userSchema>;
-export type User = z.output<typeof userSchema>;
+export type userDto = z.input<typeof userSchema>
+export type User = z.output<typeof userSchema>

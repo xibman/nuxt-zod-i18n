@@ -4,7 +4,7 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
   default: () => [],
-  server: false
+  server: false,
 })
 
 const links = computed(() => {
@@ -23,21 +23,21 @@ const links = computed(() => {
       label: 'Releases',
       icon: 'i-heroicons-rocket-launch-solid',
       to: 'https://github.com/xibman/nuxt-zod-i18n/releases',
-      target: '_blank'
+      target: '_blank',
     },
   ]
 })
 
 useHead({
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.ico' },
   ],
   htmlAttrs: {
-    lang: 'en'
-  }
+    lang: 'en',
+  },
 })
 
 useSeoMeta({
@@ -47,7 +47,7 @@ useSeoMeta({
   twitterDescription: 'Nuxt zodi18n Documentation',
   ogImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
   twitterImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
-  ogUrl: '[og:url]'
+  ogUrl: '[og:url]',
 })
 
 provide('navigation', navigation)
@@ -57,7 +57,7 @@ provide('links', links)
 
 <template>
   <div>
-    <Header :links="links" />
+    <TheHeader :links="links" />
 
     <UMain>
       <NuxtLayout>
@@ -65,10 +65,14 @@ provide('links', links)
       </NuxtLayout>
     </UMain>
 
-    <Footer />
+    <TheFooter />
 
     <ClientOnly>
-      <LazyUContentSearch :files="files" :navigation="navigation" :links="links" />
+      <LazyUContentSearch
+        :files="files"
+        :navigation="navigation"
+        :links="links"
+      />
     </ClientOnly>
 
     <UNotifications />

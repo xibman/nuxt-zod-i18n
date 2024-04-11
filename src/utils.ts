@@ -7,7 +7,8 @@ export function getNormalizedLocales(locales: NuxtI18nOptions['locales']): Local
   for (const locale of locales) {
     if (isString(locale)) {
       normalized.push({ code: locale, iso: locale })
-    } else {
+    }
+    else {
       normalized.push(locale)
     }
   }

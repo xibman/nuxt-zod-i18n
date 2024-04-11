@@ -3,8 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ui: {
     icons: {
-      dynamic: true
-    }
+      // @ts-expect-error see https://ui.nuxt.com/components/icon#dynamic
+      dynamic: true,
+    },
   },
   i18n: {
     defaultDirection: 'ltr',
@@ -19,7 +20,7 @@ export default defineNuxtConfig({
         flag: 'gb',
         isCatchallLocale: true,
         iso: 'en-GB',
-        name: 'English'
+        name: 'English',
       },
       {
         code: 'fr-FR',
@@ -27,10 +28,10 @@ export default defineNuxtConfig({
         file: 'fr-FR.json',
         flag: 'fr',
         iso: 'fr-FR',
-        name: 'French'
-      }
+        name: 'French',
+      },
     ],
     strategy: 'prefix_except_default',
-    types: 'composition'
-  }
+    types: 'composition',
+  },
 })

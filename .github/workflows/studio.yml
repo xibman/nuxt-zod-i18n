@@ -10,6 +10,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  HUSKY: 0
+
 # Add write workflow permissions
 permissions:
   contents: write

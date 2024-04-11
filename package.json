@@ -7,9 +7,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types.d.ts",
       "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "require": "./dist/module.cjs",
+      "types": "./dist/types.d.ts"
     }
   },
   "main": "./dist/module.cjs",
@@ -18,58 +18,47 @@
     "dist"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build build",
-    "check": "npm run lint:fix && npm run format:fix",
+    "check": "npm run lint:fix",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "docs:dev": "nuxi dev docs",
     "docs:build": "nuxi build docs",
+    "docs:dev": "nuxi dev docs",
     "docs:generate": "nuxi generate docs",
     "docs:preview": "nuxi preview docs",
-    "fix": "npm run lint:fix && npm run format:fix",
-    "format": "prettier --config .prettierrc.mjs --ignore-path .prettierignore --list-different '**/*.{js,json,html,md}'",
-    "format:fix": "pnpm format --write",
-    "lint": "eslint --cache --ext .js,.ts,.vue,.json .",
+    "fix": "npm run lint:fix",
+    "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
+    "prepack": "nuxt-module-build build",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "typecheck": "npx nuxi typecheck",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@intlify/shared": "^9.10.2",
-    "@nuxt/kit": "^3.11.1",
+    "@intlify/shared": "^9.11.1",
+    "@nuxt/kit": "^3.11.2",
     "defu": "^6.1.4",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
+    "@nuxt/devtools": "^1.1.5",
+    "@nuxt/eslint-config": "^0.3.5",
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.11.1",
+    "@nuxt/schema": "^3.11.2",
     "@nuxt/test-utils": "^3.12.0",
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/i18n": "^8.2.0",
-    "@types/node": "^20.11.30",
+    "@nuxtjs/i18n": "^8.3.0",
+    "@types/node": "^20.12.7",
     "changelogen": "^0.5.5",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsonc": "^2.14.1",
+    "eslint": "^9.0.0",
+    "eslint-plugin-jsonc": "^2.15.0",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "nuxt": "^3.11.1",
-    "prettier": "^3.2.5",
+    "nuxt": "^3.11.2",
     "vitest": "^1.4.0"
   },
   "lint-staged": {
-    "*.{json,md,yml}": [
-      "prettier --write"
-    ],
-    "*.{js,vue}": [
-      "prettier --write",
-      "eslint --fix --ext .js,.vue"
-    ],
-    "*.ts?(x)": [
-      "prettier --parser=typescript --write",
-      "eslint --fix --ext .ts"
-    ]
+    "*.{js,ts,vue,json,md,yml}": "eslint"
   }
 }

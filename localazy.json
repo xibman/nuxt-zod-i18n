@@ -1,0 +1,14 @@
+{
+  "download": {
+    "files": "src/runtime/locales/${lang}.json",
+    "includeSourceLang": true
+  },
+  "upload": {
+    "deprecate": "project",
+    "files": {
+      "lang": "${autodetectLang}",
+      "pattern": "src/runtime/locales/en-GB.json"
+    },
+    "type": "json"
+  }
+}

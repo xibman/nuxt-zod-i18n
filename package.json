@@ -27,6 +27,8 @@
     "docs:generate": "nuxi generate docs",
     "docs:preview": "nuxi preview docs",
     "fix": "npm run lint:fix",
+    "i18n:download": "localazy download && pnpm fix",
+    "i18n:upload": "localazy upload",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
     "prepack": "nuxt-module-build build",
@@ -43,6 +45,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@localazy/cli": "^1.7.10",
     "@nuxt/devtools": "^1.1.5",
     "@nuxt/eslint-config": "^0.3.5",
     "@nuxt/module-builder": "^0.5.5",

@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.7.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.6.0...v1.7.0)
+
+### 🚀 Enhancements
+
+- **i18n:** Add localazy for i18n keys managment ([90246e4](https://github.com/xibman/nuxt-zod-i18n/commit/90246e4))
+- **i18n:** Add new languages fr-IR tr-TR ([74aff6d](https://github.com/xibman/nuxt-zod-i18n/commit/74aff6d))
+
+### 📖 Documentation
+
+- Update doc for error interpolation ([9dde48f](https://github.com/xibman/nuxt-zod-i18n/commit/9dde48f))
+
+### 🏡 Chore
+
+- **commit hook:** Add commit hook to lint / test before pushing to repo ([8dd17fe](https://github.com/xibman/nuxt-zod-i18n/commit/8dd17fe))
+
+### 🎨 Styles
+
+- **linting:** Use eslint v9 and flat config ([360da10](https://github.com/xibman/nuxt-zod-i18n/commit/360da10))
+- **linting:** Apply linting ([894f0c9](https://github.com/xibman/nuxt-zod-i18n/commit/894f0c9))
+
+### 🤖 CI
+
+- **husky:** Disable husky on ci ([8056f64](https://github.com/xibman/nuxt-zod-i18n/commit/8056f64))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.6.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.5.0...v1.6.0)

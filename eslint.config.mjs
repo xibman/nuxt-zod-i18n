@@ -34,6 +34,8 @@ export default createConfigForNuxt({
     files: ['package.json'],
     rules: {
       'jsonc/sort-keys': 'off',
+      '@stylistic/eol-last': 'off',
     },
   },
+
 ])

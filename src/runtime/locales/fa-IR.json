@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "ورودی نامعتبر",
+      "invalid_arguments": "آرگومان های تابع نامعتبر است",
+      "invalid_date": "تاریخ نامعتبر",
+      "invalid_enum_value": "مقدار enum نامعتبر است. انتظار می رود {options} بررسی شود، دریافت '{received}'",
+      "invalid_intersection_types": "نتایج فصل مشترک را نمی‌‌توان ادغام کرد",
+      "invalid_literal": "مقدار دقیق نامعتبر، {expected} مورد انتظار است",
+      "invalid_return_type": "نوع بارگشت تابع نامعتبر است",
+      "invalid_string": {
+        "cuid": "{validation} نامعتبر",
+        "datetime": "{validation} نامعتبر",
+        "email": "{validation} نامعتبر",
+        "endsWith": "ورودی نامعتبر: باید با «{endsWith}» پایان یابد",
+        "regex": "نامعتبر",
+        "startsWith": "ورودی نامعتبر: باید با \"{startsWith}» شروع شود",
+        "url": "{validation} نامعتبر",
+        "uuid": "{validation} نامعتبر"
+      },
+      "invalid_type": "{expected} مورد انتظار بود، {received} دریافت شده",
+      "invalid_type_received_undefined": "مورد نیاز",
+      "invalid_union": "ورودی نامعتبر",
+      "invalid_union_discriminator": "مقدار تفکیک کننده نامعتبر. انتظار می‌رود {options} بررسی شود",
+      "not_finite": "عدد باید محدود باشد",
+      "not_multiple_of": "عدد باید مضربی از {multipleOf} باشد",
+      "required": "مورد نیاز",
+      "too_big": {
+        "array": {
+          "exact": "آرایه باید دقیقاً شامل {maximum} عنصر باشد",
+          "inclusive": "آرایه باید حاوی حداکثر {maximum} عتصر باشد",
+          "not_inclusive": "آرایه باید حاوی کمتر از {maximum} عنصر باشد"
+        },
+        "date": {
+          "exact": "تاریخ باید دقیقاً {maximum} باشد",
+          "inclusive": "تاریخ باید کوچکتر یا مساوی {maximum} باشد",
+          "not_inclusive": "تاریخ باید کوچکتر از {maximum} باشد"
+        },
+        "number": {
+          "exact": "عدد باید دقیقا {maximum} باشد",
+          "inclusive": "عدد باید کمتر یا مساوی {maximum} باشد",
+          "not_inclusive": "عدد باید کمتر از {maximum} باشد"
+        },
+        "set": {
+          "exact": "ورودی نامعتبر",
+          "inclusive": "ورودی نامعتبر",
+          "not_inclusive": "ورودی نامعتبر"
+        },
+        "string": {
+          "exact": "رشته باید دقیقاً حاوی {maximum} کاراکتر باشد",
+          "inclusive": "رشته باید حاوی حداکثر {maximum} کاراکتر باشد",
+          "not_inclusive": "رشته باید حاوی کمتر از {maximum} کاراکتر باشد"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "آرایه باید دقیقاً شامل {minimum} عنصر باشد",
+          "inclusive": "آرایه باید حداقل حاوی {minimum} عتصر باشد",
+          "not_inclusive": "آرایه باید حاوی بیش از {minimum} عنصر باشد"
+        },
+        "date": {
+          "exact": "تاریخ باید دقیقاً {minimum} باشد",
+          "inclusive": "تاریخ باید بزرگتر یا برابر {minimum} باشد",
+          "not_inclusive": "تاریخ باید بزرگتر از {minimum} باشد"
+        },
+        "number": {
+          "exact": "عدد باید دقیقا {minimum} باشد",
+          "inclusive": "عدد باید بزرگتر یا برابر {minimum} باشد",
+          "not_inclusive": "عدد باید بزرگتر از {minimum} باشد"
+        },
+        "set": {
+          "exact": "ورودی نامعتبر",
+          "inclusive": "ورودی نامعتبر",
+          "not_inclusive": "ورودی نامعتبر"
+        },
+        "string": {
+          "exact": "رشته باید دقیقاً حاوی {minimum} کاراکتر باشد",
+          "inclusive": "رشته باید حداقل حاوی {minimum} کاراکتر باشد",
+          "not_inclusive": "رشته باید حاوی بیش از {minimum} کاراکتر باشد"
+        }
+      },
+      "unrecognized_keys": "کلید (های) شناخته نشده در شی: {keys} بررسی شود"
+    },
+    "types": {
+      "array": "array",
+      "bigint": "bigint",
+      "boolean": "boolean",
+      "date": "date",
+      "float": "float",
+      "function": "function",
+      "integer": "integer",
+      "map": "map",
+      "nan": "nan",
+      "never": "never",
+      "null": "null",
+      "number": "number",
+      "object": "object",
+      "promise": "promise",
+      "set": "set",
+      "string": "string",
+      "symbol": "symbol",
+      "undefined": "undefined",
+      "unknown": "unknown",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "روز و تاریخ",
+      "email": "ایمیل",
+      "regex": "regex",
+      "url": "url",
+      "uuid": "uuid"
+    }
+  }
+}

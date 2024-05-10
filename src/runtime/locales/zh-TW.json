@@ -11,14 +11,14 @@
       "invalid_string": {
         "cuid": "{validation} 格式錯誤",
         "datetime": "{validation} 格式錯誤",
-        "email": "{validation}格式錯誤",
+        "email": "{validation} 格式錯誤",
         "endsWith": "必須以 \"{endsWith}\" 結尾",
         "regex": "格式錯誤",
         "startsWith": "必須以 \"{startsWith}\" 開始",
-        "url": "{validation}格式錯誤",
+        "url": "{validation} 格式錯誤",
         "uuid": "{validation} 格式錯誤"
       },
-      "invalid_type": "期望輸入的是{expected}，而輸入的是{received}",
+      "invalid_type": "期望輸入的是{expected}，而輸入的是 {received}",
       "invalid_type_received_null": "必填的欄位",
       "invalid_type_received_undefined": "必填的欄位",
       "invalid_union": "輸入格式錯誤",

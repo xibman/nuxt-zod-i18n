@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "Geçersiz girdi",
+      "invalid_arguments": "Geçersiz fonksiyon parametreleri",
+      "invalid_date": "Geçersiz tarih",
+      "invalid_enum_value": "Geçersiz enum değeri. İncelemek için {options} bekleniyordu, '{received}' alındı",
+      "invalid_intersection_types": "Kesişim sonuçları birleştirilemedi",
+      "invalid_literal": "Geçersiz değer, beklenen {expected}",
+      "invalid_return_type": "Fonksiyondan dönen tip geçersiz",
+      "invalid_string": {
+        "cuid": "Geçersiz {validation}",
+        "datetime": "Geçersiz {validation}",
+        "email": "Geçersiz {validation}",
+        "endsWith": "Geçersiz girdi: Sonu \"{endsWith}\" ile bitmelidir",
+        "regex": "Geçersiz",
+        "startsWith": "Geçersiz girdi: \"{startsWith}” ile başlamalıdır",
+        "url": "Geçersiz {validation}",
+        "uuid": "Geçersiz {validation}"
+      },
+      "invalid_type": "Beklenen {expected}, alındı {received}",
+      "invalid_type_received_undefined": "Gerekli",
+      "invalid_union": "Geçersiz girdi",
+      "invalid_union_discriminator": "Geçersiz ayırıcı değeri. İncelemek için beklenen {options}",
+      "not_finite": "Sayı sonlu bir değer olmalıdır",
+      "not_multiple_of": "Sayı bunların katı olmalıdır {multipleOf}",
+      "required": "Gerekli",
+      "too_big": {
+        "array": {
+          "exact": "Dizi tam olarak {maximum} öğe(ler) içermelidir",
+          "inclusive": "Dizi en fazla {maximum} öğe(ler) içermelidir",
+          "not_inclusive": "Dizi {maximum} sayıda elemandan daha az olmalıdır."
+        },
+        "date": {
+          "exact": "Tarih tam olarak şu şekilde olmalıdır {maximum}",
+          "inclusive": "Tarih, {maximum} değerinden küçük veya buna eşit olmalıdır",
+          "not_inclusive": "Tarih {maximum} değerinden küçük olmalıdır"
+        },
+        "number": {
+          "exact": "Sayı tam olarak {maximum} olmalıdır",
+          "inclusive": "Sayı {maximum} veya bundan küçük olmalıdır:",
+          "not_inclusive": "Sayı {maximum}'den küçük olmalıdır"
+        },
+        "set": {
+          "exact": "Geçersiz girdi",
+          "inclusive": "Geçersiz girdi",
+          "not_inclusive": "Geçersiz girdi"
+        },
+        "string": {
+          "exact": "Dize tam olarak {maximum} karakter içermelidir",
+          "inclusive": "Dize en fazla {maximum} karakter içermelidir",
+          "not_inclusive": "Dize {maximum} karakter altında olmalıdır"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "Dizi tam olarak {minimum} öğe olmalıdır.",
+          "inclusive": "Dizi en az {minimum} öğe içermelidir",
+          "not_inclusive": "Dizi {minimum} adresinden daha fazla öğe içermelidir"
+        },
+        "date": {
+          "exact": "Tarih tam olarak {minimum} olmalıdır",
+          "inclusive": "Tarih {minimum} tarihten büyük veya ona eşit olmalıdır:",
+          "not_inclusive": "Tarih {minimum}'den büyük olmalıdır"
+        },
+        "number": {
+          "exact": "Sayı tam olarak {minimum} olmalıdır",
+          "inclusive": "Sayı {minimum} den büyük veya ona eşit olmalıdır",
+          "not_inclusive": "Sayı {minimum}'den büyük olmalıdır"
+        },
+        "set": {
+          "exact": "Geçersiz girdi",
+          "inclusive": "Geçersiz girdi",
+          "not_inclusive": "Geçersiz girdi"
+        },
+        "string": {
+          "exact": "Dize tam olarak {minimum} karakter içermelidir",
+          "inclusive": "Dize en az {minimum} karakter içermelidir",
+          "not_inclusive": "Dize {minimum} üzerinde karakter içermelidir"
+        }
+      },
+      "unrecognized_keys": "Nesnedeki tanınmayan anahtarlar:{keys} incele"
+    },
+    "types": {
+      "array": "dizi",
+      "bigint": "bigint",
+      "boolean": "boolean",
+      "date": "tarih",
+      "float": "float",
+      "function": "fonksiyon",
+      "integer": "tam sayı",
+      "map": "harita",
+      "nan": "nan",
+      "never": "never",
+      "null": "null",
+      "number": "number",
+      "object": "object",
+      "promise": "promise",
+      "set": "set",
+      "string": "string",
+      "symbol": "sembol",
+      "undefined": "tanımsız",
+      "unknown": "bilinmeyen",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "datetime",
+      "email": "email",
+      "regex": "regex",
+      "url": "url",
+      "uuid": "uuid"
+    }
+  }
+}

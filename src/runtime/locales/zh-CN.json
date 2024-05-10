@@ -9,16 +9,16 @@
       "invalid_literal": "错误的字面量值，请输入 {expected}",
       "invalid_return_type": "错误的函数返回值格式",
       "invalid_string": {
-        "cuid": "错误的{validation}格式",
-        "datetime": "错误的{validation}格式",
-        "email": "错误的{validation}格式",
+        "cuid": "错误的 {validation} 格式",
+        "datetime": "错误的 {validation} 格式",
+        "email": "错误的 {validation} 格式",
         "endsWith": "文本必须以 \"{endsWith}\" 结尾",
         "regex": "错误的格式",
         "startsWith": "文本必须以 \"{startsWith}\" 开头",
-        "url": "错误的{validation}格式",
-        "uuid": "错误的{validation}格式"
+        "url": "错误的 {validation} 格式",
+        "uuid": "错误的 {validation} 格式"
       },
-      "invalid_type": "预期输入为{expected}，而输入为{received}",
+      "invalid_type": "预期输入为 {expected}，而输入为 {received}",
       "invalid_type_received_null": "必填",
       "invalid_type_received_undefined": "必填",
       "invalid_union": "不满足联合类型中的选项",

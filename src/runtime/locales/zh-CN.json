@@ -19,12 +19,12 @@
         "uuid": "错误的 {validation} 格式"
       },
       "invalid_type": "预期输入为 {expected}，而输入为 {received}",
-      "invalid_type_received_null": "必填",
       "invalid_type_received_undefined": "必填",
       "invalid_union": "不满足联合类型中的选项",
       "invalid_union_discriminator": "标识值无法被区分。请输入 {options}",
       "not_finite": "数值必须有限",
       "not_multiple_of": "数值必须是 {multipleOf} 的倍数",
+      "required": "必填",
       "too_big": {
         "array": {
           "exact": "数组元素必须为 {maximum} 个",
@@ -104,7 +104,7 @@
       "void": "空"
     },
     "validations": {
-      "cuid": "cuid",
+      "cuid": "毛茸茸的",
       "datetime": "日期时间",
       "email": "邮件",
       "regex": "正则表达式",

@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.8.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.7.0...v1.8.0)
+
+### 🚀 Enhancements
+
+- **i18n:** Add new language ru-RU thanks to @ncodealex ([2791b3b](https://github.com/xibman/nuxt-zod-i18n/commit/2791b3b))
+
+### 🩹 Fixes
+
+- **i18n:** Add missing space in zh language ([98a6820](https://github.com/xibman/nuxt-zod-i18n/commit/98a6820))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.7.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.6.0...v1.7.0)

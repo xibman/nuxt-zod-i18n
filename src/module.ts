@@ -20,7 +20,7 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     compatibility: {
-      nuxt: '^3.0.0',
+      nuxt: '>=3.0.0',
     },
     name: 'nuxt-zod-i18n',
     configKey: 'zodI18n',

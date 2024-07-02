@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.8.1
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.8.0...v1.8.1)
+
+### 💅 Refactors
+
+- **ts:** Remove @ts-expect-error comment for module config merge ([885bf98](https://github.com/xibman/nuxt-zod-i18n/commit/885bf98))
+
+### 🏡 Chore
+
+- **global:** Update dependencies ([e3c53db](https://github.com/xibman/nuxt-zod-i18n/commit/e3c53db))
+- Indicate compatibility with new v4 major ([a0e9f16](https://github.com/xibman/nuxt-zod-i18n/commit/a0e9f16))
+- **dependencies:** Update dependencies ([f7c1c84](https://github.com/xibman/nuxt-zod-i18n/commit/f7c1c84))
+
+### ❤️ Contributors
+
+- Julien Georget <julien.georget@hikoala.com>
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+
 ## v1.8.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.7.0...v1.8.0)

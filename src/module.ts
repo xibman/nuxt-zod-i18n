@@ -99,7 +99,6 @@ export default defineNuxtModule<ModuleOptions>({
       })
     }
 
-    // @ts-expect-error generated type
     nuxt.options.runtimeConfig.public.zodI18n = defu(
       nuxt.options.runtimeConfig.public.zodI18n,
       {

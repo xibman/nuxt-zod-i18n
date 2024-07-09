@@ -1,0 +1,113 @@
+{
+  "errors": {
+    "custom": "Невірне введення",
+    "invalid_arguments": "Невірні аргументи функції",
+    "invalid_date": "Невірний формат дати",
+    "invalid_enum_value": "Невірне значення enum. Очікувалося {{- options}}, отримано '{{received}}'",
+    "invalid_intersection_types": "Результати перетину не вдалося об'єднати",
+    "invalid_literal": "Невірне літеральне значення, очікувалось {{expected}}",
+    "invalid_return_type": "Невірний тип значення, що повертається функцією",
+    "invalid_string": {
+      "cuid": "Невірне введення {{validation}}",
+      "datetime": "Невірний формат {{validation}}",
+      "email": "Невірний {{validation}}",
+      "endsWith": "Невірне введення: повинно закінчуватись на \"{{endsWith}}\"",
+      "regex": "Невдала валідація",
+      "startsWith": "Невірне введення: повинно починатись з \"{{startsWith}}\"",
+      "url": "Невірний {{validation}}",
+      "uuid": "Невірне введення {{validation}}"
+    },
+    "invalid_type": "Очікувався тип {{expected}}, отримано {{received}}",
+    "invalid_type_received_undefined": "Обов'язковe поле",
+    "invalid_union": "Невірне введення",
+    "invalid_union_discriminator": "Неправильне значення дискримінатора. Очікувалось {{- options}}",
+    "not_finite": "Число повинно бути скінченним",
+    "not_multiple_of": "Число повинно бути кратним {{multipleOf}}",
+    "required": "Обов'язкове поле",
+    "too_big": {
+      "array": {
+        "exact": "Масив повинен містити рівно {{maximum}} елемента(-ів)",
+        "inclusive": "Масив повинен містити не більше {{maximum}} елемента(-ів)",
+        "not_inclusive": "Масив повинен містити менше {{maximum}} елемента(-ів)"
+      },
+      "date": {
+        "exact": "Дата повинна бути точно {{- maximum, datetime}}",
+        "inclusive": "Дата повинна бути меншою або дорівнювати {{- maximum, datetime}}",
+        "not_inclusive": "Дата повинно бути меншою ніж {{- maximum, datetime}}"
+      },
+      "number": {
+        "exact": "Число повинно бути рівно {{maximum}}",
+        "inclusive": "Число повинно бути менше або дорівнювати {{maximum}}",
+        "not_inclusive": "Число повинно бути менше {{maximum}}"
+      },
+      "set": {
+        "exact": "Неправильний ввід",
+        "inclusive": "Невірне введення",
+        "not_inclusive": "Невірний ввід"
+      },
+      "string": {
+        "exact": "Рядок повинен містити рівно {{maximum}} символа(-ів)",
+        "inclusive": "Рядок повинен містити не більше {{maximum}} символа(-ів)",
+        "not_inclusive": "Рядок повинен містити менше {{maximum}} символа(-ів)"
+      }
+    },
+    "too_small": {
+      "array": {
+        "exact": "Масив повинен містити рівно {{minimum}} елемента(-ів)",
+        "inclusive": "Масив повинен містити щонайменше {{minimum}} елемента(-ів)",
+        "not_inclusive": "Масив повинен містити більше {{minimum}} елемента(-ів)"
+      },
+      "date": {
+        "exact": "Дата повинно бути точно {{- minimum, datetime}}",
+        "inclusive": "Дата повинно бути більшою або рівною {{- minimum, datetime}}",
+        "not_inclusive": "Дата повинно бути більшою ніж {{-minimum, datetime}}"
+      },
+      "number": {
+        "exact": "Число повинно бути рівне {{minimum}}",
+        "inclusive": "Число повинно бути більше або дорівнювати {{minimum}}",
+        "not_inclusive": "Число повинно бути більше {{minimum}}"
+      },
+      "set": {
+        "exact": "Невірний ввід",
+        "inclusive": "Невірний ввід",
+        "not_inclusive": "Невірний ввід"
+      },
+      "string": {
+        "exact": "Рядок повинен містити рівно {{minimum}} символа(-ів)",
+        "inclusive": "Рядок повинен містити щонайменше {{minimum}} символа(-ів)",
+        "not_inclusive": "Рядок повинен містити більше {{minimum}} символа(-ів)"
+      }
+    },
+    "unrecognized_keys": "Нерозпізнані ключі в об'єкті: {{- keys}}"
+  },
+  "types": {
+    "array": "масив",
+    "bigint": "bigint",
+    "boolean": "булеве значення",
+    "date": "дата",
+    "float": "дробове число",
+    "function": "функція",
+    "integer": "цифра",
+    "map": "хеш-таблиця",
+    "nan": "NaN",
+    "never": "never",
+    "null": "null",
+    "number": "число",
+    "object": "об'єкт",
+    "promise": "promise",
+    "set": "множина",
+    "string": "рядок",
+    "symbol": "символ",
+    "undefined": "не визнечене",
+    "unknown": "невідоме",
+    "void": "void"
+  },
+  "validations": {
+    "cuid": "cuid",
+    "datetime": "дата й час",
+    "email": "ел. пошта",
+    "regex": "регулярний вираз",
+    "url": "посилання",
+    "uuid": "uuid"
+  }
+}

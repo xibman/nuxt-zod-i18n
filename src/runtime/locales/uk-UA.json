@@ -10,7 +10,7 @@
     "invalid_string": {
       "cuid": "Невірне введення {validation}",
       "datetime": "Невірний формат {validation}",
-      "email": "Невірний {validation}",
+      "email": "Невірна {validation}",
       "endsWith": "Невірне введення: повинно закінчуватись на \"{endsWith}\"",
       "regex": "Невдала валідація",
       "startsWith": "Невірне введення: повинно починатись з \"{startsWith}\"",

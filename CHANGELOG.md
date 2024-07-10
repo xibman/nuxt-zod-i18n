@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.9.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.8.1...v1.9.0)
+
+### 🚀 Enhancements
+
+- Add uk-UA.json ([ebef74d](https://github.com/xibman/nuxt-zod-i18n/commit/ebef74d))
+
+### 🩹 Fixes
+
+- **i18n:** Template surrounding for uk-UA locale ([90da19b](https://github.com/xibman/nuxt-zod-i18n/commit/90da19b))
+- **i18n:** Small typo in uk-UA locale ([243d8df](https://github.com/xibman/nuxt-zod-i18n/commit/243d8df))
+
+### ❤️ Contributors
+
+- Andrii ([@sundevista](http://github.com/sundevista))
+
 ## v1.8.1
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.8.0...v1.8.1)

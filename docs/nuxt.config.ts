@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2024-07-10',
   extends: ['@nuxt/ui-pro'],
   modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/fontaine', '@nuxtjs/google-fonts', 'nuxt-og-image'],
   ui: {

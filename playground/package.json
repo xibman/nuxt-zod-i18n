@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@iconify-json/flag": "^1.1.53",
-    "@nuxt/ui": "2.17.0",
+    "@iconify-json/flag": "^1.2.0",
+    "@nuxt/ui": "2.18.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.3.1",
-    "nuxt": "^3.12.3"
+    "@nuxtjs/i18n": "^8.5.3",
+    "nuxt": "^3.13.2"
   },
   "name": "nuxt-zod-i18n-playground",
   "private": true,

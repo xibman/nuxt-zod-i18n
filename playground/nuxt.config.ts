@@ -1,12 +1,14 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@nuxtjs/i18n', '@nuxt/ui'],
   devtools: { enabled: true },
+
   ui: {
     icons: {
       // @ts-expect-error see https://ui.nuxt.com/components/icon#dynamic
       dynamic: true,
     },
   },
+
   i18n: {
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',
@@ -19,7 +21,7 @@ export default defineNuxtConfig({
         file: 'en-GB.json',
         flag: 'gb',
         isCatchallLocale: true,
-        iso: 'en-GB',
+        language: 'en-GB',
         name: 'English',
       },
       {
@@ -27,11 +29,13 @@ export default defineNuxtConfig({
         dir: 'ltr',
         file: 'fr-FR.json',
         flag: 'fr',
-        iso: 'fr-FR',
+        language: 'fr-FR',
         name: 'French',
       },
     ],
     strategy: 'prefix_except_default',
     types: 'composition',
   },
+
+  compatibilityDate: '2024-09-16',
 })

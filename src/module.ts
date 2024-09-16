@@ -4,7 +4,7 @@ import {
   addPlugin,
   createResolver,
   defineNuxtModule,
-  isNuxt3,
+  isNuxtMajorVersion,
   useLogger,
 } from '@nuxt/kit'
 import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
@@ -17,7 +17,7 @@ export interface ModuleOptions {
   localeCodesMapping?: Record<string, string>
 }
 
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule<ModuleOptions>().with({
   meta: {
     compatibility: {
       nuxt: '>=3.0.0',
@@ -67,7 +67,7 @@ export default defineNuxtModule<ModuleOptions>({
       logger.fatal('Nuxt I18n required')
     }
 
-    if (!isNuxt3()) {
+    if (!isNuxtMajorVersion(3, nuxt)) {
       logger.error('Nuxt 3 required')
     }
 
@@ -111,11 +111,3 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin(resolve('./runtime/plugin'))
   },
 })
-
-export interface ModulePublicRuntimeConfig {
-  zodI18n: ModuleOptions
-}
-
-declare module '@nuxt/schema' {
-  interface PublicRuntimeConfig extends ModulePublicRuntimeConfig { }
-}

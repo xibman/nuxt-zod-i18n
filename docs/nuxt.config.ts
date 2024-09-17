@@ -1,9 +1,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-07-10',
   extends: ['@nuxt/ui-pro'],
-  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/fontaine', '@nuxtjs/google-fonts', 'nuxt-og-image'],
-  ui: {
-    icons: ['heroicons', 'simple-icons'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/ui',
+    '@nuxtjs/fontaine',
+    '@nuxtjs/google-fonts',
+    'nuxt-og-image',
+  ],
+  icon: {
+    serverBundle: 'remote',
   },
   // Fonts
   fontMetrics: {
@@ -16,8 +22,10 @@ export default defineNuxtConfig({
       'DM+Sans': [400, 500, 600, 700],
     },
   },
+  site: {
+    url: 'https://xibman-nuxt-zod-i18n.nuxt.space/',
+  },
   routeRules: {
-    '/': { prerender: true },
     '/api/search.json': { prerender: true },
   },
   // Devtools / Typescript

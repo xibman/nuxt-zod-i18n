@@ -66,5 +66,8 @@
   "lint-staged": {
     "*.{js,ts,vue,json,md,yml}": "eslint"
   },
-  "packageManager": "pnpm@9.10.0"
+  "packageManager": "pnpm@9.10.0",
+  "resolutions": {
+    "nuxt-component-meta": "^0.8.2"
+  }
 }

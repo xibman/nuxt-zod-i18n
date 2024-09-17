@@ -1,5 +1,42 @@
 # Changelog
 
+## v1.10.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.9.0...v1.10.0)
+
+### 🚀 Enhancements
+
+- Add id-ID Translation ([fe88fa8](https://github.com/xibman/nuxt-zod-i18n/commit/fe88fa8))
+
+### 💅 Refactors
+
+- **chore:** Use new nuxt kit tools isNuxtMajorVersion and defineNuxtModule().with() ([d236b1d](https://github.com/xibman/nuxt-zod-i18n/commit/d236b1d))
+- **compatibility:** Replace iso by language before deprecation in nuxtI18n V9 ([9bb79bf](https://github.com/xibman/nuxt-zod-i18n/commit/9bb79bf))
+
+### 📖 Documentation
+
+- Fix: workaround for Nuxt prerender regression ([e05d195](https://github.com/xibman/nuxt-zod-i18n/commit/e05d195))
+
+### 🏡 Chore
+
+- **release:** V1.9.0 ([286ca03](https://github.com/xibman/nuxt-zod-i18n/commit/286ca03))
+- **global:** Update dependencies ([74d9439](https://github.com/xibman/nuxt-zod-i18n/commit/74d9439))
+- **global:** Update dependencies ([9391448](https://github.com/xibman/nuxt-zod-i18n/commit/9391448))
+- **pnpm:** Set pnpm version to 9.x.x ([6ad33f4](https://github.com/xibman/nuxt-zod-i18n/commit/6ad33f4))
+
+### 🤖 CI
+
+- **github-actions:** Update pnpm/action-setup to v4 ([cade352](https://github.com/xibman/nuxt-zod-i18n/commit/cade352))
+- **husky:** Update config for v10 ([012e4bd](https://github.com/xibman/nuxt-zod-i18n/commit/012e4bd))
+- **doc:** Fix doc build by adding nuxt image ([7cbd2c9](https://github.com/xibman/nuxt-zod-i18n/commit/7cbd2c9))
+- **build:** Add new module resolution for nuxt-component-meta ([8685a88](https://github.com/xibman/nuxt-zod-i18n/commit/8685a88))
+
+### ❤️ Contributors
+
+- Xibman <georget.julien@gmail.com>
+- KingSit3 <i.ardiansyah93@gmail.com>
+- Julien Georget <julien.georget@hikoala.com>
+
 ## v1.9.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.8.1...v1.9.0)

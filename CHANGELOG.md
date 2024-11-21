@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.11.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.10.0...v1.11.0)
+
+### 🚀 Enhancements
+
+- Add hu-HU translation ([2b63560](https://github.com/xibman/nuxt-zod-i18n/commit/2b63560))
+
+### ❤️ Contributors
+
+- Adam Troll <adam.troll@levoolabs.com>
+
 ## v1.10.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.9.0...v1.10.0)

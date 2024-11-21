@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "Érvénytelen bevitel",
+      "invalid_arguments": "Érvénytelen függvény paraméterek",
+      "invalid_date": "Érvénytelen dátum",
+      "invalid_enum_value": "Érvénytelen enum érték. Várt értékek: {options}, kapott érték: '{received}'",
+      "invalid_intersection_types": "A metszet eredményeket nem lehetett egyesíteni",
+      "invalid_literal": "Érvénytelen literál érték, várt érték: {expected}",
+      "invalid_return_type": "Érvénytelen függvény visszatérési típus",
+      "invalid_string": {
+        "cuid": "Érvénytelen {validation}",
+        "datetime": "Érvénytelen {validation}",
+        "email": "Érvénytelen {validation}",
+        "endsWith": "Érvénytelen bevitel: \"{endsWith}\"-re kell végződnie",
+        "regex": "Érvénytelen",
+        "startsWith": "Érvénytelen bevitel: \"{startsWith}\"-vel kell kezdődnie",
+        "url": "Érvénytelen {validation}",
+        "uuid": "Érvénytelen {validation}"
+      },
+      "invalid_type": "Várt típus: {expected}, kapott típus: {received}",
+      "invalid_type_received_undefined": "Kötelező",
+      "invalid_union": "Érvénytelen bevitel",
+      "invalid_union_discriminator": "Érvénytelen diszkriminátor érték. Várt értékek: {options}",
+      "not_finite": "A számnak végesnek kell lennie",
+      "not_multiple_of": "A számnak a(z) {multipleOf} többszörösének kell lennie",
+      "required": "Kötelező",
+      "too_big": {
+        "array": {
+          "exact": "A tömbnek pontosan {maximum} elemet kell tartalmaznia",
+          "inclusive": "A tömb legfeljebb {maximum} elemet tartalmazhat",
+          "not_inclusive": "A tömbnek kevesebb mint {maximum} elemet kell tartalmaznia"
+        },
+        "date": {
+          "exact": "A dátumnak pontosan {maximum}-nak kell lennie",
+          "inclusive": "A dátumnak kisebbnek vagy egyenlőnek kell lennie mint {maximum}",
+          "not_inclusive": "A dátumnak kisebbnek kell lennie mint {maximum}"
+        },
+        "number": {
+          "exact": "A számnak pontosan {maximum}-nak kell lennie",
+          "inclusive": "A számnak kisebbnek vagy egyenlőnek kell lennie mint {maximum}",
+          "not_inclusive": "A számnak kisebbnek kell lennie mint {maximum}"
+        },
+        "set": {
+          "exact": "Érvénytelen bevitel",
+          "inclusive": "Érvénytelen bevitel",
+          "not_inclusive": "Érvénytelen bevitel"
+        },
+        "string": {
+          "exact": "A szövegnek pontosan {maximum} karaktert kell tartalmaznia",
+          "inclusive": "A szöveg legfeljebb {maximum} karaktert tartalmazhat",
+          "not_inclusive": "A szövegnek kevesebb mint {maximum} karaktert kell tartalmaznia"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "A tömbnek pontosan {minimum} elemet kell tartalmaznia",
+          "inclusive": "A tömbnek legalább {minimum} elemet kell tartalmaznia",
+          "not_inclusive": "A tömbnek több mint {minimum} elemet kell tartalmaznia"
+        },
+        "date": {
+          "exact": "A dátumnak pontosan {minimum}-nak kell lennie",
+          "inclusive": "A dátumnak nagyobbnak vagy egyenlőnek kell lennie mint {minimum}",
+          "not_inclusive": "A dátumnak nagyobbnak kell lennie mint {minimum}"
+        },
+        "number": {
+          "exact": "A számnak pontosan {minimum}-nak kell lennie",
+          "inclusive": "A számnak nagyobbnak vagy egyenlőnek kell lennie mint {minimum}",
+          "not_inclusive": "A számnak nagyobbnak kell lennie mint {minimum}"
+        },
+        "set": {
+          "exact": "Érvénytelen bevitel",
+          "inclusive": "Érvénytelen bevitel",
+          "not_inclusive": "Érvénytelen bevitel"
+        },
+        "string": {
+          "exact": "A szövegnek pontosan {minimum} karaktert kell tartalmaznia",
+          "inclusive": "A szövegnek legalább {minimum} karaktert kell tartalmaznia",
+          "not_inclusive": "A szövegnek több mint {minimum} karaktert kell tartalmaznia"
+        }
+      },
+      "unrecognized_keys": "Ismeretlen kulcs(ok) az objektumban: {keys}"
+    },
+    "types": {
+      "array": "tömb",
+      "bigint": "nagy egész",
+      "boolean": "logikai",
+      "date": "dátum",
+      "float": "tört",
+      "function": "függvény",
+      "integer": "egész",
+      "map": "map",
+      "nan": "NaN",
+      "never": "soha",
+      "null": "null",
+      "number": "szám",
+      "object": "objektum",
+      "promise": "promise",
+      "set": "halmaz",
+      "string": "szöveg",
+      "symbol": "szimbólum",
+      "undefined": "definiálatlan",
+      "unknown": "ismeretlen",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "dátumidő",
+      "email": "e-mail",
+      "regex": "reguláris kifejezés",
+      "url": "webcím",
+      "uuid": "uuid"
+    }
+  }
+}

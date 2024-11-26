@@ -25,8 +25,8 @@ export default defineNuxtPlugin({
           }
           else {
             message = t('zodI18n.errors.invalid_type', {
-              expected: error.expected,
-              received: error.received,
+              expected: t(`zodI18n.types.${error.expected}`),
+              received:  t(`zodI18n.types.${error.received}`),
             })
           }
           break

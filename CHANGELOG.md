@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.11.1
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.0...v1.11.1)
+
+### 🩹 Fixes
+
+- **invalid_type message:** Running translation for invalid_type error parameters ([c8898af](https://github.com/xibman/nuxt-zod-i18n/commit/c8898af))
+
+### 🎨 Styles
+
+- **linting:** Apply linting ([95c89af](https://github.com/xibman/nuxt-zod-i18n/commit/95c89af))
+
+### ❤️ Contributors
+
+- Xibman <georget.julien@gmail.com>
+- Adam Troll <adam.troll@levoolabs.com>
+
 ## v1.11.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.10.0...v1.11.0)

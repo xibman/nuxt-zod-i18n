@@ -1,0 +1,1 @@
+{"id":"b857da23-73c4-4798-bbf3-afc164d75bac","timestamp":1732965798169,"matcher":{"static":{"/api/search.json":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/","/playground","/getting-started","/getting-started/installation","/getting-started/configuration","/add-improve-translation","/usage","/usage/error-interpolation","/usage/overload-translation"]}

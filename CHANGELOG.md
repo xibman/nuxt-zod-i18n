@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.11.2
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.1...v1.11.2)
+
+### 🏡 Chore
+
+- **dependencies:** Update dependencies ([b37b25e](https://github.com/xibman/nuxt-zod-i18n/commit/b37b25e))
+- **dependencies:** Update @nuxt/eslint-config to 0.7.2 ([df4173e](https://github.com/xibman/nuxt-zod-i18n/commit/df4173e))
+- **dependencies:** Restore module resolution for nuxt-component-meta ([9771e01](https://github.com/xibman/nuxt-zod-i18n/commit/9771e01))
+
+### 🤖 CI
+
+- **pnpm version:** Align pnpm version to 9.14.4 ([7acd1f3](https://github.com/xibman/nuxt-zod-i18n/commit/7acd1f3))
+
+### ❤️ Contributors
+
+- Xibman <georget.julien@gmail.com>
+
 ## v1.11.1
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.0...v1.11.1)

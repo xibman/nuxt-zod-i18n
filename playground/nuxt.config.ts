@@ -9,6 +9,8 @@ export default defineNuxtConfig({
     },
   },
 
+  compatibilityDate: '2024-09-16',
+
   i18n: {
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',
@@ -36,6 +38,4 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     types: 'composition',
   },
-
-  compatibilityDate: '2024-09-16',
 })

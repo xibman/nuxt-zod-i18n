@@ -1,12 +1,16 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@nuxtjs/i18n', '@nuxt/ui'],
   devtools: { enabled: true },
+  future: {
+    compatibilityVersion: 4,
+    typescriptBundlerResolution: true,
+  },
   compatibilityDate: '2024-12-24',
 
   i18n: {
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',
-    langDir: './locales',
+    langDir: 'locales',
     lazy: true,
     locales: [
       {

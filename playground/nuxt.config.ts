@@ -1,15 +1,7 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@nuxtjs/i18n', '@nuxt/ui'],
   devtools: { enabled: true },
-
-  ui: {
-    icons: {
-      // @ts-expect-error see https://ui.nuxt.com/components/icon#dynamic
-      dynamic: true,
-    },
-  },
-
-  compatibilityDate: '2024-09-16',
+  compatibilityDate: '2024-12-24',
 
   i18n: {
     defaultDirection: 'ltr',

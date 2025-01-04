@@ -15,8 +15,18 @@ export default defineNuxtConfig({
   routeRules: {
     '/api/search.json': { prerender: true },
   },
-  compatibilityDate: '2024-07-10',
+  compatibilityDate: '2024-12-24',
   typescript: { strict: false },
+  hooks: {
+    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
+    'components:extend': (components) => {
+      const globals = components.filter(c =>
+        ['UButton', 'UIcon'].includes(c.pascalName),
+      )
+
+      globals.forEach(c => (c.global = true))
+    },
+  },
   // Fonts
   fontMetrics: {
     fonts: ['DM Sans'],

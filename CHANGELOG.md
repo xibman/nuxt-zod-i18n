@@ -1,5 +1,41 @@
 # Changelog
 
+## v1.11.3
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.2...v1.11.3)
+
+### 🩹 Fixes
+
+- **playground:** Move i18n translation to follow new directory structure ([f0989a3](https://github.com/xibman/nuxt-zod-i18n/commit/f0989a3))
+- **module:** Add typing for PublicRuntimeConfig ([e236fad](https://github.com/xibman/nuxt-zod-i18n/commit/e236fad))
+
+### 💅 Refactors
+
+- **vscode config:** Update eslint config to use flat config ([61db2f4](https://github.com/xibman/nuxt-zod-i18n/commit/61db2f4))
+- **doc:** Clean typing ([ad16d5a](https://github.com/xibman/nuxt-zod-i18n/commit/ad16d5a))
+
+### 🏡 Chore
+
+- **dependencies:** Update dependencies ([2dae81c](https://github.com/xibman/nuxt-zod-i18n/commit/2dae81c))
+- **libs:** Update libs and pin typescript version to 5.6.3 ([7be8194](https://github.com/xibman/nuxt-zod-i18n/commit/7be8194))
+
+### ✅ Tests
+
+- **i18n:** Move i18n translation to follow new directory structure ([0ed46ed](https://github.com/xibman/nuxt-zod-i18n/commit/0ed46ed))
+
+### 🎨 Styles
+
+- **linting:** Apply linting ([d979802](https://github.com/xibman/nuxt-zod-i18n/commit/d979802))
+
+### 🤖 CI
+
+- **pnpm:** Update version to 9.15.0 ([5606f8d](https://github.com/xibman/nuxt-zod-i18n/commit/5606f8d))
+- **pnpm:** Sync pnpm version to 9.15.2 ([3feca01](https://github.com/xibman/nuxt-zod-i18n/commit/3feca01))
+
+### ❤️ Contributors
+
+- Xibman <georget.julien@gmail.com>
+
 ## v1.11.2
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.1...v1.11.2)

@@ -15,6 +15,10 @@ export default defineNuxtConfig({
   routeRules: {
     '/api/search.json': { prerender: true },
   },
+  future: {
+    compatibilityVersion: 4,
+    typescriptBundlerResolution: true,
+  },
   compatibilityDate: '2024-12-24',
   typescript: { strict: false },
   hooks: {

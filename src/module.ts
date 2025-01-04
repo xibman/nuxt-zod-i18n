@@ -87,7 +87,7 @@ export default defineNuxtModule<ModuleOptions>().with({
           : [],
       ).map(({ code }) => code)
 
-      const languageFiles = await readdir(resolve('./runtime/locales'))
+      const languageFiles = await readdir(resolve('./runtime/i18n/locales'))
 
       const locales = languageFiles.reduce<LocaleObject[]>((acc, file) => {
         const code
@@ -102,7 +102,7 @@ export default defineNuxtModule<ModuleOptions>().with({
 
       nuxt.hook('i18n:registerModule', (register) => {
         register({
-          langDir: resolve('./runtime/locales'),
+          langDir: resolve('./runtime/i18n/locales'),
           locales,
         })
       })

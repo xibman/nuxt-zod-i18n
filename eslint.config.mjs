@@ -12,7 +12,7 @@ export default createConfigForNuxt({
     typescript: true,
   },
   dirs: {
-    src: ['./playground', './docs'],
+    src: ['./playground/app', './docs/app'],
   },
 }).append([
   ...eslintPluginJsonc.configs['flat/recommended-with-jsonc'],

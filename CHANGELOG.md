@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.11.4
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.3...v1.11.4)
+
+### 💅 Refactors
+
+- **playground:** Opting Nuxt 4 apply new Directory Structure ([bdb564f](https://github.com/xibman/nuxt-zod-i18n/commit/bdb564f))
+- **eslint:** Update directory to target app folder for linting ([8396dab](https://github.com/xibman/nuxt-zod-i18n/commit/8396dab))
+- **module:** Apply New Directory Structure ([7128234](https://github.com/xibman/nuxt-zod-i18n/commit/7128234))
+
+### 📖 Documentation
+
+- **opting nuxt 4:** Apply new directory structure ([49ed645](https://github.com/xibman/nuxt-zod-i18n/commit/49ed645))
+
+### ❤️ Contributors
+
+- Xibman <georget.julien@gmail.com>
+
 ## v1.11.3
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.2...v1.11.3)

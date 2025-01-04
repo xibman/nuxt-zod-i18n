@@ -40,32 +40,38 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@intlify/shared": "^10.0.5",
-    "@nuxt/kit": "^3.14.1592",
+    "@intlify/shared": "^11.0.1",
+    "@nuxt/kit": "^3.15.0",
     "dedupe": "^4.0.3",
     "defu": "^6.1.4",
-    "vue-tsc": "^2.1.10",
+    "vue-tsc": "^2.2.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@localazy/cli": "^1.7.14",
-    "@nuxt/devtools": "^1.6.3",
-    "@nuxt/eslint-config": "^0.7.2",
+    "@localazy/cli": "^1.7.15",
+    "@nuxt/devtools": "^1.7.0",
+    "@nuxt/eslint-config": "^0.7.4",
     "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.14.1592",
+    "@nuxt/schema": "^3.15.0",
     "@nuxt/test-utils": "^3.15.1",
     "@nuxtjs/i18n": "^9.1.1",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.10.5",
     "changelogen": "^0.5.7",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "eslint-plugin-jsonc": "^2.18.2",
     "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
-    "nuxt": "^3.14.1592",
+    "lint-staged": "^15.3.0",
+    "nuxt": "^3.15.0",
+    "typescript": "^5.6.3",
     "vitest": "^2.1.8"
   },
   "lint-staged": {
     "*.{js,ts,vue,json,md,yml}": "eslint"
   },
-  "packageManager": "pnpm@9.15.0"
+  "pnpm": {
+    "overrides": {
+      "typescript@5.7.2": "5.6.3"
+    }
+  },
+  "packageManager": "pnpm@9.15.2"
 }

@@ -17,6 +17,15 @@ export interface ModuleOptions {
   localeCodesMapping?: Record<string, string>
 }
 
+declare module '@nuxt/schema' {
+  interface PublicRuntimeConfig {
+    zodI18n: {
+      dateFormat: Intl.DateTimeFormatOptions
+      localeCodesMapping: Record<string, string>
+    }
+  }
+}
+
 export default defineNuxtModule<ModuleOptions>().with({
   meta: {
     compatibility: {
@@ -102,7 +111,7 @@ export default defineNuxtModule<ModuleOptions>().with({
     nuxt.options.runtimeConfig.public.zodI18n = defu(
       nuxt.options.runtimeConfig.public.zodI18n,
       {
-        dateFormat: options.dateFormat,
+        dateFormat: options.dateFormat as Intl.DateTimeFormatOptions,
         localeCodesMapping: options.localeCodesMapping,
       },
     )

@@ -1,115 +1,115 @@
 {
   "zodI18n": {
     "errors": {
-      "custom": "Campo no válido",
-      "invalid_arguments": "Argumentos de función no válidos",
-      "invalid_date": "Fecha no válida",
-      "invalid_enum_value": "Valor enum no válido. Esperaba {options} para revisar, recibió '{received}'",
-      "invalid_intersection_types": "No se han podido fusionar los resultados de las intersecciones",
-      "invalid_literal": "Valor literal no válido, esperado {expected}",
-      "invalid_return_type": "Tipo de retorno de función no válido",
+      "custom": "Entrada inválida",
+      "invalid_arguments": "Argumentos de función inválidos",
+      "invalid_date": "Fecha inválida",
+      "invalid_enum_value": "Valor inválido. Se esperaba {options}, se recibió '{received}'",
+      "invalid_intersection_types": "Valores de intersección no pudieron ser mezclados",
+      "invalid_literal": "Valor literal inválido, se esperaba {expected}",
+      "invalid_return_type": "Tipo de retorno de función inválido",
       "invalid_string": {
-        "cuid": "No válido {validation}",
-        "datetime": "No válido {validation}",
-        "email": "No válido {validation}",
-        "endsWith": "Campo no válido: debe terminar con \"{endsWith}\"",
-        "regex": "INVALID",
-        "startsWith": "Campo no válido: debe empezar por \"{startsWith}\"",
-        "url": "No válido {validation}",
-        "uuid": "No válido {validation}"
+        "cuid": "{validation} inválido",
+        "datetime": "{validation} inválida",
+        "email": "{validation} inválido",
+        "endsWith": "Entrada inválida: debe finalizar con \"{endsWith}\"",
+        "regex": "Inválido",
+        "startsWith": "Entrada inválida: debe comenzar con \"{startsWith}\"",
+        "url": "{validation} inválido",
+        "uuid": "{validation} inválido"
       },
-      "invalid_type": "Previsto {expected}, recibido {received}",
-      "invalid_type_received_undefined": "obligatorio",
-      "invalid_union": "Campo no válido",
-      "invalid_union_discriminator": "Valor discriminador no válido. Esperado {options} para revisar",
-      "not_finite": "El número debe ser finito",
-      "not_multiple_of": "El número debe ser múltiplo de {multipleOf}",
-      "required": "obligatorio",
+      "invalid_type": "Se esperaba {expected}, se recibió {received}",
+      "invalid_type_received_undefined": "Requerido",
+      "invalid_union": "Entrada inválida",
+      "invalid_union_discriminator": "Valor discriminador inválido. Se esperaba {options}",
+      "not_finite": "Número no puede ser infinito",
+      "not_multiple_of": "Número debe ser múltiplo de {multipleOf}",
+      "required": "Requerido",
       "too_big": {
         "array": {
-          "exact": "La matriz debe contener exactamente {maximum} elemento(s)",
-          "inclusive": "La matriz debe contener como máximo {maximum} elemento(s)",
-          "not_inclusive": "La matriz debe contener menos de {maximum} elemento(s)"
+          "exact": "La lista debe contener exactamente {maximum} elemento(s)",
+          "inclusive": "La lista debe contener como máximo {maximum} elemento(s)",
+          "not_inclusive": "La lista debe contener menos que {maximum} elemento(s)"
         },
         "date": {
           "exact": "La fecha debe ser exactamente {maximum}",
-          "inclusive": "La fecha debe ser inferior o igual a {maximum}",
-          "not_inclusive": "La fecha debe ser inferior a {maximum}"
+          "inclusive": "La fecha debe ser menor o igual al {maximum}",
+          "not_inclusive": "La fecha debe ser menor que el {maximum}"
         },
         "number": {
           "exact": "El número debe ser exactamente {maximum}",
-          "inclusive": "El número debe ser inferior o igual a {maximum}",
-          "not_inclusive": "El número debe ser inferior a {maximum}"
+          "inclusive": "El número debe ser menor o igual a {maximum}",
+          "not_inclusive": "El número debe ser menor que {maximum}"
         },
         "set": {
-          "exact": "Campo no válido",
-          "inclusive": "Campo no válido",
-          "not_inclusive": "Campo no válido"
+          "exact": "Entrada inválida",
+          "inclusive": "Entrada inválida",
+          "not_inclusive": "Entrada inválida"
         },
         "string": {
-          "exact": "La cadena debe contener exactamente {maximum} carácter(es)",
-          "inclusive": "La cadena debe contener como máximo {maximum} carácter(es)",
-          "not_inclusive": "La cadena debe contener menos de {maximum} carácter(es)"
+          "exact": "El texto debe contener exactamente {maximum} carácter(es)",
+          "inclusive": "El texto debe contener como máximo {maximum} carácter(es)",
+          "not_inclusive": "El texto debe contener menos de {maximum} carácter(es)"
         }
       },
       "too_small": {
         "array": {
-          "exact": "La matriz debe contener exactamente {minimum} elemento(s)",
-          "inclusive": "La matriz debe contener al menos {minimum} elemento(s)",
-          "not_inclusive": "La matriz debe contener más de {minimum} elemento(s)"
+          "exact": "La lista debe contener exactamente {minimum} elemento(s)",
+          "inclusive": "La lista debe contener al menos {minimum} elemento(s)",
+          "not_inclusive": "La lista debe contener más de {minimum} elemento(s)"
         },
         "date": {
           "exact": "La fecha debe ser exactamente {minimum}",
-          "inclusive": "La fecha debe ser mayor o igual a {minimum}",
-          "not_inclusive": "La fecha debe ser superior a {minimum}"
+          "inclusive": "La fecha debe ser mayor o igual al {minimum}",
+          "not_inclusive": "La fecha debe ser mayor que el {minimum}"
         },
         "number": {
           "exact": "El número debe ser exactamente {minimum}",
-          "inclusive": "El número debe ser mayor o igual que {minimum}",
+          "inclusive": "El número debe ser mayor o igual a {minimum}",
           "not_inclusive": "El número debe ser mayor que {minimum}"
         },
         "set": {
-          "exact": "Campo no válido",
-          "inclusive": "Campo no válido",
-          "not_inclusive": "Campo no válido"
+          "exact": "Entrada inválida",
+          "inclusive": "Entrada inválida",
+          "not_inclusive": "Entrada inválida"
         },
         "string": {
-          "exact": "La cadena debe contener exactamente {minimum} carácter(es)",
-          "inclusive": "La cadena debe contener al menos {minimum} carácter(es)",
-          "not_inclusive": "La cadena debe contener más de {minimum} carácter(es)"
+          "exact": "El texto debe contener exactamente {minimum} carácter(es)",
+          "inclusive": "El texto debe contener al menos {minimum} carácter(es)",
+          "not_inclusive": "El texto debe contener más de {minimum} carácter(es)"
         }
       },
-      "unrecognized_keys": "Clave(s) no reconocida(s) en el objeto: {keys} revisar"
+      "unrecognized_keys": "Llave(s) no reconocida(s) en el objeto: {keys}"
     },
     "types": {
-      "array": "array",
-      "bigint": "bigint",
-      "boolean": "boolean",
-      "date": "date",
-      "float": "float",
-      "function": "function",
-      "integer": "integer",
-      "map": "map",
-      "nan": "nan",
-      "never": "never",
-      "null": "null",
-      "number": "number",
-      "object": "object",
-      "promise": "promise",
-      "set": "set",
-      "string": "string",
-      "symbol": "symbol",
-      "undefined": "undefined",
-      "unknown": "unknown",
+      "array": "lista",
+      "bigint": "entero grande",
+      "boolean": "booleano",
+      "date": "fecha",
+      "float": "decimal",
+      "function": "función",
+      "integer": "entero",
+      "map": "mapa",
+      "nan": "valor no númerico",
+      "never": "nunca",
+      "null": "nulo",
+      "number": "número",
+      "object": "objeto",
+      "promise": "promesa",
+      "set": "conjunto",
+      "string": "texto",
+      "symbol": "símbolo",
+      "undefined": "indefinido",
+      "unknown": "desconocido",
       "void": "void"
     },
     "validations": {
       "cuid": "cuid",
-      "datetime": "datetime",
-      "email": "Correo electrónico",
-      "regex": "regex",
-      "url": "Url",
-      "uuid": "Uuid"
+      "datetime": "fecha",
+      "email": "correo",
+      "regex": "expresión regular",
+      "url": "enlace",
+      "uuid": "uuid"
     }
   }
 }

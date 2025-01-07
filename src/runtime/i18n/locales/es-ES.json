@@ -1,7 +1,7 @@
 {
   "zodI18n": {
     "errors": {
-      "custom": "Entrada inválida",
+      "custom": "Campo inválido",
       "invalid_arguments": "Argumentos de función inválidos",
       "invalid_date": "Fecha inválida",
       "invalid_enum_value": "Valor inválido. Se esperaba {options}, se recibió '{received}'",
@@ -12,15 +12,15 @@
         "cuid": "{validation} inválido",
         "datetime": "{validation} inválida",
         "email": "{validation} inválido",
-        "endsWith": "Entrada inválida: debe finalizar con \"{endsWith}\"",
+        "endsWith": "Campo inválido: debe finalizar con \"{endsWith}\"",
         "regex": "Inválido",
-        "startsWith": "Entrada inválida: debe comenzar con \"{startsWith}\"",
+        "startsWith": "Campo inválido: debe comenzar con \"{startsWith}\"",
         "url": "{validation} inválido",
         "uuid": "{validation} inválido"
       },
       "invalid_type": "Se esperaba {expected}, se recibió {received}",
       "invalid_type_received_undefined": "Requerido",
-      "invalid_union": "Entrada inválida",
+      "invalid_union": "Campo inválido",
       "invalid_union_discriminator": "Valor discriminador inválido. Se esperaba {options}",
       "not_finite": "Número no puede ser infinito",
       "not_multiple_of": "Número debe ser múltiplo de {multipleOf}",
@@ -42,9 +42,9 @@
           "not_inclusive": "El número debe ser menor que {maximum}"
         },
         "set": {
-          "exact": "Entrada inválida",
-          "inclusive": "Entrada inválida",
-          "not_inclusive": "Entrada inválida"
+          "exact": "Campo inválido",
+          "inclusive": "Campo inválido",
+          "not_inclusive": "Campo inválido"
         },
         "string": {
           "exact": "El texto debe contener exactamente {maximum} carácter(es)",
@@ -69,9 +69,9 @@
           "not_inclusive": "El número debe ser mayor que {minimum}"
         },
         "set": {
-          "exact": "Entrada inválida",
-          "inclusive": "Entrada inválida",
-          "not_inclusive": "Entrada inválida"
+          "exact": "Campo inválido",
+          "inclusive": "Campo inválido",
+          "not_inclusive": "Campo inválido"
         },
         "string": {
           "exact": "El texto debe contener exactamente {minimum} carácter(es)",

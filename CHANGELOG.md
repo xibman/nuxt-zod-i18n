@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.11.5
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.4...v1.11.5)
+
+### 🩹 Fixes
+
+- Interpolation placeholders adapted ([91cd4d5](https://github.com/xibman/nuxt-zod-i18n/commit/91cd4d5))
+- 'Entrada inválida' replaced with 'Campo inválido' ([0b2dc87](https://github.com/xibman/nuxt-zod-i18n/commit/0b2dc87))
+
+### ❤️ Contributors
+
+- Douglas Ramírez ([@DouglasAR01](http://github.com/DouglasAR01))
+
 ## v1.11.4
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.3...v1.11.4)

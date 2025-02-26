@@ -4,7 +4,7 @@
       "custom": "Invalid input",
       "invalid_arguments": "Invalid function arguments",
       "invalid_date": "Invalid date",
-      "invalid_enum_value": "Invalid enum value. Expected {options} to review, received '{received}'",
+      "invalid_enum_value": "Invalid enum value. Expected {options}, received '{received}'",
       "invalid_intersection_types": "Intersection results could not be merged",
       "invalid_literal": "Invalid literal value, expected {expected}",
       "invalid_return_type": "Invalid function return type",
@@ -21,7 +21,7 @@
       "invalid_type": "Expected {expected}, received {received}",
       "invalid_type_received_undefined": "Required",
       "invalid_union": "Invalid input",
-      "invalid_union_discriminator": "Invalid discriminator value. Expected {options} to review",
+      "invalid_union_discriminator": "Invalid discriminator value. Expected {options}",
       "not_finite": "Number must be finite",
       "not_multiple_of": "Number must be a multiple of {multipleOf}",
       "required": "Required",
@@ -79,7 +79,7 @@
           "not_inclusive": "String must contain over {minimum} character(s)"
         }
       },
-      "unrecognized_keys": "Unrecognized key(s) in object: {keys} to review"
+      "unrecognized_keys": "Unrecognized key(s) in object: {keys}"
     },
     "types": {
       "array": "array",

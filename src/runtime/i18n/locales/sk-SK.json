@@ -2,44 +2,47 @@
   "zodI18n": {
     "errors": {
       "custom": "Neplatný vstup",
-      "invalid_arguments": "Neplatné argumenty funkce",
-      "invalid_date": "Neplatné datum",
-      "invalid_enum_value": "Neplatná hodnota enumu. Očekával {options} k přezkoumání, obdržel '{received}'",
-      "invalid_intersection_types": "Výsledky průsečíků nebylo možné sloučit",
-      "invalid_literal": "Neplatná doslovná hodnota, očekávaná {expected}",
-      "invalid_return_type": "Nesprávný návratový typ funkce",
+      "invalid_arguments": "Neplatné argumenty funkcie",
+      "invalid_date": "Neplatný dátum",
+      "invalid_enum_value": "Neplatná hodnota výčtu. Očakáva sa {options}, ale bolo obdržané '{received}'",
+      "invalid_intersection_types": "Hodnoty prieniku nie je možné zlúčiť",
+      "invalid_literal": "Neplatná doslovná hodnota, očakáva sa {expected}",
+      "invalid_return_type": "Neplatný typ návratovej hodnoty",
       "invalid_string": {
-        "cuid": "Neplatná {validation}",
-        "datetime": "Neplatná {validation}",
-        "email": "Neplatná {validation}",
-        "endsWith": "Neplatný vstup: musí končit \"{endsWith}\"",
-        "regex": "Neplatná",
-        "startsWith": "Neplatný vstup: musí začínat \"{startsWith}\"",
+        "cuid": "Neplatné {validation}",
+        "datetime": "Neplatný {validation}",
+        "email": "Neplatný {validation}",
+        "endsWith": "Neplatný vstup: musí končiť \"{endsWith}\"",
+        "regex": "Neplatná kombinácia",
+        "startsWith": "Neplatný vstup: musí začínať \"{startsWith}\"",
         "url": "Neplatná {validation}",
-        "uuid": "Neplatná {validation}"
+        "uuid": "Neplatné {validation}"
       },
-      "invalid_type": "Očekávaný {expected}, přijatý {received}",
-      "invalid_type_received_undefined": "Požadované",
+      "invalid_type": "Typ vstupu musí byť {expected}, ale bol obdržaný typ {received}",
+      "invalid_type_received_undefined": "Povinné",
       "invalid_union": "Neplatný vstup",
-      "invalid_union_discriminator": "Neplatná hodnota diskriminátoru. Očekávaná {options} k přezkoumání",
-      "not_finite": "Počet musí být konečný",
-      "not_multiple_of": "Číslo musí být násobkem {multipleOf}",
+      "invalid_union_discriminator": "Neplatná hodnota diskriminátora. Očakáva sa {options}",
+      "not_finite": "Číslo nesmie byť nekonečné",
+      "not_multiple_of": "Číslo musí byť násobkom {multipleOf}",
       "required": "Požadované",
       "too_big": {
         "array": {
-          "exact": "Pole musí obsahovat přesně {maximum} prvků",
-          "inclusive": "Pole musí obsahovat nejvýše {maximum} prvků",
-          "not_inclusive": "Pole musí obsahovat méně než {maximum} prvek(y)"
+          "exact": "Pole musí obsahovať presne {maximum} prvky",
+          "exact_one": "Pole musí obsahovať presne jeden prvok",
+          "inclusive": "Pole musí obsahovať najviac {maximum} prvky",
+          "inclusive_one": "Pole musí obsahovať najviac jeden prvok",
+          "not_inclusive": "Pole musí obsahovať menej než {maximum} prvky",
+          "not_inclusive_one": "Pole musí byť prázdne"
         },
         "date": {
-          "exact": "Datum musí být přesně {maximum}",
-          "inclusive": "Datum musí být menší nebo rovno {maximum}",
-          "not_inclusive": "Datum musí být menší než {maximum}"
-        },
+          "exact": "Dátum musí byť presne {maximum}",
+          "inclusive": "Dátum musí byť menší alebo rovný {maximum}",
+          "not_inclusive": "Dátum musí byť menší než {maximum}"
+        }
         "number": {
-          "exact": "Číslo musí být přesně {maximum}",
-          "inclusive": "Číslo musí být menší nebo rovno {maximum}",
-          "not_inclusive": "Číslo musí být menší než {maximum}"
+          "exact": "Číslo musí byť presne {maximum}",
+          "inclusive": "Číslo musí byť menšie alebo rovné {maximum}",
+          "not_inclusive": "Číslo musí byť menšie než {maximum}"
         },
         "set": {
           "exact": "Neplatný vstup",
@@ -47,26 +50,29 @@
           "not_inclusive": "Neplatný vstup"
         },
         "string": {
-          "exact": "Řetězec musí obsahovat přesně {maximum} znaků",
-          "inclusive": "Řetězec musí obsahovat nejvýše {maximum} znaků",
-          "not_inclusive": "Řetězec musí obsahovat méně než {maximum} znak(y)"
+          "exact": "Text musí obsahovať presne {maximum} znak(y)",
+          "inclusive": "Text musí obsahovať najviac {maximum} znak(y)",
+          "not_inclusive": "Text musí obsahovať menej než {maximum} znak(y)"
         }
       },
       "too_small": {
         "array": {
-          "exact": "Pole musí obsahovat přesně {minimum} prvků",
-          "inclusive": "Pole musí obsahovat alespoň {minimum} prvků",
-          "not_inclusive": "Pole musí obsahovat více než {minimum} prvků"
+          "exact": "Pole musí obsahovať presne {minimum} prvky",
+          "inclusive": "Pole musí obsahovať aspoň {minimum} prvky",
+          "not_inclusive": "Pole musí obsahovať viac ako {minimum} prvky",
+          "exact_one": "Pole musí obsahovať presne jeden prvok",
+          "inclusive_one": "Pole musí obsahovať aspoň jeden prvok",
+          "not_inclusive_one": "Pole musí obsahovať aspoň dva prvky"
         },
         "date": {
-          "exact": "Datum musí být přesně {minimum}",
-          "inclusive": "Datum musí být větší nebo rovno {minimum}",
-          "not_inclusive": "Datum musí být větší než {minimum}"
+          "exact": "Dátum musí byť presne {minimum}",
+          "inclusive": "Dátum musí byť väčší alebo rovný {minimum}",
+          "not_inclusive": "Dátum musí byť väčší než {minimum}"
         },
         "number": {
-          "exact": "Číslo musí být přesně {minimum}",
-          "inclusive": "Číslo musí být větší nebo rovno {minimum}",
-          "not_inclusive": "Číslo musí být větší než {minimum}"
+          "exact": "Číslo musí byť presne {minimum}",
+          "inclusive": "Číslo musí byť väčšie alebo rovné {minimum}",
+          "not_inclusive": "Číslo musí byť väčšie než {minimum}"
         },
         "set": {
           "exact": "Neplatný vstup",
@@ -74,40 +80,40 @@
           "not_inclusive": "Neplatný vstup"
         },
         "string": {
-          "exact": "Řetězec musí obsahovat přesně {minimum} znaků",
-          "inclusive": "Řetězec musí obsahovat alespoň {minimum} znaků",
-          "not_inclusive": "Řetězec musí obsahovat více než {minimum} znaků"
+          "exact": "Text musí obsahovať presne {minimum} znak(y)",
+          "inclusive": "Text musí obsahovať aspoň {minimum} znak(y)",
+          "not_inclusive": "Text musí obsahovať najviac {minimum} znak(y)"
         }
       },
-      "unrecognized_keys": "Nerozpoznané klíče v objektu: {keys} k přezkoumání"
+      "unrecognized_keys": "Nerozpoznané kľúče v objekte: {keys}"
     },
     "types": {
       "array": "pole",
       "bigint": "bigint",
       "boolean": "boolean",
-      "date": "date",
-      "float": "float",
-      "function": "funkce",
-      "integer": "integer",
+      "date": "dátum",
+      "float": "reálne číslo",
+      "function": "funkcia",
+      "integer": "celé číslo",
       "map": "mapa",
-      "nan": "nan",
+      "nan": "NaN",
       "never": "never",
       "null": "null",
       "number": "číslo",
       "object": "objekt",
-      "promise": "slib",
-      "set": "nastavit",
-      "string": "string",
+      "promise": "promise",
+      "set": "množina",
+      "string": "text",
       "symbol": "symbol",
-      "undefined": "neurčeno",
-      "unknown": "neznámý",
+      "undefined": "nedefinované",
+      "unknown": "neznáme",
       "void": "void"
     },
     "validations": {
       "cuid": "cuid",
-      "datetime": "datum",
+      "datetime": "dátum a čas",
       "email": "e-mail",
-      "regex": "regulární výraz",
+      "regex": "regex",
       "url": "url",
       "uuid": "uuid"
     }

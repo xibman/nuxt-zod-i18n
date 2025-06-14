@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "Entrada inválida",
+      "invalid_arguments": "Argumentos de função inválidos",
+      "invalid_date": "Data inválida",
+      "invalid_enum_value": "Valor de enum inválido. Esperava-se que {options} fosse revisto, mas recebeu '{received}'",
+      "invalid_intersection_types": "Não foi possível fundir os resultados da intersecção",
+      "invalid_literal": "Valor literal inválido, esperado {expected}",
+      "invalid_return_type": "Tipo de retorno de função inválido",
+      "invalid_string": {
+        "cuid": "Inválido {validation}",
+        "datetime": "Inválido {validation}",
+        "email": "Inválido {validation}",
+        "endsWith": "Entrada inválida: deve terminar com \"{endsWith}\"",
+        "regex": "Inválido",
+        "startsWith": "Entrada inválida: deve começar por \"{startsWith}\"",
+        "url": "Inválido {validation}",
+        "uuid": "Inválido {validation}"
+      },
+      "invalid_type": "Esperado {expected}, recebido {received}",
+      "invalid_type_received_undefined": "Obrigatório",
+      "invalid_union": "Entrada inválida",
+      "invalid_union_discriminator": "Valor de discriminador inválido. Esperado {options} para rever",
+      "not_finite": "O número deve ser finito",
+      "not_multiple_of": "O número deve ser um múltiplo de {multipleOf}",
+      "required": "Obrigatório",
+      "too_big": {
+        "array": {
+          "exact": "O array deve conter exatamente {maximum} elemento(s)",
+          "inclusive": "O array deve conter no máximo {maximum} elemento(s)",
+          "not_inclusive": "O array deve conter menos de {maximum} elemento(s)"
+        },
+        "date": {
+          "exact": "A data deve ser exatamente {maximum}",
+          "inclusive": "A data deve ser menor ou igual a {maximum}",
+          "not_inclusive": "A data deve ser inferior do que {maximum}"
+        },
+        "number": {
+          "exact": "O número deve ser exatamente {maximum}",
+          "inclusive": "O número deve ser menor ou igual a {maximum}",
+          "not_inclusive": "O número deve ser inferior a {maximum}"
+        },
+        "set": {
+          "exact": "Entrada inválida",
+          "inclusive": "Entrada inválida",
+          "not_inclusive": "Entrada inválida"
+        },
+        "string": {
+          "exact": "O texto deve conter exatamente {maximum} carácter(es)",
+          "inclusive": "O texto deve conter no máximo {maximum} carácter(es)",
+          "not_inclusive": "O texto deve conter menos de {maximum} carácter(es)"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "O array deve conter exatamente {minimum} elemento(s)",
+          "inclusive": "O array deve conter pelo menos {minimum} elemento(s)",
+          "not_inclusive": "O array deve conter mais de {minimum} elemento(s)"
+        },
+        "date": {
+          "exact": "A data deve ser exatamente {minimum}",
+          "inclusive": "A data deve ser maior ou igual a {minimum}",
+          "not_inclusive": "A data deve ser superior a {minimum}"
+        },
+        "number": {
+          "exact": "O número deve ser exatamente {minimum}",
+          "inclusive": "O número deve ser maior ou igual a {minimum}",
+          "not_inclusive": "O número deve ser maior que {minimum}"
+        },
+        "set": {
+          "exact": "Entrada inválida",
+          "inclusive": "Entrada inválida",
+          "not_inclusive": "Entrada inválida"
+        },
+        "string": {
+          "exact": "O texto deve conter exatamente {minimum} carácter(es)",
+          "inclusive": "O texto deve conter pelo menos {minimum} carácter(es)",
+          "not_inclusive": "O texto deve conter mais de {minimum} carácter(es)"
+        }
+      },
+      "unrecognized_keys": "Chave(s) não reconhecida(s) no objeto: {keys} para rever"
+    },
+    "types": {
+      "array": "array",
+      "bigint": "bigint",
+      "boolean": "boolean",
+      "date": "date",
+      "float": "float",
+      "function": "function",
+      "integer": "integer",
+      "map": "map",
+      "nan": "nan",
+      "never": "never",
+      "null": "null",
+      "number": "number",
+      "object": "object",
+      "promise": "promise",
+      "set": "set",
+      "string": "string",
+      "symbol": "symbol",
+      "undefined": "undefined",
+      "unknown": "unknown",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "Data/hora",
+      "email": "E-mail",
+      "regex": "regex",
+      "url": "URL",
+      "uuid": "uuid"
+    }
+  }
+}

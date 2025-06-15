@@ -67,12 +67,14 @@ npm run release
 ```
 
 <!-- Badges -->
-
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-zod-i18n/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/nuxt-zod-i18n
+
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-zod-i18n.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/nuxt-zod-i18n
+[npm-downloads-href]: https://npm.chart.dev/nuxt-zod-i18n
+
 [license-src]: https://img.shields.io/npm/l/nuxt-zod-i18n.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/nuxt-zod-i18n
+
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com

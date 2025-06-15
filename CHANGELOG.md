@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.12.0
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.5...v1.12.0)
+
+### 🚀 Enhancements
+
+- Add nl-NL locale ([ddb9af7](https://github.com/xibman/nuxt-zod-i18n/commit/ddb9af7))
+- Add brazilian portuguese json ([3272f2d](https://github.com/xibman/nuxt-zod-i18n/commit/3272f2d))
+- **i18n:** Add nl-NL locale ([2b87772](https://github.com/xibman/nuxt-zod-i18n/commit/2b87772))
+- **i18n:** Add new translation for pt-BR ([ea51ce5](https://github.com/xibman/nuxt-zod-i18n/commit/ea51ce5))
+
+### 🩹 Fixes
+
+- Formatting, minor linting ([5d6d67c](https://github.com/xibman/nuxt-zod-i18n/commit/5d6d67c))
+- **translations:** Sk-SK language formatting, minor linting ([2d8c18a](https://github.com/xibman/nuxt-zod-i18n/commit/2d8c18a))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump vitest from 2.1.8 to 2.1.9 ([ec86a1a](https://github.com/xibman/nuxt-zod-i18n/commit/ec86a1a))
+
+### ❤️ Contributors
+
+- Georget Julien <georget.julien@gmail.com>
+- Vinicius Marinho <viniciusmarinho1616@gmail.com>
+- GreenmeisterDavid <david@oxygensoftware.net>
+
 ## v1.11.5
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.4...v1.11.5)

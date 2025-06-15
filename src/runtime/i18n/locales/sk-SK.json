@@ -38,7 +38,7 @@
           "exact": "Dátum musí byť presne {maximum}",
           "inclusive": "Dátum musí byť menší alebo rovný {maximum}",
           "not_inclusive": "Dátum musí byť menší než {maximum}"
-        }
+        },
         "number": {
           "exact": "Číslo musí byť presne {maximum}",
           "inclusive": "Číslo musí byť menšie alebo rovné {maximum}",
@@ -58,10 +58,10 @@
       "too_small": {
         "array": {
           "exact": "Pole musí obsahovať presne {minimum} prvky",
-          "inclusive": "Pole musí obsahovať aspoň {minimum} prvky",
-          "not_inclusive": "Pole musí obsahovať viac ako {minimum} prvky",
           "exact_one": "Pole musí obsahovať presne jeden prvok",
+          "inclusive": "Pole musí obsahovať aspoň {minimum} prvky",
           "inclusive_one": "Pole musí obsahovať aspoň jeden prvok",
+          "not_inclusive": "Pole musí obsahovať viac ako {minimum} prvky",
           "not_inclusive_one": "Pole musí obsahovať aspoň dva prvky"
         },
         "date": {

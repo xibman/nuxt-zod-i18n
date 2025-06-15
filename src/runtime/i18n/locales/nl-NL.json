@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "Ongeldige invoer",
+      "invalid_arguments": "Ongeldige functieargumenten",
+      "invalid_date": "Ongeldige datum",
+      "invalid_enum_value": "Ongeldige enumwaarde. Verwacht {options}, ontvangt '{received}'",
+      "invalid_intersection_types": "Resultaten van intersecties konden niet worden samengevoegd",
+      "invalid_literal": "Ongeldige waarde, verwacht {expected}",
+      "invalid_return_type": "Ongeldig functiereturntype",
+      "invalid_string": {
+        "cuid": "Ongeldige {validation}",
+        "datetime": "Ongeldige {validation}",
+        "email": "Ongeldige {validation}",
+        "endsWith": "Ongeldige invoer: moet eindigen met \"{endsWith}\"",
+        "regex": "Ongeldig",
+        "startsWith": "Ongeldige invoer: moet beginnen met \"{startsWith}\"",
+        "url": "Ongeldige {validation}",
+        "uuid": "Ongeldige {validation}"
+      },
+      "invalid_type": "Verwacht {expected}, ontvangen {received}",
+      "invalid_type_received_undefined": "Verplicht",
+      "invalid_union": "Ongeldige invoer",
+      "invalid_union_discriminator": "Ongeldige discriminatiewaarde. Verwacht {options}",
+      "not_finite": "Getal moet eindig zijn",
+      "not_multiple_of": "Getal moet een veelvoud zijn van {multipleOf}",
+      "required": "Verplicht",
+      "too_big": {
+        "array": {
+          "exact": "Array moet exact {maximum} element(en) bevatten",
+          "inclusive": "Array mag maximaal {maximum} element(en) bevatten",
+          "not_inclusive": "Array moet minder dan {maximum} element(en) bevatten"
+        },
+        "date": {
+          "exact": "Datum moet exact {maximum} zijn",
+          "inclusive": "Datum moet kleiner of gelijk zijn aan {maximum}",
+          "not_inclusive": "Datum moet kleiner zijn dan {maximum}"
+        },
+        "number": {
+          "exact": "Getal moet exact {maximum} zijn",
+          "inclusive": "Getal moet kleiner of gelijk zijn aan {maximum}",
+          "not_inclusive": "Getal moet kleiner zijn dan {maximum}"
+        },
+        "set": {
+          "exact": "Ongeldige invoer",
+          "inclusive": "Ongeldige invoer",
+          "not_inclusive": "Ongeldige invoer"
+        },
+        "string": {
+          "exact": "String moet exact {maximum} teken(en) bevatten",
+          "inclusive": "String mag maximaal {maximum} teken(en) bevatten",
+          "not_inclusive": "String moet minder dan {maximum} teken(en) bevatten"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "Array moet exact {minimum} element(en) bevatten",
+          "inclusive": "Array moet minimaal {minimum} element(en) bevatten",
+          "not_inclusive": "Array moet meer dan {minimum} element(en) bevatten"
+        },
+        "date": {
+          "exact": "Datum moet exact {minimum} zijn",
+          "inclusive": "Datum moet groter of gelijk zijn aan {minimum}",
+          "not_inclusive": "Datum moet groter zijn dan {minimum}"
+        },
+        "number": {
+          "exact": "Getal moet exact {minimum} zijn",
+          "inclusive": "Getal moet groter of gelijk zijn aan {minimum}",
+          "not_inclusive": "Getal moet groter zijn dan {minimum}"
+        },
+        "set": {
+          "exact": "Ongeldige invoer",
+          "inclusive": "Ongeldige invoer",
+          "not_inclusive": "Ongeldige invoer"
+        },
+        "string": {
+          "exact": "String moet exact {minimum} karakter(s) bevatten",
+          "inclusive": "String moet minimaal {minimum} karakter(s) bevatten",
+          "not_inclusive": "String moet meer dan {minimum} karakter(s) bevatten"
+        }
+      },
+      "unrecognized_keys": "Onbekende key(s) in object: {keys}"
+    },
+    "types": {
+      "array": "array",
+      "bigint": "bigint",
+      "boolean": "boolean",
+      "date": "datum",
+      "float": "float",
+      "function": "function",
+      "integer": "integer",
+      "map": "map",
+      "nan": "nan",
+      "never": "never",
+      "null": "null",
+      "number": "getal",
+      "object": "object",
+      "promise": "promise",
+      "set": "set",
+      "string": "string",
+      "symbol": "symbol",
+      "undefined": "undefined",
+      "unknown": "unknown",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "datetime",
+      "email": "email",
+      "regex": "regex",
+      "url": "url",
+      "uuid": "uuid"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+import{K as s,l as a,s as r,x as t}from"./Dtp3W2Dl.js";const n={};function o(e,c){return r(),a("thead",null,[t(e.$slots,"default")])}const _=Object.assign(s(n,[["render",o]]),{__name:"ProseThead"});export{_ as default};

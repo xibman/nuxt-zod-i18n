@@ -1,0 +1,1 @@
+import{K as n,l as o,s,x as r}from"./Dtp3W2Dl.js";const t={};function c(e,a){return s(),o("code",null,[r(e.$slots,"default")])}const _=Object.assign(n(t,[["render",c]]),{__name:"ProseCodeInline"});export{_ as default};

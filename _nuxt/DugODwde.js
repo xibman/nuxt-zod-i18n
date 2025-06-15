@@ -1,0 +1,1 @@
+import{K as s,l as a,s as r,x as t}from"./Dtp3W2Dl.js";const n={};function o(e,l){return r(),a("table",null,[t(e.$slots,"default")])}const _=Object.assign(s(n,[["render",o]]),{__name:"ProseTable"});export{_ as default};

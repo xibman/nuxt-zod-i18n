@@ -1,0 +1,1 @@
+import{K as s,l as r,s as n,x as o}from"./Dtp3W2Dl.js";const t={};function l(e,a){return n(),r("ul",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",l]]),{__name:"ProseUl"});export{_ as default};

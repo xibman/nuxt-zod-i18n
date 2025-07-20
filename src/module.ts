@@ -92,7 +92,7 @@ export default defineNuxtModule<ModuleOptions>().with({
       const locales = languageFiles.reduce<LocaleObject[]>((acc, file) => {
         const code
           = options.localeCodesMapping?.[file.replace('.json', '')]
-          || file.replace('.json', '')
+            || file.replace('.json', '')
         if (appLocalesCode.includes(code)) {
           acc.push({ file, code })
         }

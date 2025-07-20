@@ -34,28 +34,33 @@ function onSubmit(event: FormSubmitEvent<LoginDto>) {
       <h1 class="text-2xl font-bold">
         {{ t('pages.index.title') }}
       </h1>
-      <UDivider />
-      <UFormGroup
+      <USeparator />
+      <UFormField
         :label="t('dictionary.name')"
         name="name"
+        size="xl"
       >
         <UInput
           v-model="state.name"
           placeholder="Your name"
+          class="w-full"
         />
-      </UFormGroup>
-      <UFormGroup
+      </UFormField>
+      <UFormField
         :label="t('dictionary.email')"
         name="email"
+        size="xl"
       >
         <UInput
           v-model="state.email"
           placeholder="Your email"
+          class="w-full"
         />
-      </UFormGroup>
+      </UFormField>
       <UButton
         type="submit"
         class="w-fit"
+        size="lg"
       >
         {{ t('dictionary.save') }}
       </UButton>

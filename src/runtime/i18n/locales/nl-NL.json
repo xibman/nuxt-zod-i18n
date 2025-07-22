@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Ongeldige invoer",
-      "invalid_arguments": "Ongeldige functieargumenten",
-      "invalid_date": "Ongeldige datum",
       "invalid_enum_value": "Ongeldige enumwaarde. Verwacht {options}, ontvangt '{received}'",
-      "invalid_intersection_types": "Resultaten van intersecties konden niet worden samengevoegd",
       "invalid_literal": "Ongeldige waarde, verwacht {expected}",
-      "invalid_return_type": "Ongeldig functiereturntype",
       "invalid_string": {
         "cuid": "Ongeldige {validation}",
         "datetime": "Ongeldige {validation}",
@@ -21,8 +17,6 @@
       "invalid_type": "Verwacht {expected}, ontvangen {received}",
       "invalid_type_received_undefined": "Verplicht",
       "invalid_union": "Ongeldige invoer",
-      "invalid_union_discriminator": "Ongeldige discriminatiewaarde. Verwacht {options}",
-      "not_finite": "Getal moet eindig zijn",
       "not_multiple_of": "Getal moet een veelvoud zijn van {multipleOf}",
       "required": "Verplicht",
       "too_big": {

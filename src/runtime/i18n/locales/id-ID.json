@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Input tidak valid",
-      "invalid_arguments": "Argumen function tidak valid",
-      "invalid_date": "Tanggal tidak valid",
       "invalid_enum_value": "Nilai enum '{received}' tidak ditemukan dalam {options}",
-      "invalid_intersection_types": "Hasil intersection tidak dapat disatukan",
       "invalid_literal": "Nilai literal tidak valid, seharusnya {expected}",
-      "invalid_return_type": "Tipe data return function tidak valid",
       "invalid_string": {
         "cuid": "Format {validation} tidak valid",
         "datetime": "Format {validation} tidak valid",
@@ -21,8 +17,6 @@
       "invalid_type": "Nilai seharusnya memiliki tipe data {expected}, diterima {received}",
       "invalid_type_received_undefined": "Wajib diisi",
       "invalid_union": "Input tidak valid",
-      "invalid_union_discriminator": "Nilai discriminator tidak ditemukan dalam {options}",
-      "not_finite": "Angka harus berhingga",
       "not_multiple_of": "Angka harus merupakan kelipatan dari {multipleOf}",
       "required": "Wajib diisi",
       "too_big": {

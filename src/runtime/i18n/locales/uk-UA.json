@@ -1,12 +1,8 @@
 {
   "errors": {
     "custom": "Невірне введення",
-    "invalid_arguments": "Невірні аргументи функції",
-    "invalid_date": "Невірний формат дати",
     "invalid_enum_value": "Невірне значення enum. Очікувалося {options}, отримано '{received}'",
-    "invalid_intersection_types": "Результати перетину не вдалося об'єднати",
     "invalid_literal": "Невірне літеральне значення, очікувалось {expected}",
-    "invalid_return_type": "Невірний тип значення, що повертається функцією",
     "invalid_string": {
       "cuid": "Невірне введення {validation}",
       "datetime": "Невірний формат {validation}",
@@ -20,8 +16,6 @@
     "invalid_type": "Очікувався тип {expected}, отримано {received}",
     "invalid_type_received_undefined": "Обов'язковe поле",
     "invalid_union": "Невірне введення",
-    "invalid_union_discriminator": "Неправильне значення дискримінатора. Очікувалось {options}",
-    "not_finite": "Число повинно бути скінченним",
     "not_multiple_of": "Число повинно бути кратним {multipleOf}",
     "required": "Обов'язкове поле",
     "too_big": {

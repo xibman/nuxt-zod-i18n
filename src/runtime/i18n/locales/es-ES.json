@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Campo inválido",
-      "invalid_arguments": "Argumentos de función inválidos",
-      "invalid_date": "Fecha inválida",
       "invalid_enum_value": "Valor inválido. Se esperaba {options}, se recibió '{received}'",
-      "invalid_intersection_types": "Valores de intersección no pudieron ser mezclados",
       "invalid_literal": "Valor literal inválido, se esperaba {expected}",
-      "invalid_return_type": "Tipo de retorno de función inválido",
       "invalid_string": {
         "cuid": "{validation} inválido",
         "datetime": "{validation} inválida",
@@ -21,8 +17,6 @@
       "invalid_type": "Se esperaba {expected}, se recibió {received}",
       "invalid_type_received_undefined": "Requerido",
       "invalid_union": "Campo inválido",
-      "invalid_union_discriminator": "Valor discriminador inválido. Se esperaba {options}",
-      "not_finite": "Número no puede ser infinito",
       "not_multiple_of": "Número debe ser múltiplo de {multipleOf}",
       "required": "Requerido",
       "too_big": {

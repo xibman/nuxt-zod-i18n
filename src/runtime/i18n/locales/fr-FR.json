@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Champ invalide",
-      "invalid_arguments": "La fonction a reçu des arguments invalides",
-      "invalid_date": "Date invalide",
       "invalid_enum_value": "La valeur '{received}' n'existe pas dans les options: {options}",
-      "invalid_intersection_types": "Les résultats d'intersection n'ont pas pu être fusionnés",
       "invalid_literal": "La valeur doit être {expected}",
-      "invalid_return_type": "La fonction a retourné un type invalide",
       "invalid_string": {
         "cuid": "{validation} invalide",
         "datetime": "{validation} invalide",
@@ -21,8 +17,6 @@
       "invalid_type": "Type invalide: {expected} doit être fourni(e), mais {received} a été reçu(e)",
       "invalid_type_received_undefined": "Obligatoire",
       "invalid_union": "Champ invalide",
-      "invalid_union_discriminator": "La valeur du discriminateur est invalide. Options attendus: {options}",
-      "not_finite": "Le nombre doit être fini",
       "not_multiple_of": "Le nombre doit être un multiple de {multipleOf}",
       "required": "Requis",
       "too_big": {

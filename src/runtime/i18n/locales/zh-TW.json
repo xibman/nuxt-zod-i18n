@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "格式錯誤",
-      "invalid_arguments": "參數錯誤",
-      "invalid_date": "錯誤的日期",
       "invalid_enum_value": "無效的 '{received}' 值，請輸入 {options}",
-      "invalid_intersection_types": "交集類型無法合併",
       "invalid_literal": "無效的輸入，請輸入 {expected}",
-      "invalid_return_type": "錯誤的回傳值類型",
       "invalid_string": {
         "cuid": "{validation} 格式錯誤",
         "datetime": "{validation} 格式錯誤",
@@ -21,8 +17,6 @@
       "invalid_type": "期望輸入的是{expected}，而輸入的是 {received}",
       "invalid_type_received_undefined": "必填的欄位",
       "invalid_union": "輸入格式錯誤",
-      "invalid_union_discriminator": "無效的識別符，請輸入 {options}",
-      "not_finite": "不能為無限值",
       "not_multiple_of": "必須是 {multipleOf} 的倍數",
       "required": "必填",
       "too_big": {

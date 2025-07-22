@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Geçersiz girdi",
-      "invalid_arguments": "Geçersiz fonksiyon parametreleri",
-      "invalid_date": "Geçersiz tarih",
       "invalid_enum_value": "Geçersiz enum değeri. İncelemek için {options} bekleniyordu, '{received}' alındı",
-      "invalid_intersection_types": "Kesişim sonuçları birleştirilemedi",
       "invalid_literal": "Geçersiz değer, beklenen {expected}",
-      "invalid_return_type": "Fonksiyondan dönen tip geçersiz",
       "invalid_string": {
         "cuid": "Geçersiz {validation}",
         "datetime": "Geçersiz {validation}",
@@ -21,8 +17,6 @@
       "invalid_type": "Beklenen {expected}, alındı {received}",
       "invalid_type_received_undefined": "Gerekli",
       "invalid_union": "Geçersiz girdi",
-      "invalid_union_discriminator": "Geçersiz ayırıcı değeri. İncelemek için beklenen {options}",
-      "not_finite": "Sayı sonlu bir değer olmalıdır",
       "not_multiple_of": "Sayı bunların katı olmalıdır {multipleOf}",
       "required": "Gerekli",
       "too_big": {

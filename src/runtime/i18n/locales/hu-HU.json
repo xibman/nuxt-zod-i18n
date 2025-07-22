@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Érvénytelen bevitel",
-      "invalid_arguments": "Érvénytelen függvény paraméterek",
-      "invalid_date": "Érvénytelen dátum",
       "invalid_enum_value": "Érvénytelen enum érték. Várt értékek: {options}, kapott érték: '{received}'",
-      "invalid_intersection_types": "A metszet eredményeket nem lehetett egyesíteni",
       "invalid_literal": "Érvénytelen literál érték, várt érték: {expected}",
-      "invalid_return_type": "Érvénytelen függvény visszatérési típus",
       "invalid_string": {
         "cuid": "Érvénytelen {validation}",
         "datetime": "Érvénytelen {validation}",
@@ -21,8 +17,6 @@
       "invalid_type": "Várt típus: {expected}, kapott típus: {received}",
       "invalid_type_received_undefined": "Kötelező",
       "invalid_union": "Érvénytelen bevitel",
-      "invalid_union_discriminator": "Érvénytelen diszkriminátor érték. Várt értékek: {options}",
-      "not_finite": "A számnak végesnek kell lennie",
       "not_multiple_of": "A számnak a(z) {multipleOf} többszörösének kell lennie",
       "required": "Kötelező",
       "too_big": {

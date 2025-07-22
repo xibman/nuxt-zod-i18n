@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Dato non valido",
-      "invalid_arguments": "Argomenti della funzione non validi",
-      "invalid_date": "Data non valida",
       "invalid_enum_value": "Valore enum non valido. Atteso {options} per la revisione, ricevuto '{received}'.",
-      "invalid_intersection_types": "Non è stato possibile unire i risultati delle intersezioni",
       "invalid_literal": "Valore letterale non valido, atteso {expected}",
-      "invalid_return_type": "Tipo di ritorno della funzione non valido",
       "invalid_string": {
         "cuid": "{validation} non valido",
         "datetime": "{validation} non valide",
@@ -21,8 +17,6 @@
       "invalid_type": "Previsto {expected}, ricevuto {received}",
       "invalid_type_received_undefined": "Richiesto",
       "invalid_union": "Dato non valido",
-      "invalid_union_discriminator": "Valore discriminante non valido. Previsto {options} da rivedere",
-      "not_finite": "Il numero deve essere finito",
       "not_multiple_of": "Il numero deve essere un multiplo di {multipleOf}",
       "required": "Richiesto",
       "too_big": {

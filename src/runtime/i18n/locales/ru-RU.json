@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Неверный ввод",
-      "invalid_arguments": "Неверный тип аргументов функции",
-      "invalid_date": "Неверный формат даты",
       "invalid_enum_value": "Неверное значение перечисления. Ожидалось {options}, получено '{received}'",
-      "invalid_intersection_types": "Результаты пересечения не могут быть объединены",
       "invalid_literal": "Неверное значение литерала, ожидалось {expected}",
-      "invalid_return_type": "Неверный тип возвращаемого значения функции",
       "invalid_string": {
         "cuid": "Неверный {validation}",
         "datetime": "Неверный {validation}",
@@ -21,8 +17,6 @@
       "invalid_type": "Ожидался тип - {expected}, получено - {received}",
       "invalid_type_received_undefined": "Обязательный",
       "invalid_union": "Результаты пересечения не могут быть объединены",
-      "invalid_union_discriminator": "Неверное значение дискриминатора. Ожидалось {options}",
-      "not_finite": "Число должно быть конечным",
       "not_multiple_of": "Число должно быть кратно {multipleOf}",
       "required": "Обязательно",
       "too_big": {

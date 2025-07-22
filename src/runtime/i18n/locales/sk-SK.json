@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "Neplatný vstup",
-      "invalid_arguments": "Neplatné argumenty funkcie",
-      "invalid_date": "Neplatný dátum",
       "invalid_enum_value": "Neplatná hodnota výčtu. Očakáva sa {options}, ale bolo obdržané '{received}'",
-      "invalid_intersection_types": "Hodnoty prieniku nie je možné zlúčiť",
       "invalid_literal": "Neplatná doslovná hodnota, očakáva sa {expected}",
-      "invalid_return_type": "Neplatný typ návratovej hodnoty",
       "invalid_string": {
         "cuid": "Neplatné {validation}",
         "datetime": "Neplatný {validation}",
@@ -21,8 +17,6 @@
       "invalid_type": "Typ vstupu musí byť {expected}, ale bol obdržaný typ {received}",
       "invalid_type_received_undefined": "Povinné",
       "invalid_union": "Neplatný vstup",
-      "invalid_union_discriminator": "Neplatná hodnota diskriminátora. Očakáva sa {options}",
-      "not_finite": "Číslo nesmie byť nekonečné",
       "not_multiple_of": "Číslo musí byť násobkom {multipleOf}",
       "required": "Požadované",
       "too_big": {

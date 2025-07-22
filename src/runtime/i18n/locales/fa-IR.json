@@ -2,12 +2,8 @@
   "zodI18n": {
     "errors": {
       "custom": "ورودی نامعتبر",
-      "invalid_arguments": "آرگومان های تابع نامعتبر است",
-      "invalid_date": "تاریخ نامعتبر",
       "invalid_enum_value": "مقدار enum نامعتبر است. انتظار می رود {options} بررسی شود، دریافت '{received}'",
-      "invalid_intersection_types": "نتایج فصل مشترک را نمی‌‌توان ادغام کرد",
       "invalid_literal": "مقدار دقیق نامعتبر، {expected} مورد انتظار است",
-      "invalid_return_type": "نوع بارگشت تابع نامعتبر است",
       "invalid_string": {
         "cuid": "{validation} نامعتبر",
         "datetime": "{validation} نامعتبر",
@@ -21,8 +17,6 @@
       "invalid_type": "{expected} مورد انتظار بود، {received} دریافت شده",
       "invalid_type_received_undefined": "مورد نیاز",
       "invalid_union": "ورودی نامعتبر",
-      "invalid_union_discriminator": "مقدار تفکیک کننده نامعتبر. انتظار می‌رود {options} بررسی شود",
-      "not_finite": "عدد باید محدود باشد",
       "not_multiple_of": "عدد باید مضربی از {multipleOf} باشد",
       "required": "مورد نیاز",
       "too_big": {

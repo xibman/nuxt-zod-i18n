@@ -4,7 +4,6 @@ import {
   addPlugin,
   createResolver,
   defineNuxtModule,
-  isNuxtMajorVersion,
   useLogger,
 } from '@nuxt/kit'
 import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
@@ -74,10 +73,6 @@ export default defineNuxtModule<ModuleOptions>().with({
 
     if (checkI18nAvailable) {
       logger.fatal('Nuxt I18n required')
-    }
-
-    if (!isNuxtMajorVersion(3, nuxt)) {
-      logger.error('Nuxt 3 required')
     }
 
     if (options.useModuleLocale) {

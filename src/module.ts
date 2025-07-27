@@ -4,7 +4,6 @@ import {
   addPlugin,
   createResolver,
   defineNuxtModule,
-  isNuxtMajorVersion,
   useLogger,
 } from '@nuxt/kit'
 import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
@@ -76,10 +75,6 @@ export default defineNuxtModule<ModuleOptions>().with({
       logger.fatal('Nuxt I18n required')
     }
 
-    if (!isNuxtMajorVersion(3, nuxt)) {
-      logger.error('Nuxt 3 required')
-    }
-
     if (options.useModuleLocale) {
       const appLocalesCode = getNormalizedLocales(
         i18nOptions && (i18nOptions as NuxtI18nOptions)?.locales
@@ -92,7 +87,7 @@ export default defineNuxtModule<ModuleOptions>().with({
       const locales = languageFiles.reduce<LocaleObject[]>((acc, file) => {
         const code
           = options.localeCodesMapping?.[file.replace('.json', '')]
-          || file.replace('.json', '')
+            || file.replace('.json', '')
         if (appLocalesCode.includes(code)) {
           acc.push({ file, code })
         }

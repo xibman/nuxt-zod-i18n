@@ -1,31 +1,9 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
+const { seo } = useAppConfig()
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
-  default: () => [],
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
   server: false,
-})
-
-const links = computed(() => {
-  return [
-    {
-      label: 'Documentation',
-      icon: 'i-heroicons-book-open-solid',
-      to: '/getting-started',
-    },
-    {
-      label: 'Playground',
-      icon: 'i-simple-icons-stackblitz',
-      to: '/playground',
-    },
-    {
-      label: 'Releases',
-      icon: 'i-heroicons-rocket-launch-solid',
-      to: 'https://github.com/xibman/nuxt-zod-i18n/releases',
-      target: '_blank',
-    },
-  ]
 })
 
 useHead({
@@ -41,23 +19,23 @@ useHead({
 })
 
 useSeoMeta({
-  ogSiteName: 'Nuxt zodi18n Documentation',
+  titleTemplate: `%s - ${seo?.siteName}`,
+  ogSiteName: seo?.siteName,
   twitterCard: 'summary_large_image',
   twitterTitle: 'Nuxt zodi18n Documentation',
   twitterDescription: 'Nuxt zodi18n Documentation',
   ogImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
   twitterImage: 'https://xibman-nuxt-zod-i18n.nuxt.space/img/og-nuxt-zod-i18n.jpeg',
-  ogUrl: '[og:url]',
 })
 
 provide('navigation', navigation)
-provide('files', files)
-provide('links', links)
 </script>
 
 <template>
-  <div>
-    <TheHeader :links="links" />
+  <UApp>
+    <NuxtLoadingIndicator />
+
+    <AppHeader />
 
     <UMain>
       <NuxtLayout>
@@ -65,16 +43,13 @@ provide('links', links)
       </NuxtLayout>
     </UMain>
 
-    <TheFooter />
+    <AppFooter />
 
     <ClientOnly>
       <LazyUContentSearch
         :files="files"
         :navigation="navigation"
-        :links="links"
       />
     </ClientOnly>
-
-    <UNotifications />
-  </div>
+  </UApp>
 </template>

@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content'
 import type { NuxtError } from '#app'
-
-useSeoMeta({
-  title: 'Page not found',
-  description: 'We are sorry but this page could not be found.',
-})
 
 defineProps<{
   error: NuxtError
@@ -17,49 +11,26 @@ useHead({
   },
 })
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', {
-  default: () => [],
+useSeoMeta({
+  title: 'Page not found',
+  description: 'We are sorry but this page could not be found.',
+})
+
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'))
+const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
   server: false,
 })
 
-const links = computed(() => {
-  return [
-    {
-      label: 'Documentation',
-      icon: 'i-heroicons-book-open-solid',
-      to: '/getting-started',
-    },
-    {
-      label: 'Playground',
-      icon: 'i-simple-icons-stackblitz',
-      to: '/playground',
-    },
-    {
-      label: 'Releases',
-      icon: 'i-heroicons-rocket-launch-solid',
-      to: '/changelog',
-    },
-  ]
-})
-
 provide('navigation', navigation)
-provide('links', links)
 </script>
 
 <template>
-  <div>
-    <TheHeader />
+  <UApp>
+    <AppHeader />
 
-    <UMain>
-      <UContainer>
-        <UPage>
-          <UPageError :error="error" />
-        </UPage>
-      </UContainer>
-    </UMain>
+    <UError :error="error" />
 
-    <TheFooter />
+    <AppFooter />
 
     <ClientOnly>
       <LazyUContentSearch
@@ -67,7 +38,5 @@ provide('links', links)
         :navigation="navigation"
       />
     </ClientOnly>
-
-    <UNotifications />
-  </div>
+  </UApp>
 </template>

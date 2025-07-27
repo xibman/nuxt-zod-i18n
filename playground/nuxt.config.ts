@@ -1,12 +1,11 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@nuxtjs/i18n', '@nuxt/ui'],
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
   future: {
     compatibilityVersion: 4,
-    typescriptBundlerResolution: true,
   },
-  compatibilityDate: '2024-12-24',
-
+  compatibilityDate: '2025-05-15',
   i18n: {
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',
@@ -33,5 +32,8 @@ export default defineNuxtConfig({
     ],
     strategy: 'prefix_except_default',
     types: 'composition',
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 })

@@ -1,4 +1,4 @@
-import { field, group } from '@nuxthq/studio/theme'
+import { field, group } from '@nuxt/content/preview'
 
 export default defineNuxtSchema({
   appConfig: {
@@ -7,54 +7,91 @@ export default defineNuxtSchema({
       description: 'UI Customization.',
       icon: 'i-mdi-palette-outline',
       fields: {
+        colors: group({
+          title: 'Colors',
+          description: 'Manage main colors of your application',
+          icon: 'i-mdi-palette-outline',
+          fields: {
+            primary: field({
+              type: 'string',
+              title: 'Primary',
+              description: 'Primary color of your UI.',
+              icon: 'i-mdi-palette-outline',
+              default: 'green',
+              required: ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose'],
+            }),
+            neutral: field({
+              type: 'string',
+              title: 'Neutral',
+              description: 'Neutral color of your UI.',
+              icon: 'i-mdi-palette-outline',
+              default: 'slate',
+              required: ['slate', 'gray', 'zinc', 'neutral', 'stone'],
+            }),
+          },
+        }),
         icons: group({
           title: 'Icons',
-          description: 'Manage icons used in UI Pro.',
+          description: 'Manage icons used in the application.',
           icon: 'i-mdi-application-settings-outline',
           fields: {
             search: field({
               type: 'icon',
               title: 'Search Bar',
               description: 'Icon to display in the search bar.',
-              icon: 'i-heroicons-magnifying-glass-20-solid',
-              default: 'i-heroicons-magnifying-glass-20-solid',
+              icon: 'i-mdi-magnify',
+              default: 'i-lucide-search',
             }),
             dark: field({
               type: 'icon',
               title: 'Dark mode',
               description: 'Icon of color mode button for dark mode.',
-              icon: 'i-heroicons-moon-20-solid',
-              default: 'i-heroicons-moon-20-solid',
+              icon: 'i-mdi-moon-waning-crescent',
+              default: 'i-lucide-moon',
             }),
             light: field({
               type: 'icon',
               title: 'Light mode',
               description: 'Icon of color mode button for light mode.',
-              icon: 'i-heroicons-sun-20-solid',
-              default: 'i-heroicons-sun-20-solid',
+              icon: 'i-mdi-white-balance-sunny',
+              default: 'i-lucide-sun',
             }),
             external: field({
               type: 'icon',
               title: 'External Link',
               description: 'Icon for external link.',
-              icon: 'i-heroicons-arrow-up-right-20-solid',
-              default: 'i-heroicons-arrow-up-right-20-solid',
+              icon: 'i-mdi-arrow-top-right',
+              default: 'i-lucide-external-link',
             }),
             chevron: field({
               type: 'icon',
               title: 'Chevron',
               description: 'Icon for chevron.',
-              icon: 'i-heroicons-chevron-down-20-solid',
-              default: 'i-heroicons-chevron-down-20-solid',
+              icon: 'i-mdi-chevron-down',
+              default: 'i-lucide-chevron-down',
             }),
             hash: field({
               type: 'icon',
               title: 'Hash',
               description: 'Icon for hash anchors.',
-              icon: 'i-heroicons-hashtag-20-solid',
-              default: 'i-heroicons-hashtag-20-solid',
+              icon: 'i-ph-hash',
+              default: 'i-lucide-hash',
             }),
           },
+        }),
+      },
+    }),
+    seo: group({
+      title: 'SEO',
+      description: 'SEO configuration.',
+      icon: 'i-ph-app-window',
+      fields: {
+        siteName: field({
+          type: 'string',
+          title: 'Site Name',
+          description: 'Name used in ogSiteName and used as second part of your page title (My page title - Nuxt UI Pro).',
+          icon: 'i-mdi-web',
+          default: [],
         }),
       },
     }),
@@ -63,23 +100,37 @@ export default defineNuxtSchema({
       description: 'Header configuration.',
       icon: 'i-mdi-page-layout-header',
       fields: {
+        title: field({
+          type: 'string',
+          title: 'Title',
+          description: 'Title to display in the header.',
+          icon: 'i-mdi-format-title',
+          default: '',
+        }),
+        to: field({
+          type: 'string',
+          title: 'To',
+          description: 'URL to redirect to when the title is clicked.',
+          icon: 'i-mdi-link-variant',
+          default: '',
+        }),
         logo: group({
           title: 'Logo',
-          description: 'Footer logo configuration.',
+          description: 'Header logo configuration.',
           icon: 'i-mdi-image-filter-center-focus-strong-outline',
           fields: {
             light: field({
               type: 'media',
               title: 'Light Mode Logo',
               description: 'Pick an image from your gallery.',
-              icon: 'i-heroicons-sun-20-solid',
+              icon: 'i-mdi-white-balance-sunny',
               default: '',
             }),
             dark: field({
               type: 'media',
               title: 'Dark Mode Logo',
               description: 'Pick an image from your gallery.',
-              icon: 'i-heroicons-moon-20-solid',
+              icon: 'i-mdi-moon-waning-crescent',
               default: '',
             }),
             alt: field({
@@ -102,7 +153,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in your header.',
-          icon: 'i-heroicons-moon-20-solid',
+          icon: 'i-mdi-moon-waning-crescent',
           default: true,
         }),
         links: field({
@@ -130,7 +181,7 @@ export default defineNuxtSchema({
           type: 'boolean',
           title: 'Color Mode',
           description: 'Hide or display the color mode button in the footer.',
-          icon: 'i-heroicons-moon-20-solid',
+          icon: 'i-mdi-moon-waning-crescent',
           default: false,
         }),
         links: field({
@@ -145,7 +196,7 @@ export default defineNuxtSchema({
     toc: group({
       title: 'Table of contents',
       description: 'TOC configuration.',
-      icon: 'i-heroicons-table-cells-solid',
+      icon: 'i-mdi-table-of-contents',
       fields: {
         title: field({
           type: 'string',
@@ -157,7 +208,7 @@ export default defineNuxtSchema({
         bottom: group({
           title: 'Bottom',
           description: 'Bottom TOC configuration.',
-          icon: 'i-heroicons-bars-arrow-down-solid',
+          icon: 'i-mdi-table-of-contents',
           fields: {
             title: field({
               type: 'string',
@@ -170,7 +221,7 @@ export default defineNuxtSchema({
               type: 'string',
               title: 'Edit Page Link',
               description: 'URL of your repository content folder.',
-              icon: 'i-heroicons-pencil-square',
+              icon: 'i-ph-note-pencil',
               default: '',
             }),
             links: field({
@@ -186,3 +237,11 @@ export default defineNuxtSchema({
     }),
   },
 })
+
+declare module '@nuxt/schema' {
+  interface CustomAppConfig {
+    ui: {
+      icons: object
+    }
+  }
+}

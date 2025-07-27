@@ -37,55 +37,66 @@ function onSubmit(event: FormSubmitEvent<userDto>) {
       <h1 class="text-2xl font-bold">
         {{ t('pages.index.title') }}
       </h1>
-      <UDivider />
-      <UFormGroup
+      <USeparator />
+      <UFormField
         :label="t('dictionary.name')"
         name="name"
+        size="xl"
       >
         <UInput
           v-model="state.birthDate"
           placeholder="Your birthDate"
+          class="w-full"
         />
-      </UFormGroup>
-      <UFormGroup
+      </UFormField>
+      <UFormField
         :label="t('dictionary.email')"
         name="email"
+        size="xl"
       >
         <UInput
           v-model="state.email"
           placeholder="Your email"
+          class="w-full"
         />
-      </UFormGroup>
-      <UFormGroup
+      </UFormField>
+      <UFormField
         :label="t('dictionary.firstName')"
         name="firstName"
+        size="xl"
       >
         <UInput
           v-model="state.firstName"
           placeholder="Your firstName"
+          class="w-full"
         />
-      </UFormGroup>
-      <UFormGroup
+      </UFormField>
+      <UFormField
         :label="t('dictionary.lastName')"
         name="lastName"
+        size="xl"
       >
         <UInput
           v-model="state.lastName"
           placeholder="Your last name"
+          class="w-full"
         />
-      </UFormGroup>
-      <UFormGroup
+      </UFormField>
+      <UFormField
         :label="t('pages.complex.preferredColor')"
         name="preferredColor"
+        size="xl"
       >
         <UInput
           v-model="state.preferredColor"
           placeholder="Your preferred color"
+          class="w-full"
         />
-      </UFormGroup>
+      </UFormField>
       <UButton
         type="submit"
         class="w-fit"
+        size="lg"
       >
         {{ t('dictionary.save') }}
       </UButton>

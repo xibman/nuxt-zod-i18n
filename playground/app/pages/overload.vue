@@ -34,28 +34,33 @@ function onSubmit(event: FormSubmitEvent<WebsiteDto>) {
       <h1 class="text-2xl font-bold">
         {{ t('pages.overload.title') }}
       </h1>
-      <UDivider />
-      <UFormGroup
+      <USeparator />
+      <UFormField
         :label="t('dictionary.name')"
         name="name"
+        size="xl"
       >
         <UInput
           v-model="state.name"
           placeholder="Website name"
+          class="w-full"
         />
-      </UFormGroup>
-      <UFormGroup
+      </UFormField>
+      <UFormField
         label="Url"
         name="url"
+        size="xl"
       >
         <UInput
           v-model="state.url"
           placeholder="Website url"
+          class="w-full"
         />
-      </UFormGroup>
+      </UFormField>
       <UButton
         type="submit"
         class="w-fit"
+        size="lg"
       >
         Save
       </UButton>

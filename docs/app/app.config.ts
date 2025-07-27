@@ -1,15 +1,24 @@
 export default defineAppConfig({
   ui: {
-    primary: 'green',
-    gray: 'slate',
+    colors: {
+      primary: 'green',
+      neutral: 'slate',
+    },
+  },
+  uiPro: {
     footer: {
-      bottom: {
-        left: 'text-sm text-gray-500 dark:text-gray-400',
-        wrapper: 'border-t border-gray-200 dark:border-gray-800',
+      slots: {
+        root: 'border-t border-default',
+        left: 'text-sm text-muted',
       },
     },
   },
+  seo: {
+    siteName: 'Nuxt zodI18n documentation',
+  },
   header: {
+    title: 'Nuxt zodI18n',
+    to: '/',
     logo: {
       alt: '',
       light: './img/nuxt-zod-i18n.svg',
@@ -27,7 +36,7 @@ export default defineAppConfig({
     ],
   },
   footer: {
-    credits: 'Copyright © 2023',
+    credits: `Copyright © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [
       {
@@ -40,13 +49,13 @@ export default defineAppConfig({
         'icon': 'i-simple-icons-zod',
         'to': 'https://zod.dev/',
         'target': '_blank',
-        'aria-label': 'Nuxt Website',
+        'aria-label': 'Zod Website',
       },
       {
         'icon': 'i-simple-icons-googletranslate',
         'to': 'https://i18n.nuxtjs.org/',
         'target': '_blank',
-        'aria-label': 'Nuxt Website',
+        'aria-label': 'Nuxt i18n Website',
       },
       {
         'icon': 'i-simple-icons-github',

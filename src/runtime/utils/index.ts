@@ -33,9 +33,9 @@ export function getKeyAndValues(
   defaultKey: string,
   i18n: Composer,
 ): {
-    values: Record<string, string>
-    key: string
-  } {
+  values: Record<string, string>
+  key: string
+} {
   const { t } = i18n
   if (typeof param === 'string') {
     return { key: param, values: {} }

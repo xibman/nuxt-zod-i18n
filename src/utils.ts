@@ -1,8 +1,9 @@
 import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
-import { isString } from '@intlify/shared'
 
-export function getNormalizedLocales(locales: NuxtI18nOptions['locales']): LocaleObject[] {
-  locales = locales || []
+export const isString = (val: unknown): val is string =>
+  typeof val === 'string'
+
+export function getNormalizedLocales(locales: NuxtI18nOptions['locales'] = []): LocaleObject[] {
   const normalized: LocaleObject[] = []
   for (const locale of locales) {
     if (isString(locale)) {

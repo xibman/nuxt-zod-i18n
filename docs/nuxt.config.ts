@@ -1,48 +1,87 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
   modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui-pro',
     '@nuxt/content',
-    '@nuxt/ui',
-    '@nuxtjs/fontaine',
-    '@nuxtjs/google-fonts',
     'nuxt-og-image',
+    'nuxt-llms',
+    '@vueuse/nuxt',
   ],
-  // Devtools / Typescript
-  devtools: { enabled: true },
-  site: {
-    url: 'https://xibman-nuxt-zod-i18n.nuxt.space/',
+
+  devtools: {
+    enabled: true,
   },
-  routeRules: {
-    '/api/search.json': { prerender: true },
+
+  css: ['~/assets/css/main.css'],
+
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          searchDepth: 1,
+        },
+      },
+    },
+    preview: {
+      api: 'https://api.nuxt.studio',
+    },
   },
   future: {
     compatibilityVersion: 4,
-    typescriptBundlerResolution: true,
   },
-  compatibilityDate: '2024-12-24',
-  typescript: { strict: false },
-  hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c =>
-        ['UButton', 'UIcon'].includes(c.pascalName),
-      )
 
-      globals.forEach(c => (c.global = true))
+  compatibilityDate: '2025-05-15',
+
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true,
+      autoSubfolderIndex: false,
     },
   },
-  // Fonts
-  fontMetrics: {
-    fonts: ['DM Sans'],
-  },
-  googleFonts: {
-    display: 'swap',
-    download: true,
-    families: {
-      'DM+Sans': [400, 500, 600, 700],
+
+  eslint: {
+    config: {
+      stylistic: true,
     },
   },
+
   icon: {
-    serverBundle: 'remote',
+    provider: 'iconify',
+  },
+
+  llms: {
+    domain: 'https://xibman-nuxt-zod-i18n.nuxt.space/',
+    title: 'Nuxt zodI18n documentation',
+    description: 'Translate zod error message easily',
+    full: {
+      title: 'Nuxt zodI18n documentation - Full Documentation',
+      description: 'This is the full documentation for the Nuxt zodI18n.',
+    },
+    sections: [
+      {
+        title: 'Getting Started',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/getting-started%' },
+        ],
+      },
+      {
+        title: 'Usage',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: 'LIKE', value: '/usage%' },
+        ],
+      },
+      {
+        title: 'Add or improve translation',
+        contentCollection: 'docs',
+        contentFilters: [
+          { field: 'path', operator: '=', value: '/add-improve-translation' },
+        ],
+      },
+    ],
   },
 })

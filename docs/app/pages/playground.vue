@@ -10,13 +10,12 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="h-[calc(100vh-var(--header-height)-var(--header-height)-1px)]">
-    <ClientOnly>
-      <iframe
-        src="https://stackblitz.com/github/xibman/nuxt-zod-i18n?embed=1&file=playground%2Fapp.vue"
-        width="100%"
-        height="100%"
-      />
-    </ClientOnly>
-  </div>
+  <ClientOnly>
+    <iframe
+      src="https://stackblitz.com/github/xibman/nuxt-zod-i18n?embed=1&file=playground%2Fapp.vue"
+      width="100%"
+      height="100%"
+      class="min-h-screen"
+    />
+  </ClientOnly>
 </template>

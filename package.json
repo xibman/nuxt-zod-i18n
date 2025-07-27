@@ -40,21 +40,19 @@
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
-    "typecheck": "npx nuxi typecheck",
+    "test:types": "vue-tsc --noEmit ",
     "prepare": "husky"
   },
   "dependencies": {
     "@nuxt/kit": "^3.17.7",
     "defu": "^6.1.4",
-    "vue-tsc": "^3.0.3",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@localazy/cli": "^2.0.8",
     "@nuxt/devtools": "^2.6.2",
-    "@nuxt/eslint-config": "^1.6.0",
-    "@nuxt/module-builder": "^1.0.1",
+    "@nuxt/eslint-config": "^1.7.1",
+    "@nuxt/module-builder": "^1.0.2",
     "@nuxt/schema": "^3.17.7",
     "@nuxt/test-utils": "^3.19.2",
     "@nuxtjs/i18n": "^9.5.6",
@@ -66,10 +64,22 @@
     "lint-staged": "^16.1.2",
     "nuxt": "^3.17.7",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.0.4"
   },
   "lint-staged": {
     "*.{js,ts,vue,json,md,yml}": "eslint"
+  },
+  "resolutions": {
+    "unimport": "4.1.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ],
+    "ignoredBuiltDependencies": [
+      "vue-demi"
+    ]
   },
   "packageManager": "pnpm@10.13.1"
 }

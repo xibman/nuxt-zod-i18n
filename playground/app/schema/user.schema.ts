@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 export const userSchema = z.object({
-  birthDate: z.coerce.date().max(new Date('1900-01-01')),
+  birthDate: z.string().date(),
   email: z
     .string()
     .email()

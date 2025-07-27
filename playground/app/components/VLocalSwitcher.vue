@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import type { LocaleObject } from '@nuxtjs/i18n'
-import type { DropdownItem } from '#ui/types'
+import type { DropdownMenuItem } from '#ui/types'
 
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
-const items = computed<DropdownItem[][]>(() => {
+const items = computed<DropdownMenuItem[][]>(() => {
   const availableLocales = (locales.value as LocaleObject[]).filter(i => i.code !== locale.value)
 
   const data = availableLocales.map(({ code }) => {
     return {
       label: code,
       to: switchLocalePath(code),
-      icon: `i-flag-${code.split('-')[1].toLowerCase()}-4x3`,
+      icon: `i-flag-${code.split('-')[1]?.toLowerCase()}-4x3`,
 
     }
   })
@@ -28,7 +28,7 @@ const items = computed<DropdownItem[][]>(() => {
       trailing-icon="i-heroicons-chevron-down-20-solid"
     >
       <UIcon
-        :name="`i-flag-${locale.split('-')[1].toLowerCase()}-4x3`"
+        :name="`i-flag-${locale.split('-')[1]?.toLowerCase()}-4x3`"
         dynamic
       />
       {{ locale }}
@@ -36,6 +36,7 @@ const items = computed<DropdownItem[][]>(() => {
 
     <template #item="{ item }">
       <UIcon
+        v-if="item.icon"
         :name="item.icon"
         dynamic
       />

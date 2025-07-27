@@ -1,10 +1,9 @@
 export default defineNuxtConfig({
   modules: ['../src/module', '@nuxtjs/i18n', '@nuxt/ui'],
   devtools: { enabled: true },
-  css: ['./app/assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
   future: {
     compatibilityVersion: 4,
-    typescriptBundlerResolution: true,
   },
   compatibilityDate: '2025-05-15',
   i18n: {

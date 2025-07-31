@@ -79,7 +79,12 @@
     ],
     "ignoredBuiltDependencies": [
       "vue-demi"
-    ]
+    ],
+    "overrides": {
+      "unimport": "4.1.1",
+      "@nuxtjs/mdc@<0.17.2": ">=0.17.2",
+      "@eslint/plugin-kit@<0.3.4": ">=0.3.4"
+    }
   },
   "packageManager": "pnpm@10.13.1"
 }

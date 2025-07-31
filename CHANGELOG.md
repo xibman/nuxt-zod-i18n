@@ -1,5 +1,40 @@
 # Changelog
 
+## v1.12.1
+
+[compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.12.0...v1.12.1)
+
+### 💅 Refactors
+
+- **documentation:** Migrate doc to nuxt content V3 & nuxt ui pro V3 ([35c276e](https://github.com/xibman/nuxt-zod-i18n/commit/35c276e))
+- **playground:** Fix nuxt ui type related to v3 ([62eee11](https://github.com/xibman/nuxt-zod-i18n/commit/62eee11))
+- **chore:** Update module builder to 1.0.2 ([0078680](https://github.com/xibman/nuxt-zod-i18n/commit/0078680))
+- **module:** Remove check nuxt major version ([83943df](https://github.com/xibman/nuxt-zod-i18n/commit/83943df))
+- **module:** Add default empty array value for locales in getNormalizedLocales ([dc8d31e](https://github.com/xibman/nuxt-zod-i18n/commit/dc8d31e))
+
+### 📦 Build
+
+- **playground:** Update to nuxt 3.17.7 and to NuxtUi 3.2.0 ([c12116f](https://github.com/xibman/nuxt-zod-i18n/commit/c12116f))
+- **module:** Update dependencies ([8cd9c74](https://github.com/xibman/nuxt-zod-i18n/commit/8cd9c74))
+
+### 🏡 Chore
+
+- **module:** Update dependencies and migrate doc to content V3 ([70d6eee](https://github.com/xibman/nuxt-zod-i18n/commit/70d6eee))
+
+### 🎨 Styles
+
+- **linting:** Fox linting config for eslint / vscode ([0aa860a](https://github.com/xibman/nuxt-zod-i18n/commit/0aa860a))
+
+### 🤖 CI
+
+- **github-action:** Sync pnpm version to 10.13.1 ([73a4cdc](https://github.com/xibman/nuxt-zod-i18n/commit/73a4cdc))
+- **deploy:** Remove @nuxthq/studio ([2b24544](https://github.com/xibman/nuxt-zod-i18n/commit/2b24544))
+
+### ❤️ Contributors
+
+- Xibman <georget.julien@gmail.com>
+- Georget Julien <georget.julien@gmail.com>
+
 ## v1.12.0
 
 [compare changes](https://github.com/xibman/nuxt-zod-i18n/compare/v1.11.5...v1.12.0)

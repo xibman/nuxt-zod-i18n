@@ -62,11 +62,6 @@ jobs:
       - name: Prepare Module
         run: ${{ steps.pkgman.outputs.package_manager }} dev:prepare
 
-      - name: Install @nuxthq/studio
-        run: ${{ steps.pkgman.outputs.package_manager }} add -D -w @nuxthq/studio
-
-      - name: Create .nuxtrc
-        run: echo $'\nautoImport=true\nmodules[]=@nuxthq/studio' >> ./docs/.nuxtrc
 
       - name: Generate
         run: ${{ steps.pkgman.outputs.package_manager }} docs:generate

@@ -1,0 +1,346 @@
+# Introduction
+
+This module is inspired by [Zod Internationalization](https://github.com/aiji42/zod-i18n){:target="_blank" rel="nofollow"} library, its goal is to provide everything to translate Zod's error messages.
+
+## Features
+
+- Powered by [@nuxtjs/i18n](https://i18n.nuxtjs.org/){rel="nofollow"} and [Zod](https://zod.dev/){:target="_blank" rel="nofollow"}
+- Provide a Global error map for zod see [Zod ERROR\_HANDLING](https://zod.dev/ERROR_HANDLING?id=global-error-map){:target="_blank" rel="nofollow"}
+
+## Play online
+
+You can start playing with this template in your browser using our online sandboxes:
+
+::div{.flex.flex-wrap.gap-2}
+  :::u-button
+  ---
+  icon: i-simple-icons-stackblitz
+  label: Play on StackBlitz
+  target: _blank
+  to: https://stackblitz.com/github/xibman/nuxt-zod-i18n?file=playground%2Fapp.vue
+  ---
+  :::
+
+  :::u-button
+  ---
+  icon: i-simple-icons-codesandbox
+  label: Play on CodeSandbox
+  target: _blank
+  to: https://codesandbox.io/s/github/xibman/nuxt-zod-i18n/tree/main/playground
+  ---
+  :::
+::
+
+Or open [Nuxt UI playground](https://xibman-nuxt-zod-i18n.nuxt.space/playground).
+
+
+# Installation
+
+## Quick Start
+
+1. Install `nuxt-zod-i18n` dependency to your project:
+
+```bash [Terminal]
+npx nuxi@latest module add nuxt-zod-i18n
+```
+
+2. Add it to your `modules` section in your `nuxt.config`
+
+::warning
+This module must be loaded before `@nuxtjs/i18n`
+::
+
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['nuxt-zod-i18n', '@nuxtjs/i18n']
+})
+```
+
+That's it! You can now use all the components and composables in your Nuxt app ✨
+
+::tip
+This module require [@nuxtjs/i18n](https://i18n.nuxtjs.org/){rel="nofollow"} and [zod](https://zod.dev/){rel="nofollow"} to be installed.
+::
+
+
+# Configuration
+
+You can configure Nuxt zodI18n with the `zodI18n` property in your `nuxt.config` file.
+
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  zodI18n: {
+    // My custom configuration
+  }
+})
+```
+
+## `dateFormat`
+
+- Type: [Intl.DateTimeFormatOptions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat){:target="_blank" rel="nofollow"}
+- Default: `{ day: 'numeric', month: 'long', year: 'numeric'}`
+
+Change default date format in error message linked to `Date`.
+
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  zodI18n: {
+    dateFormat: {
+      day: '2-digit',
+      month: 'numeric',
+      year: 'numeric'
+    }
+  }
+})
+```
+
+::note
+As result show 20/12/2020 instead of 20 December 2020
+::
+
+## `localeCodesMapping`
+
+- Type: `Record<string, string>`
+- Default: `undefined`
+
+Change default i18n codes to own custom ones.
+
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  zodI18n: {
+    localeCodesMapping: {
+      'en-GB': 'en',
+      'fr-FR': 'fr'
+    }
+  }
+})
+```
+
+## `useModuleLocale`
+
+- Type: `boolean`
+- Default: `true`
+
+Toggle usage of module internal translation files.
+
+By setting it to `false` you need to provide your own translations under `zodI18n` key. :br
+You can use this file with [English translation](https://github.com/xibman/nuxt-zod-i18n/blob/main/src/runtime/locales/en-GB.json){rel="nofollow"} as basis.
+
+
+# How to use
+
+This is only a basic example of what you can achieve with Nuxt zodI18n.
+
+This example use [NuxtUi](https://ui.nuxt.com/forms/form#zod){:target="_blank" rel="nofollow"}.
+
+::callout{color="primary" icon="i-heroicons-information-circle"}
+As you see you don't need to add extra message in into the schema to have translated answers.
+::
+
+::tabs
+  :::div{label="Zod Schema"}
+  ```ts [login.schema.ts]
+  import { z } from 'zod'
+  
+  export const loginSchema = z.object({
+    name: z.string().min(5).max(15),
+    email: z.string().email().min(1)
+  })
+  
+  export type Login = z.input<typeof loginSchema>;
+  ```
+  :::
+
+  :::div{label="Component"}
+  ```vue [login.vue]
+  <script setup lang="ts">
+    import type { Login } from '~/schema/login.schema'
+    import type { FormSubmitEvent } from '#ui/types'
+  
+    import { loginSchema } from '~/schema/login.schema'
+  
+    const state = reactive({
+      name: undefined,
+      email: undefined
+    })
+  
+    function onSubmit (event: FormSubmitEvent<Login>) {
+      console.log(event.data)
+    }
+  </script>
+  
+  <template>
+    <UForm 
+      :schema="loginSchema" 
+      :state="state" 
+      class="flex flex-col gap-6 pt-6" 
+      @submit="onSubmit"
+    >
+      <UFormGroup label="Name" name="name">
+        <UInput v-model="state.name" placeholder="Your name" />
+      </UFormGroup>
+      <UFormGroup label="Email" name="email">
+        <UInput v-model="state.email" placeholder="Your email" />
+      </UFormGroup>
+      <UButton type="submit" class="w-fit">
+        Save
+      </UButton>
+    </UForm>
+  </template>
+  ```
+  :::
+::
+
+
+# Overload translation
+
+You can overload translation that comes from Nuxt zodI18n by adding them into your own translation files.
+
+All zod translations are under the `zodI18n` key.
+
+::callout{color="primary" icon="i-heroicons-information-circle"}
+See the [en-GB.json](https://github.com/xibman/nuxt-zod-i18n/blob/main/src/runtime/locales/en-GB.json){:target="_blank" rel="nofollow"} file for translation structure
+::
+
+::tabs
+  :::div{label="Zod Schema"}
+  ```ts [website.schema.ts]
+  import { z } from 'zod'
+  
+  export const websiteSchema = z.object({
+    name: z.string().min(5).max(15),
+    url: z.string().url().min(1)
+  })
+  
+  export type Website = z.input<typeof websiteSchema>;
+  ```
+  :::
+
+  :::div{label="Component"}
+  ```vue [overload.vue]
+  <script setup lang="ts">
+    import type { Website } from '~/schema/website.schema'
+    import type { FormSubmitEvent } from '#ui/types'
+  
+    import { websiteSchema } from '~/schema/website.schema'
+  
+    const state = reactive({
+      name: 'My website',
+      url: 'lol'
+    })
+  
+    function onSubmit (event: FormSubmitEvent<Website>) {
+      console.log(event.data)
+    }
+  </script>
+  
+  <template>
+    <UForm :schema="websiteSchema" :state="state" class="flex flex-col gap-6 pt-6" @submit="onSubmit">
+      <UDivider />
+      <UFormGroup label="Name" name="name">
+        <UInput v-model="state.name" placeholder="Website name" />
+      </UFormGroup>
+      <UFormGroup label="Url" name="url">
+        <UInput v-model="state.url" placeholder="Website url" />
+      </UFormGroup>
+      <UButton type="submit" class="w-fit">
+        Save
+      </UButton>
+    </UForm>
+  </template>
+  ```
+  :::
+
+  :::div{label="en-GB Locale"}
+  ```json [en-GB.json]
+  {
+    "zodI18n": {
+      "errors": {
+        "invalid_string": {
+          "url": "overload by your global translation, original translation: Invalid url"
+        }
+      }
+    }
+  }
+  ```
+  :::
+::
+
+
+# Error interpolation
+
+At first [see how interpolation](https://vue-i18n.intlify.dev/guide/essentials/syntax.html#interpolations){:target="_blank" rel="nofollow"} work with Vue I18n.
+
+You need to use [refinements](https://zod.dev/?id=refine){:target="_blank" rel="nofollow"} function from Zod to send custom values to your final translation key.
+
+::tabs
+  :::div{label="Zod Schema"}
+  ```ts [website.schema.ts]
+  import { z } from 'zod'
+  
+  // here refine always return false to directly show the error message
+  export const colorSchema = z.object(color: z.string().refine(() => false, {
+    params: {
+      i18n: {
+        key: 'myCustomErrorWithInterpolation',
+        values: { first: 'colors.red', second: 'colors.green' }
+      }
+    }
+  })
+  
+  export type Color= z.input<typeof colorSchema>;
+  ```
+  :::
+
+  :::div{label="Component"}
+  ```vue [overload.vue]
+  <script setup lang="ts">
+    import type { Website } from '~/schema/website.schema'
+    import type { FormSubmitEvent } from '#ui/types'
+  
+    import { websiteSchema } from '~/schema/website.schema'
+  
+    const state = reactive({
+      color: '',
+    })
+  
+    function onSubmit (event: FormSubmitEvent<Website>) {
+      console.log(event.data)
+    }
+  </script>
+  
+  <template>
+    <UForm :schema="websiteSchema" :state="state" class="flex flex-col gap-6 pt-6" @submit="onSubmit">
+      <UDivider />
+      <UFormGroup label="Color" name="color">
+        <UInput v-model="state.color" placeholder="Enter color" />
+      </UFormGroup>
+      <UButton type="submit" class="w-fit">
+        Save
+      </UButton>
+    </UForm>
+  </template>
+  ```
+  :::
+
+  :::div{label="en-GB Locale"}
+  ```json [en-GB.json]
+  {
+    "colors": {
+      "green": "green",
+      "red": "red"
+    },
+    "myCustomErrorWithInterpolation": "My preferred colors are {first} and {second}",
+  }
+  ```
+  :::
+::
+
+
+# Add / Improve translation
+
+You can help to translate this module.
+
+You can use this [English translation](https://github.com/xibman/nuxt-zod-i18n/blob/main/src/runtime/locales/en-GB.json){rel="nofollow"} file as a basis for rewriting it in your language.
+
+You can also directly update or add translation with Localazy: <https://localazy.com/p/zod-i18n>{rel="nofollow"}

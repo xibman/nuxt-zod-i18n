@@ -1,0 +1,23 @@
+# Nuxt zodI18n documentation
+
+> Translate zod error message easily
+
+## Documentation Sets
+
+- [Nuxt zodI18n documentation - Full Documentation](https://xibman-nuxt-zod-i18n.nuxt.space//llms-full.txt): This is the full documentation for the Nuxt zodI18n.
+
+## Getting Started
+
+- [Introduction](https://xibman-nuxt-zod-i18n.nuxt.space/getting-started): Welcome to Nuxt zodI18n documentation.
+- [Installation](https://xibman-nuxt-zod-i18n.nuxt.space/getting-started/installation): Get started with zodI18n.
+- [Configuration](https://xibman-nuxt-zod-i18n.nuxt.space/getting-started/configuration): Nuxt zodI18n configuration guide
+
+## Usage
+
+- [How to use](https://xibman-nuxt-zod-i18n.nuxt.space/usage/how-to-use): Learn how to use Nuxt zodI18n.
+- [Overload translation](https://xibman-nuxt-zod-i18n.nuxt.space/usage/overload-translation): Learn how to overload translation from zodI18n.
+- [Error interpolation](https://xibman-nuxt-zod-i18n.nuxt.space/usage/error-interpolation): Learn how to overload translation from zodI18n.
+
+## Add or improve translation
+
+- [Add / Improve translation](https://xibman-nuxt-zod-i18n.nuxt.space/add-improve-translation): Add / Improve Nuxt zodI18n translations

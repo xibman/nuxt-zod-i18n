@@ -1,0 +1,115 @@
+{
+  "zodI18n": {
+    "errors": {
+      "custom": "Ugyldig værdi",
+      "invalid_arguments": "Ugyldige funktionsargumenter",
+      "invalid_date": "Ugyldig dato",
+      "invalid_enum_value": "Ugyldig enum-værdi. Forventede {options}, modtog '{received}'",
+      "invalid_intersection_types": "Resultaterne af intersection kunne ikke flettes",
+      "invalid_literal": "Ugyldig literal-værdi, forventede {expected}",
+      "invalid_return_type": "Ugyldig returtype fra funktion",
+      "invalid_string": {
+        "cuid": "Ugyldig {validation}",
+        "datetime": "Ugyldig {validation}",
+        "email": "Ugyldig {validation}",
+        "endsWith": "Ugyldig værdi: skal slutte med \"{endsWith}\"",
+        "regex": "Ugyldig",
+        "startsWith": "Ugyldig værdi: skal starte med \"{startsWith}\"",
+        "url": "Ugyldig {validation}",
+        "uuid": "Ugyldig {validation}"
+      },
+      "invalid_type": "Forventede {expected}, modtog {received}",
+      "invalid_type_received_undefined": "Påkrævet",
+      "invalid_union": "Ugyldig værdi",
+      "invalid_union_discriminator": "Ugyldig discriminator-værdi. Forventede {options}",
+      "not_finite": "Tallet skal være endeligt",
+      "not_multiple_of": "Tallet skal være et multiplum af {multipleOf}",
+      "required": "Påkrævet",
+      "too_big": {
+        "array": {
+          "exact": "Listen skal indeholde præcis {maximum} element(er)",
+          "inclusive": "Listen må højst indeholde {maximum} element(er)",
+          "not_inclusive": "Listen skal indeholde færre end {maximum} element(er)"
+        },
+        "date": {
+          "exact": "Datoen skal være præcis {maximum}",
+          "inclusive": "Datoen skal være mindre end eller lig med {maximum}",
+          "not_inclusive": "Datoen skal være mindre end {maximum}"
+        },
+        "number": {
+          "exact": "Tallet skal være præcis {maximum}",
+          "inclusive": "Tallet skal være mindre end eller lig med {maximum}",
+          "not_inclusive": "Tallet skal være mindre end {maximum}"
+        },
+        "set": {
+          "exact": "Ugyldig værdi",
+          "inclusive": "Ugyldig værdi",
+          "not_inclusive": "Ugyldig værdi"
+        },
+        "string": {
+          "exact": "Teksten skal indeholde præcis {maximum} tegn",
+          "inclusive": "Teksten må højst indeholde {maximum} tegn",
+          "not_inclusive": "Teksten skal indeholde færre end {maximum} tegn"
+        }
+      },
+      "too_small": {
+        "array": {
+          "exact": "Listen skal indeholde præcis {minimum} element(er)",
+          "inclusive": "Listen skal indeholde mindst {minimum} element(er)",
+          "not_inclusive": "Listen skal indeholde mere end {minimum} element(er)"
+        },
+        "date": {
+          "exact": "Datoen skal være præcis {minimum}",
+          "inclusive": "Datoen skal være større end eller lig med {minimum}",
+          "not_inclusive": "Datoen skal være større end {minimum}"
+        },
+        "number": {
+          "exact": "Tallet skal være præcis {minimum}",
+          "inclusive": "Tallet skal være større end eller lig med {minimum}",
+          "not_inclusive": "Tallet skal være større end {minimum}"
+        },
+        "set": {
+          "exact": "Ugyldig værdi",
+          "inclusive": "Ugyldig værdi",
+          "not_inclusive": "Ugyldig værdi"
+        },
+        "string": {
+          "exact": "Teksten skal indeholde præcis {minimum} tegn",
+          "inclusive": "Teksten skal indeholde mindst {minimum} tegn",
+          "not_inclusive": "Teksten skal indeholde mere end {minimum} tegn"
+        }
+      },
+      "unrecognized_keys": "Ukendte nøgle(r) i objektet: {keys}"
+    },
+    "types": {
+      "array": "liste",
+      "bigint": "bigint",
+      "boolean": "boolean",
+      "date": "dato",
+      "float": "float",
+      "function": "function",
+      "integer": "heltal",
+      "map": "map",
+      "nan": "nan",
+      "never": "never",
+      "null": "null",
+      "number": "tal",
+      "object": "objekt",
+      "promise": "promise",
+      "set": "sæt",
+      "string": "streng",
+      "symbol": "symbol",
+      "undefined": "undefined",
+      "unknown": "ukendt",
+      "void": "void"
+    },
+    "validations": {
+      "cuid": "cuid",
+      "datetime": "ISO dato- og klokkeslæt",
+      "email": "e-mailadresse",
+      "regex": "input",
+      "url": "URL",
+      "uuid": "UUID"
+    }
+  }
+}

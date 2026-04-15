@@ -4,7 +4,6 @@ import {
   addPlugin,
   createResolver,
   defineNuxtModule,
-  useLogger,
 } from '@nuxt/kit'
 import type { NuxtI18nOptions, LocaleObject } from '@nuxtjs/i18n'
 import { getNormalizedLocales } from './utils'
@@ -33,6 +32,15 @@ export default defineNuxtModule<ModuleOptions>().with({
     name: 'nuxt-zod-i18n',
     configKey: 'zodI18n',
   },
+  moduleDependencies: {
+    '@nuxtjs/i18n': {
+      version: '>=8',
+    },
+    '@nuxtjs/i18n-edge': {
+      version: '>=8',
+      optional: true,
+    },
+  },
   // Default configuration options of the Nuxt module
   defaults: {
     useModuleLocale: true,
@@ -44,36 +52,24 @@ export default defineNuxtModule<ModuleOptions>().with({
   },
   async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
-    const logger = useLogger('zodI18n')
 
-    let i18nOptions: NuxtI18nOptions | null = null
+    const i18nModuleNames = ['@nuxtjs/i18n', '@nuxtjs/i18n-edge']
+    const i18nOptions = nuxt.options.modules.reduce<null | NuxtI18nOptions>((acc, module) => {
+      if (acc) return acc
 
-    // Check NuxtI18n module availability
-    const checkI18nAvailable = !nuxt.options.modules.some((module) => {
-      const i18nModuleNames = ['@nuxtjs/i18n', '@nuxtjs/i18n-edge']
-      if (typeof module === 'string') {
-        const isRegistered = i18nModuleNames.includes(module)
-        if (isRegistered) {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          i18nOptions = (nuxt.options as any).i18n
-        }
-        return isRegistered
+      if (typeof module === 'string' && i18nModuleNames.includes(module) && 'i18n' in nuxt.options) {
+        return nuxt.options.i18n as NuxtI18nOptions
       }
+
       if (Array.isArray(module)) {
         const [moduleName, options] = module
-        const isRegistered = i18nModuleNames.includes(moduleName as string)
-        if (isRegistered) {
-          i18nOptions = options
+        if (i18nModuleNames.includes(moduleName as string)) {
+          return options
         }
-        return isRegistered
       }
 
-      return false
-    })
-
-    if (checkI18nAvailable) {
-      logger.fatal('Nuxt I18n required')
-    }
+      return acc
+    }, null)
 
     if (options.useModuleLocale) {
       const appLocalesCode = getNormalizedLocales(
@@ -95,6 +91,7 @@ export default defineNuxtModule<ModuleOptions>().with({
         return acc
       }, [])
 
+      // @ts-expect-error Module hook from @nuxtjs/i18n (see ModuleHooks type)
       nuxt.hook('i18n:registerModule', (register) => {
         register({
           langDir: resolve('./runtime/i18n/locales'),

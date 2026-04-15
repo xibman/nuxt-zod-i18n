@@ -1,11 +1,15 @@
 export default defineNuxtConfig({
-  modules: ['../src/module', '@nuxtjs/i18n', '@nuxt/ui'],
+  modules: ['nuxt-zod-i18n', '@nuxtjs/i18n', '@nuxt/ui'],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  future: {
-    compatibilityVersion: 4,
+  compatibilityDate: 'latest',
+  vite: {
+    optimizeDeps: {
+      include: [
+        'zod',
+      ],
+    },
   },
-  compatibilityDate: '2025-05-15',
   i18n: {
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',

@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',
     langDir: 'locales',
-    lazy: true,
     locales: [
       {
         code: 'en-GB',

@@ -1,12 +1,9 @@
-import MyModule from '../../../src/module'
-
 export default defineNuxtConfig({
-  modules: [MyModule, '@nuxtjs/i18n'],
+  modules: ['nuxt-zod-i18n', '@nuxtjs/i18n'],
   i18n: {
     defaultDirection: 'ltr',
     defaultLocale: 'en-GB',
     langDir: './locales',
-    lazy: true,
     locales: [
       {
         code: 'en-GB',

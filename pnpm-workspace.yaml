@@ -1,12 +1,15 @@
 packages:
   - docs
   - playground
-  - ./
 
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
-  - esbuild
-  - sharp
-  - unrs-resolver
-  - vue-demi
+
+catalog:
+  '@nuxt/ui': ^4.6.1
+  '@nuxt/schema': ^4.4.2
+  '@nuxtjs/i18n': ^10.2.4
+  eslint: ^10.2.0
+  nuxt: ^4.4.2
+  tailwindcss: ^4.2.2
+  typescript: ^5.9.3
+  vue-tsc: ^3.2.6
+  zod: ^3.25.76

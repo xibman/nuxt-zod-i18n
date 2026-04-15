@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
-import { findPageHeadline } from '#ui-pro/utils/content'
+import { findPageHeadline } from '@nuxt/content/utils'
 
 definePageMeta({
   layout: 'docs',
@@ -33,7 +33,7 @@ useSeoMeta({
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value))
 
-defineOgImageComponent('Docs', {
+defineOgImage('Docs', {
   headline: headline.value,
 })
 

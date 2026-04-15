@@ -22,15 +22,19 @@
   "files": [
     "dist"
   ],
+  "workspaces": [
+    "playground",
+    "docs"
+  ],
   "scripts": {
     "check": "npm run lint:fix",
-    "dev": "npm run dev:prepare && nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "docs:build": "nuxi build docs",
-    "docs:dev": "nuxi dev docs",
-    "docs:generate": "nuxi generate docs",
-    "docs:preview": "nuxi preview docs",
+    "dev": "npm run dev:prepare && nuxt dev playground",
+    "dev:build": "nuxt build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground",
+    "docs:build": "nuxt build docs",
+    "docs:dev": "nuxt dev docs",
+    "docs:generate": "nuxt generate docs",
+    "docs:preview": "nuxt preview docs",
     "fix": "npm run lint:fix",
     "i18n:download": "localazy download && pnpm fix",
     "i18n:upload": "localazy upload",
@@ -40,51 +44,35 @@
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "test:types": "vue-tsc --noEmit ",
+    "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit",
     "prepare": "husky"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.17.7",
-    "defu": "^6.1.4",
-    "zod": "^3.25.76"
+    "@nuxt/kit": "^4.4.2",
+    "defu": "^6.1.7",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@localazy/cli": "^2.0.8",
-    "@nuxt/devtools": "^2.6.2",
-    "@nuxt/eslint-config": "^1.7.1",
+    "@nuxt/devtools": "^3.2.4",
+    "@nuxt/eslint-config": "^1.15.2",
     "@nuxt/module-builder": "^1.0.2",
-    "@nuxt/schema": "^3.17.7",
-    "@nuxt/test-utils": "^3.19.2",
-    "@nuxtjs/i18n": "^9.5.6",
-    "@types/node": "^22.10.5",
+    "@nuxt/schema": "catalog:",
+    "@nuxt/test-utils": "^4.0.2",
+    "@nuxtjs/i18n": "catalog:",
+    "@types/node": "^25.6.0",
     "changelogen": "^0.6.2",
-    "eslint": "^9.31.0",
-    "eslint-plugin-jsonc": "^2.20.1",
+    "eslint": "catalog:",
+    "eslint-plugin-jsonc": "^3.1.2",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.2",
-    "nuxt": "^3.17.7",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.4",
-    "vue-tsc": "^3.0.4"
+    "lint-staged": "^16.4.0",
+    "nuxt": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "^4.1.4",
+    "vue-tsc": "catalog:"
   },
   "lint-staged": {
     "*.{js,ts,vue,json,md,yml}": "eslint"
   },
-  "resolutions": {
-    "unimport": "4.1.1"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "better-sqlite3"
-    ],
-    "ignoredBuiltDependencies": [
-      "vue-demi"
-    ],
-    "overrides": {
-      "unimport": "4.1.1",
-      "@nuxtjs/mdc@<0.17.2": ">=0.17.2",
-      "@eslint/plugin-kit@<0.3.4": ">=0.3.4"
-    }
-  },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.33.0"
 }

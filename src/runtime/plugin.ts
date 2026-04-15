@@ -5,7 +5,6 @@ import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 export default defineNuxtPlugin({
   name: 'zodI18n:plugin',
-  // @ts-expect-error plugin from @nuxt/i18n
   dependsOn: ['i18n:plugin'],
   parallel: true,
   setup: (nuxtApp) => {
